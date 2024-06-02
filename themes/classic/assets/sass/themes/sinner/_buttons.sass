@@ -1,0 +1,197 @@
+
+    
+.btn
+    display: inline-flex
+    +align-items(center)
+    padding: 9px 25px
+    border-radius: $radius
+    color: $btn-primary-text
+    font-family: $body-f
+    font-weight: 500
+    font-style: normal
+    line-height: 1
+    min-height: 36px
+    cursor: pointer
+    +rem(14)
+    border-width: 2px
+    text-transform: uppercase
+    +multipleTransition((opacity 0.25s, padding 0.25s ease, color 0.2s, background 0.25s, border 0.25s, width 0.25s))
+
+    &:hover,
+    &:focus
+        // +multipleTransition((opacity 0.25s ease, padding 0.25s, color 0.25s ease, background 0.25s, border 0.25s))
+
+    i.fas,
+    i
+        margin-top: -2px
+        margin-left: -15px
+        font-size: 18px
+        margin-right: 15px
+        vertical-align: middle
+        +multipleTransition((opacity 0.25s, padding 0.25s ease, color 0.1s, background 0.25s, font 0.25s, width 0.25s))
+
+
+    
+.btn--primary,
+.btn-primary
+    @extend .btn
+    color: $btn-primary-text
+    background: $btn-primary-bg
+    border: 2px $btn-primary-border solid
+    // +flexbox()
+    // +align-items(center)
+    // border: 0
+
+    &:hover,
+    &:focus
+        background: $btn-primary-bg-hover
+        border-color: $btn-primary-border-hover
+        color: $btn-primary-text-hover
+
+
+    &.ico--right
+        i
+            margin: 0 -15px 0 10px
+
+.btn--secondary,
+.btn-secondary
+    @extend .btn
+    // +flexbox()
+    // +align-items(center)
+    color: white
+    background: $c-black
+    border: 2px $c-black solid
+
+    &:hover,
+    &:focus
+        background: $btn-secondary-bg-hover
+        border: 2px $btn-secondary-border-hover solid
+        color: $btn-secondary-text-hover
+        // +opacity(0.5)
+
+
+.btn--border,
+.btn-border
+    @extend .btn
+    color: $c-black
+    background: transparent
+    border: 2px $c-black solid
+
+    &:hover,
+    &:focus,
+    &:active
+        background: transparent
+        background: $cp1
+        border-color: $cp1
+        color:  $cp1
+        color:  white
+        // +opacity(0.5)
+
+
+.btn--icon
+    @extend .btn
+    +flexbox()
+    +align-items(center)
+    padding-top: 0
+    padding-bottom: 0
+    padding-left: 30px
+    // height: 42px
+
+    &.btn--primary
+        i
+            color: white
+
+        &:hover
+            i
+                color: $cp1
+
+    i
+        font-size: 24px
+        color: $cp1
+
+    &:hover
+        i
+            // font-size: 28px
+
+.btn-grid
+    background: none
+    +flexbox()
+    +align-items(center)
+
+    i
+        display: none
+        +multipleTransition((opacity 0.25s, color 0.2s, background 0.25s))
+
+        &.grid--active
+            display: block
+        
+
+    &:hover
+        color: $cp1
+
+    .grid--6 &
+        .grid--6
+            display: block
+
+    .grid--4 &
+        .grid--4
+            display: block
+
+    .grid--3 &
+        .grid--3
+            display: block
+
+    .grid--2 &
+        .grid--2
+            display: block
+
+
+    // .grid--4 &,
+    // .qm &
+    //     .grid--less
+    //         display: block
+
+    //     .grid--normal
+    //         display: none
+
+
+.grid--4.qm
+    // .btn-grid
+    //     pointer-events: none
+    //     opacity: 0.5
+
+
+.btn--large
+    height: auto
+    font-size: 22px
+    font-weight: 300
+    text-transform: none
+
+
+.btn-primary .material-icons, .btn-secondary .material-icons, .btn-tertiary .material-icons
+    // margin-left: 
+
+
+    
+.btn.disabled, .btn.disabled:hover, .btn[disabled]
+    background: #717171 !important
+    border-color: #717171 !important
+    cursor: not-allowed !important
+
+    &.btn-primary
+        background: #717171
+        border-color: #717171
+
+
++breakpoint(mobilewide)
+
+    .btn--large
+        font-size: 17px
+        padding: 4px 15px
+        
+        img
+            max-height: 24px
+
+
+    .btn-grid
+        // display: none

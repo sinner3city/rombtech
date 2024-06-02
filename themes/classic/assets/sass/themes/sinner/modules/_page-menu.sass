@@ -1,0 +1,1098 @@
+
+.page-subnav
+    position: static
+    position: absolute
+    top: 0
+    // border-top: 3px white solid
+    // left: 0
+    left: 220px
+    width: auto
+    z-index: 100
+    padding-left: $page-padding
+    padding-right: $page-padding
+    pointer-events: auto
+    // background: #f5f5f5
+    // background: rgb(245 245 245 / 74%)
+    height: 60px
+    +flexbox()
+    +align-items(center)
+    +multipleTransition((transform 0.85s ease, height 0.45s ease, top 0.45s ease, opacity 0.35s))
+    // +justify-content(center)
+
+    opacity: 0
+    // +translate3d((0, -30px, 0))
+    // +translate3d((-30px, 0, 0))
+    +multipleTransition((opacity 0.75s ease 0.2s, transform 0.95s ease 0.2s))
+
+    .animation--loaded &
+        opacity: 1
+        +translate3d((0, 0, 0))
+
+    .menu--active &
+        opacity: 0
+        pointer-events: none
+
+    .category-id-2 &
+        display: none
+
+    &:hover
+        z-index: 100
+
+        .list--right
+            opacity: 1
+
+.page-product:not(.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament, .product-skuteczny-i-dochodowy-sklep-internetowy-abonament)
+    .page-subnav
+        display: none
+
+#index
+    .page-subnav,
+    .page-header__right
+        +multipleTransition((transform 0.85s ease 1s, height 0.45s ease, top 0.45s ease, opacity 0.85s 1.2s))
+
+.page-subnav__list
+    // margin-top: 100px
+    // margin-bottom: -60px
+    +flexbox()
+    +align-items(center)
+    +multipleTransition((transform 0.85s ease, height 0.45s ease, top 0.45s ease, opacity 0.35s))
+
+    &.list--right
+        // opacity: 0.3
+
+    &.list--current,
+    &.list--right
+        .page-subnav__item
+            &::after
+                display: none
+
+.page-product,
+.page-order
+    .page-header
+        .page-menu
+            display: none
+    &.product-skuteczny-i-dochodowy-sklep-internetowy-abonament,
+    &.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament,
+    &.category-reklama-w-google
+        padding-top: 85px
+        .page-header
+            .page-menu
+                display: block
+
+.page-header
+    .page-menu__item
+        z-index: 2
+    #category-2
+        > .page-menu__link,
+        > .page-menu__arrow
+            display: none
+
+        > .page-menu__droplist
+            height: 100%
+            opacity: 1
+            top: 0
+            background: none
+            pointer-events: auto
+            border-bottom: 0
+
+.page-subnav__item
+    position: relative
+    padding-right: 10px
+    margin-right: 10px
+    // z-index: 0
+
+    &:last-child
+        padding-right: 0
+        margin-right: -15px
+        &::after
+            display: none
+
+    &::after
+        position: absolute
+        top: -4px
+        right: 0
+        content: '//'
+        color: $cp1
+
+    &.item--active
+        +flexbox()
+        +align-items(center)
+        white-space: nowrap
+
+        .page-subnav__link
+            // color: $c-black
+            font-weight: 400
+
+        .page-subnav__drop
+            opacity: 1
+            pointer-events: auto
+            padding: 0
+            display: flex
+            // margin: 10px 0
+            // margin-left: -11px
+            z-index: 22
+            opacity: 1
+            +translate3d((0, 0, 0))
+            pointer-events: auto
+
+        .page-menu__drop-ico
+            color: $c-black
+            +rotate(-45)
+
+        .page-menu__drop-ico
+            color: $c-black
+            +rotate(-45)
+
+        &::after
+            display: none
+            margin-right: 0
+            padding-right: 0
+
+    &.item--submenu ~ li
+        display: none
+
+.page-subnav__item:not(.item--active)
+    .page-menu__drop-ico
+        color: $cp1
+
+        .product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament &
+            color: $cp3a
+
+        .category-reklama-w-google &
+            color: $cp4
+
+.page__panel-right
+    .page-menu__arrow
+        cursor: pointer
+        position: absolute
+        right: -10px
+        top: 0
+        padding: 12px 15px
+        z-index: 2
+
+    .has-drop
+        .page-menu__label
+            padding-right: 40px
+            line-height: 1.2
+
+    .page-menu__item
+        position: relative
+
+        .page-menu__item
+            margin-right: 0
+            margin-left: 15px
+.page-subnav__item
+    color: $c-black
+    font-size: 16px
+    font-weight: 400
+
+.page-subnav__link
+    color: $c-black
+    font-size: 16px
+    margin-right: 10px
+    font-weight: 400
+    +flexbox()
+
+    .page-menu__arrow
+        margin-top: -2px
+
+    .list--right &
+        color: $cp1
+        text-decoration: underline
+
+    &:hover
+        color: $c-black
+        text-decoration: none
+
+.page-subnav__drop
+    position: absolute
+    top: -5px
+    left: 0
+    left: 100%
+    margin-left: 0
+    // opacity: 0
+    // z-index: -1
+    min-width: 150px
+    // padding-top: 20px
+    // width: 100%
+    opacity: 0
+    // overflow: hidden
+    pointer-events: none
+    +flexbox()
+    +translate3d((-15px, 0, 0))
+    +multipleTransition((transform 0.45s ease, height 0.45s ease, top 0.45s ease, opacity 0.15s))
+
+    .link--strona:hover
+        background: $cp3a
+        border-color: $cp3a
+
+    .link--reklama:hover
+        background: $cp4
+        border-color: $cp4
+
+.category-reklama-w-google
+    .link--reklama
+        background: $c-black
+        border-color: $c-black
+        color: white
+
+.page-subnav__link-btn,
+.page-subnav__drop-li
+    display: block
+    color: white
+    padding: 5px 20px
+    font-size: 14px
+    white-space: nowrap
+    background: black
+    margin: 0 5px
+    border-radius: $radius
+    border: 1px $c-border solid
+    background: transparent
+    color: #222
+    font-weight: 400
+
+    strong
+        font-weight: 500
+
+    &:hover
+        background: $cp1
+        color: white
+        border-color: $cp1
+
+    &.link--strona:hover
+        background: $cp3a
+        border-color: $cp3a
+
+    &.link--reklama:hover
+        background: $cp4
+        border-color: $cp4
+
+    &.link--main:hover
+        background: $c-black
+        border-color: $c-black
+
+.menu-burger__btn
+    +flexbox()
+    position: relative
+    margin: auto
+    width: 35px
+    height: 27px
+    cursor: pointer
+
+    span
+        display: block
+        position: absolute
+        left: 0
+        height: 5px
+        width: 100%
+        background: #fff
+        border-radius: 3px
+        opacity: 1
+        +multipleTransition((transform 0.2s ease-in-out, width 0.25s, top 0.25s, left 0.25s, opacity 0.25s))
+
+        &:nth-child(1)
+            top: 0
+            .menu--active &,
+            .menu--active &
+                opacity: 0
+
+        &:nth-child(2)
+            top: 11px
+            .menu--active &,
+            .menu--active &
+                +rotate(45)
+
+        &:nth-child(3)
+            top: 11px
+            .menu--active &,
+            .menu--active &
+                +rotate(-45)
+
+        &:nth-child(4)
+            top: 22px
+            .menu--active &,
+            .menu--active &
+                opacity: 0
+
+.page-header
+    .page-menu__list
+        +justify-content(center)
+
+    .page-menu__link
+        +rem(14)
+        padding: 10px
+        font-weight: 400
+
+    .page-menu__item
+        margin: 0 5px
+
+.page-menu
+    // display: none
+    position: absolute
+    left: 0
+    width: 100%
+    // height: 80px
+    opacity: 1
+    // overflow: hidden
+    // pointer-events: none
+    z-index: 123
+    +multipleTransition((height 0.75s, opacity 0.25s ease, top 0.45s ease))
+    top: 560px
+    top: 46px
+    +multipleTransition((height 0.75s, opacity 0.25s ease, top 0.45s ease))
+    background: white
+    background: rgba(255, 255, 255, 1)
+    border-bottom: 1px #ddd solid
+    +multipleTransition((transform 0.75s ease 0.8s, height 0.75s ease, background 0.45s))
+
+    &:hover
+        background: rgba(255, 255, 255, 1)
+
+    .page-header &
+        display: block
+
+    .menu--active &
+        opacity: 1
+        // top: 80px
+        // opacity: 1
+        // height: 550px
+        pointer-events: auto
+        +multipleTransition((height 0.75s, opacity 0.25s ease, top 0.45s ease))
+
+        &::after
+            opacity: 0.2
+
+    // .header--scroll &
+        // top: 60px
+        // +multipleTransition((height 0.75s, opacity 0.25s ease, top 0.45s ease))
+
+.page-menu__bg
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    pointer-events: none
+    // background: rgb(255 255 255 / 100%)
+    // background: $c-black
+
+    a
+        color: white
+    // +multipleTransition((height 0.75s, top 0.75s ease))
+
+    .menu--active &
+        // height: 500px
+        // +multipleTransition((height 0.75s, top 0.75s ease))
+.page__panel-right
+    .page-menu__scroll
+        height: 100%
+        width: 100%
+        position: relative
+        overflow: auto
+        //overflow-y: auto
+
+        > .page-menu__list
+            overflow: hidden
+
+        .menu--active &
+            // overflow-y: auto
+            // height: 100%
+            // +multipleTransition((height 0.75s, top 0.75s ease))
+
+.page-menu__list
+    padding-right: 15px
+    padding-left: 15px
+
+.page-menu__link
+    padding: 12px 0
+    color: $c-black
+    @extend .center
+
+    &:hover
+        color: $cp1
+
+.page-menu__item
+    // position: relative
+    margin: 0 10px
+    @extend .center
+
+    &.link--active
+        color: $cp1
+
+        > .page-menu__droplist
+            // display: block 
+            height: 100%
+            pointer-events: auto
+            opacity: 1
+            // +multipleTransition((opacity 0.05s ease 0.25s))
+
+        > .page-menu__link
+            > .page-menu__label
+                color: $cp1
+        > .page-menu__arrow .page-menu__drop-ico
+            +rotate(-180)
+
+.page-header
+    .page-menu__list
+        .page-menu__droplist
+            height: 0
+            +multipleTransition((opacity 0.25s, height 0.25s))
+            //+multipleTransition((opacity 0.25s ease 1s))
+
+            &.show
+                opacity: 1 !important
+                height: 38px
+                pointer-events: auto
+
+                .page-menu__droplist
+                    background: #454545
+
+    #category-2
+        margin-right: auto
+
+        .page-menu__list
+            +justify-content(flex-start)
+
+    .page-menu__list
+        +justify-content(flex-end)
+    .page-menu__item:hover
+        color: $cp1
+
+    .page-menu__item:hover
+        > .page-menu__link .page-menu__label
+            color: $cp1
+
+        > .page-menu__droplist
+            // display: block 
+            //height: 100%
+            //pointer-events: auto
+            //opacity: 1
+            //+multipleTransition((opacity 0.25s, height 0.25s))
+
+        > .page-menu__arrow .page-menu__drop-ico
+            +rotate(-180)
+
+.page-menu__arrow
+    @extend .center
+    margin-left: 10px
+    margin-left: 0
+    line-height: 1
+
+.page-menu__drop-ico
+    color: $cp1
+    +multipleTransition((transform 0.35s ease))
+
+.page-menu__droplist
+    position: absolute
+    top: 100%
+    left: 0
+    width: 100%
+    opacity: 0
+    // display: none
+    background: #212121
+    background: white
+    pointer-events: none
+    height: 0
+    max-height: 500px
+    border-bottom: 1px #ddd solid
+    // overflow: hidden
+    +multipleTransition((max-height 0.045s ease, opacity 0.05s ease))
+
+    .page__panel-right &
+        position: static
+
+.page-menu__list
+    +flexbox()
+    +justify-content(center)
+    +align-items(center)
+
+    .page__panel-right &
+        +flex-wrap(wrap)
+
+.page__panel-right
+    position: fixed
+    right: 0
+    top: 0
+    width: 320px
+    height: 100vh
+    background: white
+    z-index: 122
+    border-left: 1px #ddd solid
+    // overflow: hidden
+    padding: 9px 20px 15px 20px
+    +translate3d((320px, 0, 0))
+    +multipleTransition((transform 0.45s, opacity 0.25s ease, top 0.45s ease))
+
+    &::before
+        position: absolute
+        content: ''
+        right: 100%
+        top: 0
+        width: 10000px
+        height: 100%
+        background: rgb(0 0 0 / 40%)
+        opacity: 0
+        pointer-events: none
+        +multipleTransition((transform 0.45s, opacity 0.45s ease, top 0.45s ease))
+
+    .menu--active &,
+    .menu--active &
+        +translate3d((0, 0, 0))
+        +multipleTransition((transform 0.45s, opacity 0.45s ease, top 0.45s ease))
+
+        &::before
+            pointer-events: auto
+            opacity: 1
+            +multipleTransition((transform 0.45s, opacity 0.45s ease, top 0.45s ease))
+
+    .nav-top-user
+        display: none
+
+    .nav-top-cart,
+    .nav-top-lang,
+    .nav-top-currency
+        display: none
+
+    .page-menu
+        position: static
+
+    .page-menu__list
+        padding-left: 0
+        padding-right: 0
+        border: 0
+
+    .page__panel-logo
+        position: absolute
+        position: static
+        top: 14px
+        left: 30px
+        margin-left: 5px
+        overflow: hidden
+        +justify-content(flex-start)
+
+    .page-menu
+        width: auto
+        height: 100%
+        max-height: none
+        border: 0
+        padding-bottom: 40px
+        margin-top: 10px
+
+    .page-menu__droplist
+        height: 0
+        max-height: none
+        border-bottom: 0
+        +multipleTransition((max-height 0.05s ease, opacity 0.05s ease))
+
+    .page-menu__link
+        position: relative
+        font-size: 17px
+        padding-left: 18px
+        border-bottom: 1px #ddd solid
+
+        &::before
+            position: absolute
+            content: ''
+            top: 50%
+            left: 0
+            width: 4px
+            height: 4px
+            background: $c-black
+            margin-top: -2px
+
+        .page-menu__drop-ico
+            // color: $c-black
+
+    .link--active:not(#category-97, #category-98)
+        > .page-menu__droplist
+            height: 100%
+            +multipleTransition((max-height 0.45s ease, opacity 0.5s ease))
+
+    #category-97, #category-98, #category-100, #product-197, #product-196
+        .page-menu__arrow,
+        .page-menu__droplist
+            // display: none
+
+        .page-menu__link
+            font-weight: 400
+
+    // #product-197
+    //     .page-menu__link::before
+    //         background-color: $cp1
+
+    // #product-196
+    //     .page-menu__link::before
+    //         background-color: $cp3a
+
+    // #category-100
+    //     .page-menu__link::before
+    //         background-color: red
+
+    #category-2
+        > .page-menu__link,
+        > .page-menu__arrow
+            display: none
+
+        .page-menu__link
+            // font-weight: 400
+            &::before
+                background: $cp1
+
+        .page-menu__drop-ico
+            color: $cp1
+
+        > .page-menu__droplist
+            height: 100%
+            opacity: 1
+            // border-bottom: 1px $cp1 solid
+            // border-bottom: 1px #e5e5e5 solid
+            pointer-events: auto
+            > .page-menu__list
+                padding-left: 0
+
+                > .page-menu__item
+                    margin-left: 0
+                    margin-right: 0
+
+    .page-menu__droplist
+        position: static
+        // height: 100%
+
+        // +multipleTransition((height 0.45s ease, opacity 0.05s ease))
+        // max-height: none
+
+    .page-menu__list,
+    .page-menu__item
+        +justify-content(flex-start)
+        +flex-wrap(wrap)
+        width: 100%
+
+    .page-menu__link
+        +justify-content(flex-start)
+        +flex-basis(100%)
+
+    .page-menu__item
+        width: 100%
+        margin-right: 0
+
+    .page-menu__item:not(.link--active)
+        // border-bottom: 1px #ddd solid
+
+        &:last-child
+            border-bottom: 0
+
+    .nav-top-search
+        position: relative
+        margin-top: 15px
+
+    .nav-top-search__btn
+        position: absolute
+        top: 2px
+        right: -8px
+        +flexbox()
+        +align-items(center)
+        height: 34px
+        border-right: 0
+        width: 36px
+
+        i
+            font-size: 22px
+
+.nav-top__link
+    position: relative
+    margin: 0 7px
+    height: 45px
+    width: 55px
+    background: transparent
+    border: 1px #ddd solid
+    border: 0
+    border-bottom: 0
+    color: $c-black
+    opacity: 0
+    // margin-top: -140px
+    opacity: 1
+    +flexbox()
+    +justify-content(center)
+    +align-items(center)
+    +translate3d((0, 0, 0))
+    +multipleTransition((opacity 0.45s ease, margin 0.45s ease, background 0.45s ease, color 0.25s ease, border 0.45s ease))
+
+    width: 45px
+    height: 30px
+
+    i
+        font-size: 26px
+
+        &:hover
+            font-size: 22px
+
+    .menu--active &
+        opacity: 0
+        // pointer-events: none
+        +multipleTransition((opacity 0.75s ease, top 0.75s ease))
+
+    #index &
+        // opacity: 0
+        // margin-top: -140px
+
+    .animation--start &
+        opacity: 1
+        margin-top: 0
+        +translate3d((0, 0, 0))
+        +multipleTransition((opacity 0.65s ease 0.3s, margin 0.65s ease 0.3s, background 0.45s ease, color 0.45s ease, border 0.45s ease, width 0.45s ease, height 0.45s ease))
+
+    i
+        pointer-events: none
+        font-size: 26px
+        +scale(1)
+        +multipleTransition((opacity 0.45s ease, background 0.45s ease, color 0.45s ease, fontSize 0.1s, transfrom 0.35s))
+
+    .page-header &
+        &:hover
+            background: #f5f5f5
+            border-color: transparent
+            background: transparent
+            color: $cp1
+            +multipleTransition((opacity 0.45s ease, background 0.45s ease, color 0.45s ease, border 0.45s ease, width 0.45s ease, height 0.45s ease))
+
+            .page-header__basket-count
+                background: $c-black
+                +multipleTransition((opacity 0.45s ease, background 0.45s ease, color 0.45s ease, left 0.45s ease))
+
+            i
+                // font-size: 32px
+                color: $cp1
+                // +scale(1.2)
+                border-color: transparent
+                +multipleTransition((fontSize 0.1s, color 0.25s, transfrom 0.35s))
+
+    .page-header__btn-label
+        display: none
+
+.nav-top-cart
+    i
+        font-size: 24px
+.nav-top-user
+
+    .link--account
+        width: 100%
+        border: 0
+        margin-left: 5px
+        padding-left: 5px
+        //display: block
+        padding-top: 0
+        cursor: default
+        +align-items(center)
+
+        &.link--logged
+            cursor: pointer
+
+        i
+            vertical-align: middle
+            line-height: 1
+            margin-bottom: 2px
+            color: $cp1
+
+    .page-header__btn-label
+        display: inline-flex
+        margin: 0 0 0 10px
+        font-size: 14px
+        line-height: 1
+        font-weight: 400
+        white-space: nowrap
+
+body
+    .nav-top-lang
+        opacity: 0
+        +translate3d((0, 0, 0))
+        +multipleTransition((opacity 0.45s ease, transform 0.45s ease-in-out))
+
+    &.animation--start
+        .nav-top-lang
+            opacity: 1
+            +translate3d((0, 0, 0))
+            +multipleTransition((opacity 0.65s ease 0.4s, transform 0.65s ease-in-out 0.4s))
+
+body
+    .nav-top-currency
+        opacity: 0
+        +translate3d((0, 0, 0))
+        +multipleTransition((opacity 0.45s ease, transform 0.45s ease-in-out))
+
+    &.animation--start
+        .nav-top-currency
+            opacity: 1
+            +translate3d((0, 0, 0))
+            +multipleTransition((opacity 0.65s ease 0.5s, transform 0.65s ease-in-out 0.5s))
+
+.nav-top__link.link--search
+    border: 0
+    i
+        font-size: 22px
+    .animation--start &
+        +multipleTransition((opacity 0.65s ease 0.5s, margin 0.65s ease 0.5s, background 0.45s ease, color 0.25s, border 0.45s ease, width 0.45s ease, height 0.45s ease))
+
+.nav-top__link.link--account
+    .animation--start &
+        +multipleTransition((opacity 0.65s ease 0.6s, margin 0.65s ease 0.6s, background 0.45s ease, color 0.45s ease, border 0.45s ease, width 0.45s ease, height 0.45s ease))
+
+.nav-top__link.link--cart
+    // position: fixed
+    // top: 130px
+    // right: -100px
+    // background: white
+    .animation--start &
+        // right: $space-s
+        +multipleTransition((opacity 0.65s ease 0.7s, right 0.65s ease 0.7s, margin 0.65s ease 0.7s, background 0.45s ease, color 0.45s ease, border 0.45s ease, width 0.45s ease, height 0.45s ease))
+
+#index
+    .nav-top__link.link--burger
+        // top: -60px
+        margin-top: -60px
+        margin-top: 0
+    &.animation--loaded
+        .nav-top__link.link--burger
+            margin-top: 0
+            +multipleTransition((transform 0.25s ease-in-out 0.05s, opacity 0.65s ease, margin 0.65s ease 0.4s, background 0.45s ease, top 0.45s ease, border 0.45s ease, right 0.45s ease))
+
+#index.animation--start
+    .nav-top-lang
+        +multipleTransition((opacity 0.65s ease 1.44s, transform 0.65s ease-in-out 1.44s))
+
+    .nav-top-currency
+        +multipleTransition((opacity 0.65s ease 1.54s, transform 0.65s ease-in-out 1.54s))
+
+.nav-top__link.link--burger
+    position: fixed
+    right: $page-padding
+    right: 10px
+    z-index: 124
+    display: inline-flex
+    border: 3px $cp1 solid
+    top: 0
+    top: -7px
+    padding-top: 3px
+    width: 60px
+    height: 60px
+    color: white
+    background: $cp1
+    border-radius: $radius
+    +scale(0.7)
+    +scale(0.6)
+    +multipleTransition((opacity 0.45s ease, transform 0.25s ease-in-out 0.35s, background 0.45s ease, right 0.45s ease-in-out, top 450ms ease-in-out))
+
+    .menu--active &
+        pointer-events: auto
+        background: $c-black
+        border-color: $c-black
+        +multipleTransition((transform 650ms ease-in-out, right 450ms ease-in-out, top 450ms ease-in-out))
+
+    &:hover
+        +scale(0.6)
+        background: $c-black
+        border: 3px #2121 solid
+        color: $c-black
+        // +multipleTransition((transform 0.25s ease-in-out 0.05s, right 0.65s ease-in-out, background 0.45s ease, color 0.45s ease, top 0.45s ease))
+
+    .header--scroll &
+        +scale(0.6)
+
+    .menu--active &
+        border-color: $cp1
+        background: $cp1
+        color: $c-black
+        right: 1px
+
+// +breakpoint(laptop)
+//     .page-header .page-menu__item
+//         &.cms-category,
+//         &.cms-page
+//             opacity: 0
+//             pointer-events: none
+//             // display: none
+
+    .page-header #category-2 .page-menu__list
+        // background: #f5f5f5
+
++breakpoint(desktop)
+    .page-subnav
+        left: 220px
+
+    .page-header
+        .page-menu
+            display: none
+
+    .nav-top__link.link--burger
+        height: 60px
+        top: -8px
+
+    .page-product
+        &.product-skuteczny-i-dochodowy-sklep-internetowy-abonament,
+        &.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament,
+        &.category-reklama-w-google
+            .page-header
+                .page-menu
+                    display: none
+
+    .page-product
+        &.product-skuteczny-i-dochodowy-sklep-internetowy-abonament,
+        &.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament,
+        &.category-reklama-w-google
+            padding-top: 45px
+
++breakpoint(tablet)
+
+    .page__panel-right
+        .page-menu__scroll
+            overflow-y: auto
+    .nav-top-user .page-header__btn-label
+        display: none
+
+    .nav-top__link.link--burger
+        right: 0
+
+    .menu--active .nav-top__link.link--burger
+        right: -1px
+
+    .nav-top__link i
+        font-size: 32px
+
+    .nav-top-cart i
+        font-size: 28px
+
+    .nav-top__link
+        width: 60px
+
+    .nav-top-user .link--account
+        width: 60px
+        display: block
+        text-align: center
+        margin-top: -6px
+
+    .page-header:hover .nav-top-search__form .nav-top-search__input[type=text]
+        border-color: #ababab
+
+    .page-subnav
+        display: none
+
+    .nav-top-user.js-dropdown
+        order: 0
+        .nav-top__link
+            +flexbox()
+            margin: 0
+            padding: 0
+            width: 55px
+
+    .nav-top-cart
+        border-left: 1px #ddd solid
+        border-right: 0
+        margin-right: 10px
+
+    .page__panel-right .page-menu
+        padding-bottom: 0
+
+@media (max-height: 540px)
+    .page__panel-right .page-menu
+        padding-bottom: 100px
+
++breakpoint(mobilewide)
+    #index
+        .page-subnav,
+        .page-header__right
+            opacity: 1
+            +translate3d((0, 0, 0))
+            +multipleTransition((transform 0.85s ease, height 0.45s ease, top 0.45s ease, opacity 0.85s))
+
+        .nav-top__link.link--burger
+            opacity: 1
+            margin-top: 0
+
+    .nav-top__link
+        opacity: 1
+
+    .page-header
+        .nav-top__link
+            height: 46px
+            width: 50px
+            margin: 0
+            .animation--start &
+                +multipleTransition((opacity 0.65s ease))
+
+            &:hover
+                border-color: $c-border
+
+            i
+                font-size: 28px
+
+    .nav-top-cart
+        border-left: 1px #ddd solid
+        border-right: 1px #ddd solid
+        margin-right: 10px
+
+    .nav-top-cart
+        .nav-top__link
+            width: 55px
+
+        i
+            font-size: 22px
+
+    .nav-top__link.link--burger
+        // top: -5px
+        right: 0
+        margin: 0
+        padding: 0
+
+    .page__panel-right
+        padding: 10px 15px
+
+    .nav-top__link.link--burger
+        +scale(0.5)
+        // width: 65px
+        &:hover
+            +scale(0.5)
+
+        .header--scroll &
+            +scale(0.5)
+
+    .page-header
+        .nav-top-search__form
+            display: none
+            position: static
+            &.form--active
+                .nav-top-search__input[type=text]
+                    width: 100%
+            .nav-top-search__input[type=text]
+                top: 49px
+                left: 0
+                height: 40px
+                border-radius: 0
+                width: 100%
+                left: inherit
+                right: 0
+
+    .nav-top-user.js-dropdown .dropdown-menu
+        padding-top: 0
+        right: 0
+
+    .page__panel-right .nav-top-search__btn
+        right: 0
+
++breakpoint(mobile)
+
+    .page__panel-right
+        position: fixed
+        right: 0
+        top: 0
+        width: 100%
+        height: 100vh
+        background: white
+        z-index: 122
+        border-left: 1px #ddd solid
+        // overflow: hidden
+        padding: 15px 20px
+        +translate3d((100%, 0, 0))
+        +multipleTransition((transform 0.75s, opacity 0.25s ease, top 0.45s ease))
+
+    .menu--active .page-sidebar .nav-top__link.link--burger
+        right: 10px
+        top: -3px

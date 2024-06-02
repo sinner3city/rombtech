@@ -1,0 +1,13 @@
+To nie szablony graficzne to szablon, który sprzedaje
+
+
+Baza danych utworzona
+
+Twoja baza danych została utworzona z następującymi parametrami:
+
+Baza danych:	sinnerstudio_shop_sandra
+Host:	localhost
+Użytkownik:	sinnerstudio_fsdemo
+Hasło:	
+
+7lw)S9y-VA-ChIVr

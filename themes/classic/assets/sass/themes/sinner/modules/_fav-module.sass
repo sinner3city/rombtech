@@ -1,0 +1,143 @@
+
+
+.art__fav-link
+    position: absolute
+    //top: 20px
+    //right: 20px
+    bottom: 35px
+    left: 35px
+    z-index: 2
+    opacity: 0
+    z-index: 2
+    @extend .noselect
+    +translate3d((0, 10px, 0))
+    +multipleTransition((transform 0.45s ease, color 0.45s ease, background 0.45s, opacity 0.45s))
+
+    .page-category &
+        opacity: 0
+
+    &.fav--active
+        +translate3d((0, 0, 0))
+
+    &:hover
+        .fav-link
+            +scale(1.5)
+            +multipleTransition((transform 0.45s ease, color 0.45s ease, background 0.45s, opacity 0.45s))
+
+
+[data-col="2"],
+[data-col="3"]
+    .art__fav-link
+        left: initial
+        top: 7px
+        right: 7px
+
+    .fav--active .fav--saved
+        margin-top: 0
+    
+
+
+.fav-link
+    display: block
+    opacity: 0
+    position: absolute
+    top: 0
+    right: 0
+    color: $cp1
+    +multipleTransition((transform 0.45s ease, color 0.45s ease, background 0.45s, opacity 0.45s))
+    pointer-events: none
+    text-indent: 0
+
+
+.fav--add
+    opacity: 1
+    pointer-events: auto
+    +multipleTransition((transform 0.45s ease, color 0.45s ease, background 0.45s, opacity 0.45s))
+
+    .fav--active &
+        opacity: 0
+        pointer-events: auto
+        +multipleTransition((transform 0.45s ease, color 0.45s ease, background 0.45s, opacity 0.45s))
+
+
+.fav--saved
+    color: $cp1
+    .fav--active &
+        opacity: 1
+        pointer-events: auto
+        +multipleTransition((transform 0.45s ease, color 0.45s ease, background 0.45s, opacity 0.45s, margin 0.25s))
+
+.fav--remove
+    color: $c-black
+    +multipleTransition((transform 0.45s ease, color 0.45s ease, background 0.45s, opacity 0.45s))
+
+
+.fav--active
+    .fav--saved
+        // margin-top: 10px
+        opacity: 1
+        pointer-events: none
+        +scale(1)
+
+        .product-detail &
+            margin-top: 0
+    .fav--remove
+        opacity: 0
+        pointer-events: auto
+        +scale(1)
+        +multipleTransition((transform 0.45s ease, color 0.45s ease, background 0.45s, opacity 0.45s, margin 0.25s))
+    &:hover
+        .fav--add
+            opacity: 0
+            pointer-events: none
+        .fav--saved
+            // opacity: 0
+            pointer-events: auto
+            color: white
+            +scale(1.5)
+            +multipleTransition((transform 0.45s ease, color 0.45s ease  0.5s, background 0.45s, opacity 0.45s, margin 0.25s))
+        .fav--remove
+            opacity: 1
+            pointer-events: none
+            color: $c-black
+            +scale(1.5)
+            +multipleTransition((transform 0.45s ease, color 0.45s ease, background 0.45s, opacity 0.45s 0.5s))
+
+
+
+.list--products
+    .art.fav--active
+        &::after
+            // color: red
+            box-shadow: 0 5px 15px rgb(0 0 0 / 30%)
+            // box-shadow: 0px 2px 11px rgb(189 0 0 / 30%)
+            opacity: 0
+            -webkit-transition: opacity 0.9s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.45s ease
+            transition: opacity 0.9s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.45s ease
+
+
+    .art
+        &.fav--active
+
+            .art__fav-link
+                opacity: 1
+                +translate3d((0, 0, 0))
+
+
+        &:hover
+            &::after
+                opacity: 1
+
+            .btn--price
+                background: $c-black
+                // border-color: $cp1
+
+            .art__title
+                color: $c-black
+
+            .art__fav-link
+                opacity: 1
+                +translate3d((0, 0, 0))
+
+            .fav--saved
+                margin-top: 0

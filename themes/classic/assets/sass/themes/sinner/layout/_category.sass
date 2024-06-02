@@ -1,0 +1,1013 @@
+
+.page-banner
+    &.banner--simple
+        height: 400px
+        // margin-top: 60px
+
+
+.content-banner
+    height: 300PX
+    overflow: hidden
+    border-radius: $radius
+    background: no-repeat center center
+    background-size: cover
+    max-width: 1320px
+    margin: 0 auto
+
+    &.banner--full
+        max-width: 100%
+
+
+.page-category:not(.category-reklama-w-google)
+    > .page-container
+        +flexbox()
+        // +justify-content(center)
+
+    .page-content-left.left-column,
+    .page-content-listing
+        width: 100%
+        position: relative
+
+
+.category-id-2
+    .category-top-menu__title
+        //display: none
+
+.page-category
+    .page-main
+        margin-bottom: auto
+
+
+.page-category .breadcrumb
+    // display: none
+    
+.product-item__cover
+    // position: relative
+    
+
+
+
+
+// filtry
+
+.breadcrumb:not(.hide) ~ .category-top-menu
+    margin-top: 0
+
+
+
+
+
+.category-top-menu
+    position: relative
+    padding-right: 135px
+    padding-right: 0
+    // margin-top: 25px
+    margin-bottom: 10px
+    +align-items(center)
+    +flexbox()
+    +flex-wrap(wrap)
+    overflow: hidden
+    overflow-x: auto
+    padding-bottom: 10px
+
+    &::-webkit-scrollbar-track
+        -webkit-box-shadow: none
+        border-radius: 0
+        background-color: #f5f5f5
+
+    &::-webkit-scrollbar
+        width: 2px
+        background-color: white
+
+    &::-webkit-scrollbar-thumb
+        border-radius: 5px
+        -webkit-box-shadow: none
+        background-color: $cp1
+
+.category-top-menu__title
+    // font-size: 33px
+    font-weight: 300
+    color: $c-black
+    margin-top: 5px
+    display: inline-flex
+    // display: block
+    margin-right: 15px
+    white-space: nowrap
+
+    &:hover
+        color: $cp1
+
+
+
+.category-sub__list
+    +flexbox()
+
+    &.list--main
+        margin-top: 10px
+
+    &.list--submenu
+        list-style: disc
+        +flex-wrap(wrap)
+
+
+
+
+
+.category-sub__drop
+    +flex-wrap(wrap)
+    margin-top: -1px
+    width: 100%
+    display: none
+    padding-left: 15px
+
+    &.open
+        // display: block
+
+
+
+.category-sub__item
+    border: 0
+    position: relative
+    line-height: 1
+    white-space: nowrap
+    text-align: center
+    // width: 100%
+    +flexbox()
+    +align-items(center)
+    
+
+
+    &.item--submenu
+        +flex-wrap(wrap)
+
+        i
+            font-size: 18px
+            color: $cp1
+            padding: 5px
+
+
+
+.category-sub__link
+    position: relative
+    display: block
+    font-size: 18px
+    font-weight: 300
+    font-size: 12px
+    font-weight: 400
+    text-transform: uppercase
+    padding: 11px 15px
+    width: 100%
+    color: white
+
+    &::before
+        position: absolute
+        content: ''
+        top: 50%
+        margin-top: -2px
+        left: 18px
+        width: 3px
+        height: 3px
+        background: $cp1
+
+    &:hover
+        color: $cp1
+
+
+
+
+
+.category-sub__arrow
+    position: absolute
+    right: 10px
+    top: 11px
+    // +translate3d((0, -50%, 0))
+    padding: 0
+    cursor: pointer
+    @extend .noselect
+
+    &.closed
+        & ~ .category-sub__drop
+            // display: none
+
+
+
+.category-sub__item[data-depth="0"]
+    border: 1px $c-border solid
+    min-width: 100px
+    margin-right: 10px
+
+    &.item--submenu
+        padding-right: 28px
+        
+    &:hover
+        background: $c-black
+        color: white
+        > a
+            color: white
+
+
+        & > .category-sub__drop
+            display: block
+            background: $c-black
+            border: 0
+
+        & > .category-sub__arrow
+            color: $cp1
+            +rotate(45)
+            pointer-events: none
+
+
+.category-sub__link[data-depth="0"]
+    color: $c-black
+
+    &::before
+        display: none
+
+    &:hover
+        color: $cp1
+
+
+
+.category-sub__drop[data-depth="0"]
+    position: absolute
+    background: white
+    top: 100%
+    left: 0
+    width: 125%
+    z-index: 4
+    padding-left: 0
+
+
+.category-sub__arrow[data-depth="0"]
+    top: 2px
+    right: 4px
+    
+
+
+
+.category-sub__link[data-depth="1"]
+    color: white
+    padding: 15px
+    padding-left: 35px
+    white-space: normal
+
+    &::before
+        left: 20px
+
+    &:hover
+        color: $cp1
+
+
+.category-sub__arrow[data-depth="1"]
+    i
+        padding: 0
+        color: white
+        background: $cp1
+
+
+        
+
+.category-sub__item[data-depth="1"]
+    border: 0
+    border-bottom: 1px #444 solid
+    width: 100%
+
+
+.category-sub__link[data-depth="2"]
+    padding-left: 35px
+
+
+.block-categories
+    background: #fff
+    padding: 0 0 10px
+    margin-bottom: 15px
+    width: 100%
+
+
+
+    .category-sub-link
+        font-size: .875rem
+
+
+
+    .category-sub-menu li:not([data-depth="0"]):not([data-depth="1"])
+        padding-left: .3125rem
+
+
+    .category-sub-menu li:not([data-depth="0"]):not([data-depth="1"]):before
+        content: "-"
+        margin-right: .3125rem
+
+
+
+    .collapse-icons[aria-expanded=true] .add
+        display: none
+
+
+    .collapse-icons[aria-expanded=true] .remove
+        display: block
+
+
+
+    .collapse-icons .remove
+        display: none
+
+
+    .arrows .arrow-down,
+    .arrows .arrow-right
+        font-size: .875rem
+        cursor: pointer
+        margin-left: 2px
+
+
+    .arrows .arrow-down:hover,
+    .arrows .arrow-right:hover
+        color: #2fb5d2
+
+
+    .arrows .arrow-down,
+    .arrows[aria-expanded=true] .arrow-right
+        display: none
+
+
+    .arrows[aria-expanded=true] .arrow-down
+        display: inline-block
+
+
+
+// filtry
+
+
+
+.filter-navi
+    margin-bottom: 15px
+    position: relative
+    min-height: 25px
+.faceted-overlay
+    background: rgb(255 255 255 / 80%)
+
+    .spinner
+        color: black
+        fill: black
+        border-top-color: black
+
+
+
+#products
+    margin-top: 30px
+
+#js-product-list-top
+    position: absolute
+    top: 11px
+    right: 12px
+    z-index: 10
+
+.products-sort-order
+    width: auto
+
+    .btn-unstyle
+        display: inline-block
+        width: 100%
+        color: #232323
+        background: #fff
+        padding: 0.625rem
+        cursor: pointer
+        border: 1px solid rgba(0,0,0,.25)
+        box-shadow: 2px 2px 4px 0 rgb(0 0 0 / 20%)
+        width: 100%
+        +flexbox()
+        font-size: 12px
+        padding: 0
+        height: 36px
+        +align-items(center)
+        +justify-content(flex-end)
+        padding-right: 10px
+        box-shadow: none
+        border-color: $c-border
+        border: 0
+
+        .sort-title
+            padding-left: 10px
+            margin-right: 10px
+
+        &:hover
+            i
+                color: $cp1
+
+
+    &.open
+            
+        .btn-unstyle
+            background: #111
+            color: white
+            border-color: #111
+            // border-bottom: 1px transparent solid
+        i
+            +rotate(-180)
+    .dropdown-menu
+        position: absolute
+        width: 200px
+        top: 100%
+        right: 0
+        z-index: 10
+        display: none
+        left: auto
+        background: #111111
+        color: white
+        border: none
+        border-radius: 0
+        box-shadow: 2px 2px 4px 0 rgb(0 0 0 / 10%)
+        margin: 0
+        border: 1px white solid
+        border-top: 0
+        border-right: 0
+
+    .dropdown-menu-link
+        display: block
+        padding: 5px 15px
+        white-space: nowrap
+        border-bottom: 1px $c-border solid
+
+        &:last-child
+            border-bottom: 0
+
+
+    &.open
+        .dropdown-menu
+            display: block
+
+    .select-list
+        display: block
+        color: #fff
+        font-size: 16px
+        padding: 10px 25px
+        text-align: right
+
+        &:hover
+            background: $cp1
+            color: #fff
+            text-decoration: none
+
+.sort-by-row
+    .sort-by
+        white-space: nowrap
+        font-size: 16px
+        font-weight: 400
+        margin-right: 10px
+
+.sort-total-products__label
+    font-size: 16px
+    font-weight: 400
+    margin: 0
+    color: $cp1
+
+.filter-active-label
+    font-weight: 400
+    font-size: 17px
+    margin-top: 0
+    cursor: pointer
+    +flexbox()
+
+    &:hover
+        color: $cp1
+    
+.active_filters
+    position: relative
+    +flexbox()
+    +align-items(center)
+    background: #f6f6f6
+    padding: 0 15px
+    margin-bottom: 1.25rem
+    margin-top: 30px
+    border: 1px $c-border solid
+    background: none
+    z-index: 2
+    .active-filter-title
+        font-weight: 400
+        margin-right: 15px
+        margin-left: 10px
+        display: inline-block
+
+    .filter-block 
+        box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
+        box-shadow: none
+        color: #232323
+        margin-right: .625rem
+        margin: .625rem 0
+        background: #fff
+        display: inline-block
+        font-size: .8125rem
+        color: white
+        padding: 0
+
+        .close
+            color: $cp1
+            font-size: .9375rem
+            opacity: 1
+            margin-top: 2px
+            margin-left: 10px
+            text-shadow: none
+
+    .js-search-link
+        display: block
+        color: white
+        padding: .625rem
+        background: $c-black
+
+        &:hover
+            background: $cp1
+
+            .close
+                color: #232323
+
+
+#js-active-search-filters
+    display: none
+
+#_desktop_search_filters_clear_all
+    //position: absolute
+    top: 17px
+    left:  25px
+    line-height: 1
+    +flexbox()
+    +align-items(center)
+    margin: 0 10px 0 10px
+
+.js-search-filters-clear-all
+    position: absolute
+    left: 0
+    +flexbox()
+    background: $cp1
+    color: white
+    padding: 3px
+
+    i
+        font-size: 16px
+
+#search_filters_wrapper
+    position: relative
+    z-index: 3
+    width: 100%
+    padding-left: 15px
+.filter-navi
+    border: 1px $c-border solid
+    padding: 15px 0
+    min-height: 60px
+
+#search_filters
+    position: relative
+    min-width: 250px
+    box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
+    margin-bottom: 0
+    background: #fff
+    box-shadow: none
+    padding-right: 100px
+    +flexbox()
+    +align-items(flex-start)
+    +align-items(center)
+    +flex-wrap(wrap)
+
+    .filter-title
+        font-weight: 400
+        margin-bottom: 0
+        margin-top: 2px
+        line-height: 1px
+        margin-right: 0
+
+    [data-toggle="showfilter"][aria-expanded="true"]
+        &:hover
+            ul
+                display: block
+            i
+                +rotate(180)
+    .facet
+        margin-left: 15px
+        //padding-top: 7px
+        position: relative
+
+        i
+            +multipleTransition((opacity 0.95s ease, transform 0.45s ease))
+
+
+        .title
+            margin-right: 5px
+        .facet-title
+            font-size: 17px
+            margin-top: 2px
+            width: auto
+            margin-right: 5px
+
+            &:hover
+                color: $cp1
+            i
+                margin-left: 5px
+        .facet-label
+            +flexbox()
+            +align-items(center)
+
+            &.active
+                .custom-checkbox
+                    position: relative
+                    top: 0
+                    background: $cp1
+                    &::before
+                        position: absolute
+                        content: 'X'
+                        top: 1px
+                        left: 3px
+                        color: white
+                        font-weight: bold
+                        line-height: 1
+                        font-size: 12px
+
+            .custom-checkbox
+                position: static
+                width: 15px
+                height: 15px
+                border: 1px $cp1 solid
+                padding: 0
+                margin: 0 8px 0 0
+            a
+                width: auto
+                line-height: 1
+                margin-top: 3px
+                &:hover
+                    color: $cp1
+    [data-toggle="collapse"]
+        cursor: pointer
+
+        ~ .collapse,
+        ~ .collapsing
+            overflow: hidden
+
+        &:hover
+            color: $cp1
+
+            .facet-title
+                color: $cp1
+
+
+    [aria-expanded="false"]
+        & ~ .collapse,
+        & ~ .collapsing,
+        & ~ .show
+            display: none
+            +multipleTransition((transform 0.5s ease, opacity 0.5s ease, height 0.5s ease))
+
+    [aria-expanded="true"]:not(.main-filter-active)
+        & ~ .collapse.in,
+        & ~ .collapsing
+            display: block
+            +multipleTransition((transform 0.5s ease, opacity 0.5s ease, height 0.5s ease))
+
+
+    .title.main-filter-active
+        color: $cp1
+
+
+.block-category
+    padding-top: 25px
+    padding-bottom: 25px
+
+    .h1
+        font-size: 33px
+[data-toggle="showfilter"]
+    cursor: pointer
+    @extend .noselect
+    &[aria-expanded="true"]:hover,
+    &[aria-expanded="true"]
+        color: $cp1
+
+        .facet-title
+            color: $cp1
+    & ~ .show
+        display: block
+    .remove
+        display: none
+    .add
+        display: block
+
+    & ~ ul
+        // margin: 10px 0
+        display: none
+        position: absolute
+        background: white
+        padding: 15px
+        box-shadow: -1px 3px 1px #ddd
+        z-index: 1
+        > li
+            margin: 7px 0
+    .closed
+        .add
+            display: none
+        .remove
+            display: block
+.page-content-left
+    //margin-right: 60px
+
+
+
+// GOOGLE PAGE
+
+.category-reklama-w-google
+
+    .filter-navi
+        display: none
+
+    #js-product-list,
+    #products,
+    #search_filters_wrapper
+        display: none
+
+    &.animation--end
+        .page-banner 
+            .page-banner__header
+                opacity: 1
+                +translate3d((0, 0, 0))
+                +multipleTransition((opacity 0.95s ease, transform 0.95s ease))
+    .page-banner
+        // overflow: hidden
+        background-size: 100% 500px
+        // background-position: center 60px
+        // padding-top: 80px
+        z-index: 1
+        +justify-content(center)
+
+        .page-banner__header
+            img
+                margin-bottom: 10px
+
+        .page-banner__header
+            width: 45%
+            width: 60%
+            padding-left: 6%
+            opacity: 0
+            +translate3d((-30px, 0, 0))
+            +multipleTransition((opacity 0.95s ease, transform 0.95s ease))
+
+
+        .product-actions
+            // position: relative
+            opacity: 0
+            +translate3d((0, -30px, 0))
+            +multipleTransition((opacity 0.95s ease 0.4s, transform 0.95s ease 0.4s))
+
+            .animation--loaded &
+                opacity: 1
+                +translate3d((0, 0, 0))
+            &::before
+                position: absolute
+                top: 30%
+                left: 50%
+                content: ''
+                z-index: -1
+                width: calc(100% + 30px)
+                height: 60%
+                background: transparent
+                border: 2px white solid
+                // border-color: rgb(0 0 0 / 52%)
+                border-radius: $radius
+                +translate3d((-50%, 0, 0))
+
+        .btn--demo
+            font-weight: 400
+
+            &:hover
+                border-color: white
+                background: transparent
+                color: white
+
+    #left-column
+        display: none
+
+    #content-wrapper
+        width: 100%
+        padding: 0
+
+
+    .block-categories
+        display: none
+
+
+
+
+    #products
+        padding-left: 3%
+        padding-right: 3%
+
+
+
+    #js-product-list-top
+        display: none
+
+    .pagination
+        display: none
+
+    ul.list--inline
+        +flexbox()
+        margin: 0
+        li
+            display: inline-block
+
+    .product-short-desc
+        display: block
+        text-align: center
+        font-size: 17px
+        color: #f94d12
+        text-transform: uppercase
+        margin-bottom: 3px
+
+    .product-short-users
+        display: block
+        text-transform: none
+        font-weight: 300
+        color: #212121
+        margin-top: 5px
+        font-size: 18px
+        margin-bottom: 35px
+
+
+.product-short-desc,
+.product-short-users
+    display: none
+
+.h1.products-section-title
+    font-size: 32px
+
+
+.h2.products-section-title
+    font-size: 28px
+    margin-bottom: 60px
+
+    &.mg-b-0
+        margin-bottom: 0
+
+
+
+.section-products2 .products,
+.product-accessories2 .products
+    
+    .abo-period-title
+        color: $cp1
+        margin-bottom: 3px
+        font-weight: normal
+        font-size: 22px
+
+    .price
+        color: #aaa
+        font-size: 18px
+
+    .abo-label-mc
+        color: #aaa
+        font-size: 13px
+        margin-bottom: 0
+        letter-spacing: 1px 
+
+    .netto
+        color: white
+        font-weight: normal
+        font-size: 13px
+
+    .title-price
+        margin: 0
+        font-size: 50px
+        line-height: 1
+
+    .title-price-label
+        color: white
+        font-size: 13px
+        text-transform: uppercase
+
+    .product-miniature
+        overflow: initial !important
+        padding-bottom: 30px !important
+
+        > a
+            display: block
+
+    .product-thumbnail
+        text-align: center
+    .btn
+        margin-top: 40px
+        letter-spacing: 1px
+        padding: 10px 15%
+        position: absolute
+        bottom: -50px
+        margin: 0
+        left: 50%
+        margin-left: -25%
+
+
+#products .product-title, .section-products .product-title, .product-accessories .product-title, .product-miniature .product-title a
+    color: $c-text
+
+
+#products .thumbnail-container, .section-products .thumbnail-container, .product-accessories .thumbnail-container, .product-miniature .thumbnail-container
+    height: auto
+
+
+
+#products .product-price-and-shipping, .section-products .product-price-and-shipping, .product-accessories .product-price-and-shipping, .product-miniature .product-price-and-shipping
+    color: $cp1
+
+
+
+.all-product-link .btn-primary > span, .all-product-link .btn-primary > i
+    // color: $color-link
+
+
+
+
+
++breakpoint(desktop)
+    #category.category-reklama-w-google 
+        .products
+
+            .product-miniature
+                width: 33%
+                max-width: 30%
+        .profits-slider .article-no-image__title
+            font-size: 34px
+            line-height: 1
+
+    .page-content-left
+        display: none
+
++breakpoint(tablet)
+
+    #search_filters
+        padding-left: 0
+
+        .facet .title
+            padding: 5px
+    .category-reklama-w-google .product-short-users
+        font-size: 14px
+
+    #search_filters .facet
+        margin-left: 0
+
+    .page-category:not(.category-reklama-w-google)
+        > .page-container
+            display: block
+
+    #search_filters .facet:hover ul
+        display: none
+
+    #search_filters .facet:hover ul.show
+        display: block
+
+    .category-top-menu
+        width: 100%
+        padding-right: 0
+        > li
+            display: block
+            overflow-y: hidden
+            overflow-x: auto
+            width: 100%
+    .category-sub__item[data-depth="0"].item--submenu
+        padding-right: 0
+    .category-sub__arrow[data-depth="0"]
+        display: none
+
+
+
++breakpoint(mobilewide)
+    #category.category-reklama-w-google 
+        #products 
+            .product-miniature
+                width: 45%
+                max-width: 100%
+
+
+    #category .btn-add-listing
+        width: 80%
+
+
+    .category-reklama-w-google .page-banner .page-banner__header
+        width: 100%
+
+    .products-list, .product-item-list
+        padding-bottom: 0
+
+
+    .category-top-menu__title
+        // display: none
+
+
++breakpoint(mobile)
+    #category.category-reklama-w-google 
+        #products 
+            .product-miniature
+                width: 100%
+                max-width: 100%
+                margin: 10px 0
+                
+
+    .category-top-menu__title
+        padding-bottom: 10px
+
+    .products-sort-order .btn-unstyle .sort-title
+        display: none
+
+    .products-sort-order.open .btn-unstyle
+        padding-left: 8px

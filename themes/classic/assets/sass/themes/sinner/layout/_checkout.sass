@@ -1,0 +1,506 @@
+#checkout
+    .page-content
+        max-width: 1200px
+        margin: 0 auto
+    
+.checkout-step
+
+
+    &.-current
+        .step-edit
+            display: none
+
+    &.-clickable.-complete
+        cursor: pointer
+    .fspromo
+        display: none
+
+
+    .fsbasket-belt
+        background: #eee
+
+
+    .btn--border
+        // border: 0
+
+
+    .step-title
+        +flexbox()
+        +align-items(center)
+        font-size: 26px
+        padding: 15px 25px 15px 35px
+        //display: none
+
+    .step-edit
+        position: relative
+        margin-left: auto
+        // cursor: pointer
+        +flexbox()
+        +align-items(center)
+        font-size: 15px
+
+        i
+            font-size: 15px
+            margin-right: 5px
+
+
+    .step-title
+        position: relative
+        border-bottom: 1px #ddd solid
+        > i
+            position: absolute
+            left: 0
+
+
+    .text-muted
+        font-size: 14px
+        color: #7a7a7a
+
+
+    .tab-pane
+        width: 100%
+        display: none
+
+        &.active
+            display: block
+
+
+    .checkout-step-1
+
+        .step-title
+            display: none
+
+
+    .step-subtitle
+        text-align: center
+        font-size: 24px
+
+
+    #login-form
+        margin-top: 38px
+
+
+    #customer-form
+    .row--ck
+        display: none
+            
+
+.checkout-step
+    &.-complete
+        .step-button-next
+            display: none
+
+    &.-complete,
+    &.-recheable
+        .content
+            display: none
+
+        .step-number
+            color: $cp1
+            margin-left: 0
+
+        &:hover
+            .step-title
+                color: $cp1
+
+        .step-edit
+            cursor: pointer
+            &:hover
+                color: $cp1
+
+
+.checkout-step.-current.-reachable.-complete .content
+    display: block
+
+.checkout-step-2
+    form
+        position: relative
+        max-width: 80%
+
+    .content
+        padding-top: 30px
+
+#delivery-addresses
+    +flexbox()
+    +justify-content(center)
+
+
+
+    .address
+        // padding: 30px
+        
+
+
+
+
+.address-item
+    border: 2px #f5f5f5 solid
+    border-radius: 5px
+    margin: 2% 1%
+    +flex-basis(48%)
+    background: #f5f5f5
+
+    h4
+        font-size: 24px
+        font-weight: 400
+        margin-bottom: 15px
+
+    address
+        font-size: 15px
+
+    &.selected
+        border: 2px $cp1 solid
+        background: #fff
+
+    .custom-radio
+        margin-left: 5px
+        opacity: 0
+
+
+    .address
+        margin-left: 0
+        text-align: center
+        margin-top: -20px
+        //overflow: hidden
+        //max-height: 82px
+
+    .address-footer
+        +flexbox()
+        +justify-content(space-between)
+        +align-items(center)
+        padding: 15px 10px
+        border-top: 1px #ddd solid
+        //margin-top: 30px
+
+        a
+            +flexbox()
+            +justify-content(space-between)
+            +align-items(center)
+
+            &:hover
+                i
+                    color: $cp1
+
+            i
+                font-size: 18px
+                display: block
+                margin-top: -2px
+                margin-right: 5px
+
+
+.address-item__header
+    overflow: hidden
+    // padding: 30px 0
+    text-align: center
+    //padding-bottom: 30px
+    // height: 150px
+
+
+    .radio-block
+        display: block
+        padding-bottom: 15px
+        // overflow: hidden
+        text-align: center
+        // height: 95px
+
+
+.add-address__add-link
+    display: block
+    text-align: center
+    border: 2px $c-black solid
+    border-radius: 6px
+    line-height: 1
+    padding: 2px 8px
+    background: $c-black
+    color: white
+    font-size: 14px
+    font-weight: 400
+    margin-left: 10px
+    border-color: $c-black
+    position: absolute
+    left: 100%
+    top: 0
+    white-space: nowrap
+    +flexbox()
+    +justify-content(space-between)
+    +align-items(center)
+
+    &:hover
+        background: $cp1
+        border-color: $cp1
+        color: white
+
+    i
+        display: block
+        font-size: 24px
+        margin-right: 10px
+        margin-left: 0
+
+
+#delivery-addresses,
+#invoice-addresses
+    position: relative
+    margin: 15px -1%
+
+.js-address-form
+    .h4
+        font-weight: 400
+    p
+        text-align: center
+        margin-bottom: 0
+
+
+.delivery-logo
+    padding-right: 10px
+
+.delivery-options
+    padding-right: 0 !important
+
+        
+    input
+        min-width: 0
+        height: auto
+        margin-right: 10px
+
+    .delivery-option
+        label
+            // padding-right: 0 !important
+
+
+    #delivery-addresses
+        +justify-content(center)
+
+
+
+#delivery-address
+    max-width: 760px
+    margin: 30px auto
+    display: block
+
+    .cancel-address
+        color: $c-black
+        margin-right: 45px
+
+        &:hover
+            color: $cp1
+
+
+.checkout-step-3
+    form
+        max-width: 680px
+        margin: 0 auto
+    .delivery-option
+        background: transparent
+        border: 1px #ddd solid
+        padding: 5px 10px
+        border-radius: 5px
+        margin: 30px 0
+        +align-items(center)
+        +justify-content(center)
+
+.checkout-step-4
+    .content
+        padding: 25px 25px 25px 75px
+
+    .summary-selected-carrier
+        border: 1px #ddd solid
+        padding: 15px
+        margin-top: 15px
+
+
+#order-items
+    padding-top: 30px
+
+    h3
+        font-size: 22px
+
+    ._desktop-title
+        display: none
+
+
+    
+.order-confirmation-table
+    .image
+        img
+            max-width: 100px
+
+    .details
+        a
+            color: $c-black
+
+            &:hover
+                color: $cp1
+
+    table
+        margin-left: auto
+        min-width: 30%
+
+        td
+            padding-left: 30px
+            text-align: right
+            border-bottom: 1px #ddd solid
+            padding: 6px 20px
+            font-size: 16px
+
+            &:first-child
+                text-align: left
+
+                
+#checkout
+    .modal-content
+        .close
+            opacity: 1
+            margin: 15px
+    .js-modal-content
+        #center_column
+            padding: 0 45px
+            font-size: 14px
+
+    .modal-backdrop.fade.in
+        display: block
+        opacity: 0.3
+
+#module-payu-payment
+    text-align: center
+    form
+        max-width: 585px
+    .payuConditions
+        font-size: 14px
+
+    .alert
+        text-align: center
+
+    #cart_navigation
+        > a
+            margin-right: 10px
+
+
+#order-summary-content
+    margin: 60px
+
+.sumedit-carrier
+    margin-top: 30px
+
+.payment-option
+    margin-bottom: 10px
+    label
+        span
+            display: inline-block
+            vertical-align: middle
+            padding-left: 15px
+            font-size: 22px
+
+#checkout
+    .condition-label
+        padding-left: 30px
+
+#conditions-to-approve
+    max-width: none
+    //margin-left: -5px
+    margin-bottom: 15px
+    margin-top: 60px
+
+.js-alert-payment-conditions
+    margin-left: -5px
+
+
+#payment-confirmation
+    margin-top: 46px
+
+
+.payment-option label img
+    display: inline-block
+    vertical-align: middle
+    margin-left: 10px
+
+.payment-option
+    +flexbox()
+    +align-items(center)
+
+#payuAmountInfo
+    font-size: 24px
+    display: block
+    float: none
+    text-align: center
+    padding: 15px 0
+    margin-top: 60px
+
+#payuLogo
+    float: none
+    text-align: center
+    display: block
+    margin: 15px auto
+
++breakpoint(mobilewide)
+
+    
+    .checkout-step-2 form
+        max-width: 100%
+        margin: 15px 0
+
+    .add-address__add-link
+        position: static
+        margin: 15px 0
+
+    .checkout-step-1
+        .flex-row-center
+            // display: block
+
+
+    #delivery-addresses, #invoice-addresses
+        display: block
+        margin: 15px 0
+
+    .address-item
+        margin: 5px 0
+
+    #payment-confirmation
+        margin: 30px 0
+
+
+    .checkout-step 
+        .step-title
+            padding-left: 10px
+            font-size: 22px
+            > i
+                display: none
+
+
+    #checkout
+        .condition-label
+            padding-left: 30px
+
+
+    .checkout-step-4 .content
+        padding: 25px
+
+    #order-items .order-line
+        +flex-wrap(nowrap)
+        padding: 10px 20px
+
+    #order-items .order-confirmation-table
+        padding: 0
+
+    #order-items .order-confirmation-table .div-price
+        margin: 0
+
+
++breakpoint(mobile)
+
+    .payment-option label span
+        font-size: 18px
+    .order-confirmation-table
+        p
+            font-size: 15px
+
+
+        table
+            width: 100%
+
+        .image img
+            max-width: 50px
+
+
+    #delivery-address
+        .cancel-address
+            margin-right: 0

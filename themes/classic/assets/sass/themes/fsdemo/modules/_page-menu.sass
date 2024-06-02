@@ -1,0 +1,81 @@
+.page-header .page-menu__item:hover > .page-menu__link .page-menu__label
+    color: inherit
+
+    
+.page-header
+    .page-menu__list
+        .page-menu__droplist
+            background: #212121
+            // background: $cp1
+            border-top: 1px rgb(255 255 255 / 20%) solid
+            > li > a
+                font-weight: 400
+
+    .page-menu__link
+        line-height: 1.2
+        padding: 12px ​10px
+
+
+.page-header
+
+    [data-depth]
+        color: white
+        line-height: 1.2
+        &:hover
+            color: $cp4
+
+    [data-depth="0"]
+        color: black
+        font-weight: 400
+        &:hover
+            color: $cp1
+
+
+    .page-menu__arrow
+        margin-left: -5px
+
+.page-header
+    #category-2
+        [data-depth="1"] a
+            color: black
+            font-weight: 400
+            &:hover
+                color: $cp1
+
+        [data-depth="2"] a
+            color: white
+            &:hover
+                color: $cp4
+
+        
+        #lnk-promocje a
+            color: $cp1
+
+            &:hover
+                color: $c-black
+
+
+
+
+
+#my-account .page-header .page-menu, #authentication .page-header .page-menu
+    display: block
+
+
+
+
+.nav-top-user.js-dropdown
+    li.current:last-child
+        .dropdown-item
+            padding-bottom: 7px
+            background: $c-black
+            color: white
+
+            &:hover
+                color: white
+                background: $cp1
+
+
++breakpoint(desktop)
+    #my-account .page-header .page-menu, #authentication .page-header .page-menu
+        display: none

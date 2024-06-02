@@ -1,0 +1,159 @@
+
+body
+    padding-top: 100px
+
+// DEMO OFF DLA KLIENTA
+
+.demo--hide
+    display: none !important
+
+.demo--show
+    display: block !important
+
+.section-products__title
+    strong
+        color: black !important
+        background: #eee !important
+
+
+
+.topcontact
+    +flexbox()
+
+
+.promo-basket,
+.page-footer .block_newsletter
+    display: none
+
+
+.btn--icon.btn--primary:focus i
+    color: $c-black
+
+.page-heading
+    border-top: 0
+
+
+.page-content
+    .log-social
+        // display: none
+
+
+.page-cms-13
+    text-align: center
+
+.tooltip-comp
+    border-radius: 3px
+
+#cms .page-content.page-cms p
+    font-size: 21px
+    text-align: center
+
+
+
+.page-content.page-cms
+    padding: 0 10%
+
+    [style*="font-size:medium"]
+        font-size: 18px !important
+
+    ol, ul
+        margin: 15px 0 15px 30px
+        font-weight: 300
+        line-height: 1.8
+
+    ul li
+        list-style: disc
+
+    p
+        font-size: 18px
+
+
+        
+
+
+.page-content.page-cms
+    h1
+        font-size: 44px
+    h2
+        font-size: 34px
+    h3
+        font-size: 24px
+    h4
+        font-size: 24px
+    h5
+        font-size: 18px
+        font-weight: 400
+    
+    img
+        max-width: 100%
+        width: auto
+        height: auto
+        +translateZ(0)
+
+    .page-content.card-block
+        border: 0
+        text-align: center
+
+    .cms-category-list,
+    .cms-category-page
+        border: 1px #eee solid
+        padding: 30px
+        margin: 2%
+        +multipleTransition((border 0.25s ease-in-out, opacity 0.55s linear, margin 0.55s ease-in-out))
+
+        &:hover
+            border-color: $cp1
+            +multipleTransition((border 0.25s ease-in-out, opacity 0.55s linear, margin 0.55s ease-in-out))
+
+        p
+            margin-bottom: 0
+
+        .cms-category-page__title,
+        .cms-category__title
+            color: $cp1
+            font-weight: 400
+            font-size: 24px
+
+    .cms-category-page-title
+        font-weight: 400
+        border-bottom: 1px #ddd solid
+        padding-bottom: 25px
+
+        .sep
+            color: $cp1
+
+    .contact-sinner
+        padding-top: 30px
+        max-width: 980px
+        margin: 30px auto 0
+
+
+#cms .page-content.page-cms p
+    text-align: left
+
+
++breakpoint(laptop)
+    .fsbasket-sum
+        padding: 15px
+
++breakpoint(desktop)
+    body
+        padding-top: 60px
+
+    body#index
+        padding-top: 46px
+
+    body
+        // padding-top: 90px
+
+
++breakpoint(tablet)
+
+    
+    #my-account
+        .link-item
+            font-size: 14px
+
+
+    .page-content.page-cms
+        padding: 0px 2%

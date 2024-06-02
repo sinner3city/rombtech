@@ -1,0 +1,40 @@
+.page-cms .breadcrumbs__item:nth-child(2)
+    display: block
+
+
+.cms-id-13,
+.page-category.category-id-2,
+.page-cart
+    .breadcrumb
+        display: none
+
+#order-detail .breadcrumb, #history .breadcrumb, #order-slip .breadcrumb, #module-myprestaloyalty-default .breadcrumb, #module-psgdpr-gdpr .breadcrumb, .page-cms .breadcrumb
+    display: none
+
+.page-product .breadcrumbs__item:nth-child(1)
+    +flexbox()
+
++breakpoint(desktop)
+
+    .page-category
+        .breadcrumb
+            margin-top: 15px
+
++breakpoint(tablet)
+
+    .page-category
+        .breadcrumb
+            margin-top: 15px
+    
+    #order-detail .breadcrumb, #history .breadcrumb, #order-slip .breadcrumb, #module-myprestaloyalty-default .breadcrumb, #module-psgdpr-gdpr .breadcrumb, .page-cms .breadcrumb
+        display: block
+
+    .breadcrumb
+        border-bottom: 1px #ddd solid
+
+
++breakpoint(mobilewide)
+
+    .page-category
+        .breadcrumb
+            margin-top: 0

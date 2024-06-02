@@ -1,0 +1,385 @@
+$col-margin: 15px
+$col-margin-double: 30px
+
+img
+    image-rendering: -webkit-optimize-contrast
+    
+.ico--500
+    font-size: 500px
+
+.f-22
+    font-size: 22px
+
+
+.flex-wrap
+    +flexbox()
+    +flex-wrap(wrap)
+
+
+.text-right
+    text-align: right
+
+.text-center
+    text-align: center
+
+    
+.pd-t-60
+    padding-top: 60px
+    
+.mg-b-30
+    margin-bottom: 30px
+
+.mg-b-15
+    margin-bottom: 15px
+
+
+.pd-b-30
+    padding-bottom: 30px
+
+.pd-b-15
+    padding-bottom: 15px
+
+
+.mg-t-30
+    margin-top: 30px
+
+
+.mg-t-15
+    margin-top: 15px
+
+
+.mg-t-60
+    margin-top: 60px
+
+
+.pd-t-30
+    padding-top: 30px
+
+.mg-t-5
+    margin-top: 5px
+
+.mg-b-5
+    margin-bottom: 5px
+
+
+.mg-ver-30
+    margin-top: 30px
+    margin-bottom: 30px
+
+.pd-ver-30
+    padding-top: 30px
+    padding-bottom: 30px
+
+
+
+.mg-ver-60
+    margin-top: 60px
+    margin-bottom: 60px
+    
+.pd-ver-60
+    padding-top: 60px
+    padding-bottom: 60px
+
+.display--block
+    display: block
+
+.display--inline
+    display: inline-flex
+
+.item--hide
+    display: none
+
+
+
+.link--u
+    text-decoration: underline
+    color: $c-black
+
+    &:hover
+        color: $cp1
+        text-decoration: none
+
+
+.js-dropdown
+    position: relative
+    .btn-unstyle
+        background: $cp1
+        font-size: 14px
+        color: white
+        +flexbox()
+        +align-items(center)
+        padding: 2px 2px 2px 8px
+        border: 1px rgb(51 51 51 / 22%) solid
+        background: transparent
+        color: #313131
+        height: 30px
+        padding: 0 0 0 9px
+        border: 1px rgb(51 51 51 / 12%) solid
+
+        > .expand-more
+            margin-left: 5px
+
+        i
+            color: #313131
+
+
+    .dropdown-menu
+        position: absolute
+        display: none
+        color: $c-black
+        background: white
+        font-size: 14px
+        font-weight: 400
+        padding: 8px
+        min-width: 100%
+        box-shadow: 0px 1px 21px rgb(0 0 34 / 11%)
+
+        > li
+            width: 100%
+            border-bottom: 1px #ddd solid
+
+            &:last-child
+                border-bottom: 0
+                margin-bottom: 0
+                padding-bottom: 0
+                a
+                    padding-bottom: 0
+
+        .current
+            .dropdown-item
+                color: $cp1
+
+    .dropdown-item
+        display: block
+        color: $c-black
+        padding: 5px 0
+        white-space: nowrap
+
+        &:hover
+            color: $cp1
+
+
+    .material-icons
+        color: white
+        +multipleTransition((transform 0.35s ease, height 0.75s ease, background 0.45s, margin 0.45s))
+
+
+// lists
+
+ul.list
+    font-weight: 300
+    list-style: square
+    margin: 30px 0 30px 40px
+
+    &.t-center
+        list-style: none
+        margin-left: 0
+        margin-bottom: 60px
+
+    li
+        margin: 10px 0
+
+    
+.list--inline
+    padding: 0 0 0
+    +flexbox()
+    +align-items(center)
+    +justify-content(center)
+    img
+        max-height: 55px
+        margin: 12px 25px
+
+
+
+.radius
+    border-radius: $radius
+
+
+.ico-top-text
+    +flex-wrap(wrap)
+    +flexbox()
+    +justify-content(center)
+    text-align: center
+
+    .ico-top-text__ico
+        font-size: 64px
+        width: 100%
+        color: #333
+        // color: $cp1
+        margin-bottom: 10px
+
+    li
+        padding: 5px 35px
+        +flex-wrap(wrap)
+        +flexbox()
+        +justify-content(center)
+
+.ico-top-text__text
+    margin: 0
+    font-weight: 400
+    font-size: 18px
+    margin-top: 5px
+    opacity: 0
+    +multipleTransition((transform 0.5s ease, opacity 0.5s ease, margin 0.5s ease))
+
+    .animation--start &
+        opacity: 1
+
+
+.section-badge
+    position: relative
+    margin-top: -100px
+    left: 50%
+    background: url('../images/bg-badge.png') no-repeat
+    max-width: 300px
+    padding: 30px
+    text-align: center
+    +translate3d((-50%, 0, 0))
+
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 100%
+        // margin-left: 20px
+        width: 17px
+        height: 20px
+        background: url('../images/badge-corner.png') no-repeat
+
+
+    .ico
+        +rem(70)
+        color: white
+        margin: 30px 0 50px 0
+
+    .label-price__label
+        +rem(17)
+        .cp1
+            color: white
+
+    .label-price__price
+        color: white
+
+    .btn
+        width: 100%
+        text-align: center
+        margin-top: 30px
+        background: $cp3
+        border-color: $cp3
+
+        &:hover
+            background: $c-black  
+            border-color: $c-black    
+
+
+// .label-price__price
+//     position: relative
+//     +rem(50)
+//     font-weight: 700
+//     line-height: 1
+//     display: block
+
+//     &.price--old
+//         position: absolute
+//         top: 100%
+//         overflow: hidden
+//         font-weight: 300
+//         text-decoration: line-through
+//         // letter-spacing: 10px
+//         +rem(24)
+
+//     &.price--save
+//         position: absolute
+//         top: 100%
+//         overflow: hidden
+//         font-weight: 300
+//         letter-spacing: 10px
+//         +rem(18)
+
+//     .label-price--big &
+//         +rem(100)
+
+//         small
+//             +rem(40)
+
+//     small
+//         font-weight: 400
+//         +rem(40)
+
+
+// .label-price__label
+//     display: block
+//     +rem(22)
+//     font-weight: 700
+//     line-height: 1
+//     letter-spacing: 5px
+//     margin: 0
+//     text-transform: uppercase
+//     // margin-bottom: 60px
+//     padding-left: 10px
+    
+
+// autocomplete
+
+.ui-autocomplete
+    mragin-right: 5px
+    border-radius: 0
+    font-size: 12px
+
+.ui-menu-item a.ui-state-focus
+    background: none
+    border: 0
+
+.label-ico
+    +flexbox()
+    +justify-content(center)
+    +align-items(center)
+    +rem(20)
+
+    .ico
+        margin-right: 10px
+
+
++breakpoint(laptop)
+    .f-22
+        font-size: 19px
+
+
++breakpoint(desktop)
+    .flex-wrap-md
+        +flex-wrap(wrap)
+
+
++breakpoint(tablet)
+    .flex-wrap-mt
+        +flex-wrap(wrap)
+
+    .f-22
+        font-size: 17px
+        line-height: 1.3
+
++breakpoint(mobilewide)
+    [data-col]
+        margin-left: 0
+        margin-right: 0
+        > *
+            +flex-basis(100%)
+
+
+    .list--inline
+        padding: 0 0 0
+        img
+            max-height: 40px
+            margin: 10px 15px
+
+
++breakpoint(mobile)
+
+    .section-badge
+        max-width: 260px
+        margin-top: -80px
+        padding: 15px 15px 20px
+        // left: 48%
+
+        .ico
+            margin: 0 0 30px 0

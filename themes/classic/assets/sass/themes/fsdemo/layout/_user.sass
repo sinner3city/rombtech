@@ -1,0 +1,62 @@
+
+#order-slip,
+#history,
+#order-follow,
+#identity,
+#module-ps_emailalerts-account
+    .breadcrumb
+        display: none
+    .panel-top
+        display: none
+        
+    .table
+        font-size: 1rem
+
+#my-account
+    #emailsalerts,
+    #returns-link
+        display: none
+
+
+    
+#history
+    .orders.hidden-md-up
+        display: none
+
+    .order-actions
+        font-weight: 500
+
+        [data-link-action]
+            margin-right: 5px
+
+
+#order-detail
+    .hidden-md-up
+        display: none
+
++breakpoint(mobilewide)
+    
+    #history
+        .orders.hidden-md-up
+            display: block
+
+            .col-xs-12
+                display: flex
+                flex-wrap: wrap
+                /* gap: 30px; */
+                text-align: center
+                justify-content: center
+                flex-direction: column
+
+            .status .label
+                font-size: 12px
+                border: 1px #ddd solid
+                margin-top: 10px
+
+    #order-detail
+        .hidden-md-up
+            display: block
+
+        .order-item
+            .qty
+                display: none

@@ -1,0 +1,336 @@
+
+
+.offer-slider,
+.gfx-slider,
+.article-slider
+    // opacity: 0
+    // width: 60%
+    padding: 0 55px
+    margin-top: $space-m
+    // margin-bottom: $space-m
+    +multipleTransition((opacity 0.2s, background 0.2s, margin 0.35s ease, border 0.2s, transform 0.2s))
+
+
+
+
+.gfx-slider
+    margin-top: 60px
+
+.offer-slider__item,
+.gfx-slider__item
+    background: $cp2
+    background: #f5f5f5
+    margin: 0 5%
+    border: 1px rgb(0 0 0 / 11%) solid
+    border-radius: 7px
+    min-height: 220px
+    +flexbox()
+    +align-items(center)
+    +justify-content(center)
+    // +gradientYellow()
+    +translateZ(0)
+
+
+.gfx-slider__item
+    background: transparent
+    i
+        font-size: 64px
+        color: $cp1
+
+
+.offer-slider
+    .splide__track
+        padding-bottom: 30px
+
+    .splide__pagination__page
+        background: #fff
+
+
+.splide__arrow 
+    margin-top: 0
+    opacity: 0.2
+    +multipleTransition((opacity 0.25s))
+
+    &:hover
+        opacity: 1
+        +multipleTransition((opacity 0.25s))
+
+    &:hover svg
+        fill: $cp1
+
+    svg
+        fill: $c-black
+        opacity: 1
+
+.slider--icons
+    .splide__arrow
+        opacity: 1
+
+        svg
+            fill: $cp1
+
+
+.splide__pagination__page:hover,
+.splide__pagination__page.is-active
+    background: $cp1
+
+    .offer-slider &
+        background: $cp3
+
+
+.gfx-slider
+    .splide__arrows
+        // display: none
+
+.splide__pagination li
+    margin: 0 5px
+
+
+.splide__pagination
+    bottom: 15px
+    display: none
+
+.offer-slider__item:hover,
+.gfx-slider__item:hover
+    border-color: $c-black
+
+
+.section
+
+    .offer-slider__title,
+    .gfx-slider__title
+        +rem(30)
+        color: $c-black
+        font-weight: 300
+        text-align: center
+    // text-transform: uppercase
+
+.offer-slider__item, .gfx-slider__item
+    // overflow: hidden
+
+.offer-slider__price
+    position: absolute
+    bottom: -30px
+    left: 50%
+    background: #333
+    color: white
+    +rotate(-5)
+    border-radius: 6px
+    +translate3d((-50%, 0, 0))
+    // +translate3d((-50%, 0, 0))
+
+    .price
+        display: block
+        padding: 6px 30px
+        // +rotate(5)
+
+
+.splide__arrow--prev
+    left: 0
+
+.splide__arrow--next
+    right: 0
+
+.offer-slider__price .price
+    white-space: nowrap
+
+
+.splide__slide
+    cursor: grab
+    i
+        display: block
+        margin-bottom: 15px
+
+        .offer-slider &
+            margin-top: -30px
+
+
+    &.is-active
+        i
+            color: $cp1
+
+
+.splide__slide.is-active
+    i
+        color: $cp1
+.product--firmowywww
+    .splide__slide
+        
+        
+        &.is-active,
+        &:hover
+            i
+                color: $cp3a
+
+
+.product--firmowareklama
+    .splide__slide
+        cursor: grab
+    .splide__slide.is-active,
+    .splide__slide:hover
+        i
+            color: $cp4
+
+    .splide__arrow svg
+        fill: $cp4
+        &:hover
+            fill: $c-black
+
+
+.product--firmowysklep
+    .splide__slide.is-active
+        i
+            color: $cp1
+
+
+.slider--articles
+    .splide__slide
+        cursor: grab
+
+.profits-slider
+    margin: 0 30px
+    +translateZ(0)
+    .article-no-image
+        height: 100%
+        margin: 0 15px
+
+    .article-no-image
+        font-size: 16px
+
+    
+    .article-no-image__title
+        font-size: 40px
+
+
+.gfx-slider__item
+    pointer-events: none
+
+
+.slider--articles,
+.slider--icons
+    margin: 0 auto
+    margin-top: $space-m
+    max-width: 100%
+
+    .ico-top-text li
+        padding: 0 5px
+
+.slider--articles,
+.slider--icons
+    margin-top: 0
+
+    .splide__track
+        margin: 0 60px
+
+.slider--icons
+    .splide__arrows
+        opacity: 1
+        color: $cp1
+
+    .splide__slide
+        min-width: 150px
+        margin-right: 0 !important
+
+// article slider
+
+.slider-item
+    height: 95%
+    padding: 30px
+    border: 1px $c-border solid
+    margin: 0 15px
+    border-radius: $radius
+
+
+.slider-item__title
+    font-size: 28px
+
+.slider-item__content
+    font-size: 16px
+
+
+.slider--articles
+    .slider-item
+        text-align: center
+        +flexbox()
+        +align-items(center)
+        +justify-content(center)
+        +flex-wrap(wrap)
+
++breakpoint(laptop)
+    .section
+        .gfx-slider__title
+            font-size: 24px
+    .slider-item
+        // margin: 0
+
+    .slider--articles .slider-item
+        margin: 0
+
++breakpoint(desktop)
+    .profits-slider .article-no-image__title
+        font-size: 30px
+
+    .profits-slider .article-no-image
+        margin: 0 7px
+        padding: 30px 18px
+
+
+
+
++breakpoint(tablet)
+    .offer-slider__title
+        +rem(24)
+        text-transform: none
+
+    .offer-slider,
+    .gfx-slider
+        .splide__arrows
+            display: none
+    .section .offer-slider__title, .section .gfx-slider__title
+        font-size: 24px
+
+
+    .gfx-slider__title
+        padding: 5px
+        font-size: 22px
+
+    .gfx-slider
+        padding: 0
+
++breakpoint(mobilewide)
+    .offer-slider__item, .gfx-slider__item
+        width: 80%
+        margin: 0 auto
+        position: relative
+
+
+
+
++breakpoint(mobile)
+    .offer-slider__item, .gfx-slider__item
+        width: 95%
+        margin: 0 auto
+        position: relative
+
+    .profits-slider .article-no-image
+        text-align: center
+
+
+    .profits-slider__slide p ~ p
+        display: none
+
+
+    .profits-slider
+        margin: 0
+
+    .splide__arrows
+        display: none
+        
+    .slider--articles .splide__track, .slider--icons .splide__track
+        margin: 0
+
+
+
+@media only screen and (max-width: 400px)
+    .section--intro .btn, .section--intro .btn--primary, .section--intro .btn--secondary, .section--intro .btn--border
+        padding: 10px 20px

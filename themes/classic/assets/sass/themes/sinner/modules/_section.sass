@@ -1,0 +1,515 @@
+
+
+.section
+    position: relative
+    background-size: cover
+    background-attachment: fixed
+    padding: $s-padding
+    margin: $s-margin
+
+    &.content--padding
+        padding-left: $page-content-padding
+        padding-right: $page-content-padding
+
+    article:not(.article-no-image)
+    
+    +multipleTransition(( opacity 0.45s, background 0.65s))
+
+    &::before
+        position: absolute
+        content: ''
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: top center no-repeat
+        background-size: cover
+        background-attachment: fixed
+        z-index: -1
+        pointer-events: none
+
+
+    &.pd-t-0
+        padding-top: 0
+
+
+
+    &.mg-t-0
+        margin-top: 0
+
+
+    &.pd-b-0
+        padding-bottom: 0
+
+    &.mg
+        padding: 80px 0
+        border-bottom: 1px #ddd solid
+
+    &.mg-0
+        margin-top: 0
+        margin-bottom: 0
+
+
+    &.section--topup
+        margin-top: -30px
+
+    &.pd-ver
+        padding-top: 30px
+        padding-bottom: 30px
+
+
+
+.section--full
+    padding-left: 0
+    padding-right: 0
+
+.section--bg
+    padding: $s-bg-padding
+    margin-left: -#{$page-padding}
+    margin-right: -#{$page-padding}
+
+    &.pd-hor
+        padding-left: 30px
+        padding-right: 30px
+
+    &.pd0
+        padding: 0
+
+    &.mg0
+        margin-top: 0
+        margin-bottom: 0
+
+
+.section--offer
+    .splide__pagination
+        display: none
+
+.section__subtitle
+    display: block
+    // font-weight:  $f-normal
+    text-transform: uppercase
+    letter-spacing: 2px
+    opacity: 1
+    +rem(15)
+    margin-top: 7px
+    margin-bottom: 0
+
+
+
+.section__title
+    margin-bottom: 30px
+    margin-top: 0
+    // font-size: 56px
+
+    &.mg-b-0
+        margin-bottom: 0
+
+    strong
+        font-weight: 300
+
+
+.section__header.invert
+    .section__title,
+    .section__subtitle
+        color: white
+    
+.section--free
+
+    .section__header
+        margin-bottom: 30px
+
+    .section__subtitle
+        margin-top: 25px
+        text-transform: none
+        letter-spacing: 1px
+        font-size: 22px
+        max-width: 1200px
+        margin: 25px auto 0
+
+
+    strong
+        font-weight: 300
+
+.section--buy
+    margin-bottom: 0
+
+
+.section--promocode
+    border-top: 1px #ddd solid
+    padding-top: 80px
+
+.section--p24
+    padding-top: 0
+    padding-bottom: 0
+    padding: 0
+
+    img
+        max-width: 90%
+
+
+    .p24logo
+        +flex(1)
+        text-align: center
+
+
+
+.section__header
+    margin-bottom: 40px
+    text-align: center
+
+    &.mg-b-0
+        margin-bottom: 0
+
+    .color
+        color: $cp1
+
+    &.invert
+        color: white
+
+.t-left
+    text-align: left
+
+
+
+.section__content
+    text-align: center
+    padding:
+        left: $s-padding
+        right: $s-padding
+
+
+
+.section--nr1
+    background: #eee
+    +gradientLightGray()
+
+    .section__header
+        .flex-row-left-mid
+            margin-left: -10px
+
+    .label-ico
+        margin: 0 10px
+
+        &:first-child
+            // margin-left: 0
+
+            
+
+.section--contain
+    +justify-content(space-between)
+
+
+.section--recommended
+    padding-top: 60px
+    border-top: 1px $c-border solid
+    
+.section--startujemy
+    background-attachment: initial
+    margin-top: 0
+    margin-bottom: -28px
+    padding-right: 50%
+    background-position: center right
+    min-height: 770px
+
+    .abo-block
+        margin-top: 60px
+
+    .section__header
+        width: 100%
+
+
++breakpoint(laptop)
+    .section--promuj
+        .content--max
+            padding-left: 30px
+            padding-right: 30px
++breakpoint(desktop)
+    .section--free .section__subtitle
+        font-size: 20px
+
+
++breakpoint(tablet)
+    .section--buy
+        .col--2
+            width: 100%
+
+        p.page-padding.t-center.mg-b-60
+            br
+                display: none
+
+
+    .section__title
+        font-size: 44px
+
+    .section__subtitle
+        font-size: 14px
+        margin-top: 5px
+
+    .section__header
+        margin-bottom: 30px
+
+    
+
+    .section--why
+        margin-top: 80px
+
+    .section
+        margin-top: 45px
+        margin-bottom: 45px
+        // margin-left: 0
+        // margin-right: 0
+        padding-left: 0
+        padding-right: 0
+
+    .section--bg
+        padding-left: 30px
+        padding-right: 30px
+        padding-top: 45px
+        padding-bottom: 45px
+
+    .section--free
+        margin-bottom: 80px
+        .section__subtitle
+            br
+                display: none
+
+    .section--premium
+        .section__header
+            // margin-bottom: 60px
+
+        .review__stars
+            margin-bottom: 15px
+
+
+    .section--googleadd
+        +flex-wrap(wrap)
+        +justify-content(center)
+
+        .art__figure
+            display: none
+
+    .section--products
+        .art__footer
+            bottom: 0
+        .btn--large2
+            padding: 5px 10px
+            font-size: 16px
+            position: absolute
+            top: 190px
+            left: 0
+            left: 50%
+            transform: translate3d(-50%, 0, 10px)
+            white-space: nowrap
+
+        .art__header
+            padding: 15px
+
+
+            
++breakpoint(mobilewide)
+
+    .section--products
+        .btn--large
+            top: 173px
+        .art__list[data-col]
+            display: block
+            +flex-wrap(wrap)
+
+            .art
+                width: 100%
+                min-width: 100%
+                margin: 0
+                padding: 15px 30px
+                border: 0 #ddd solid
+                margin-bottom: 15px
+
+            .art__figure
+                //height: 180px
+
+            .art__footer
+                margin: 0
+
+        .art__header
+            //display: none
+
+        .art
+            padding: 0 30px
+
+        .art__content
+            p
+                //font-size: 17px
+                line-height: 1.3
+
+        .art__footer
+            p
+                line-height: 1
+
+    .section--premium
+        .article
+            text-align: justify
+            padding-left: 30px
+            padding-right: 30px
+
+        .art__title
+            font-size: 40px
+
+    .section--googleadd
+        .art
+            margin: 0
+        .art__content
+            padding-top: 0
+
+        .art__title
+            // font-size: 40px
+    .section
+        // padding-left: 0
+        // padding-right: 0
+        margin-top: 45px
+        margin-bottom: 45px
+
+    .t-msw-center
+        text-align: center
+
+    .section--home-offer2
+        text-align: center
+        padding-top: 0
+
+        .section__header
+            text-align: center
+            margin-bottom: 40px
+
+    .section
+        .section__title
+            text-align: center
+            line-height: 1
+            font-size: 34px
+
+        .page-padding
+            padding-left: 0
+            padding-right: 0
+
+    .section--home-offer__p
+        text-align: center
+
+    .section.section--offer
+        padding-top: 30px
+
+    .section__subtitle
+        text-align: center
+        padding-left: 15px
+        padding-right: 15px
+
+    .footer-company p
+        text-align: center
+
+
+    .section--free
+        padding:
+            top: 30px
+            // bottom: 30px
+
+
+    .section.section--offer
+        // padding-top: 0
+
+    .section--free
+        .section__subtitle
+            font-size: 18px
+
+
+    .section--products
+        [data-col][data-slider]
+            .art__figure
+                height: 180px
+
+
+
+    .section--google
+        .section__header
+            img
+                max-width: 80%
+
+    .article
+        padding-left: 30px
+        padding-right: 30px
+        > 
+            p
+                text-align: justify
+
+    .section--intro-text
+        .content--max
+            padding-left: 30px
+            padding-right: 30px
+            text-align: justify
+
+
+
+
+
+
+
++breakpoint(mobile)
+
+    
+    .section--optifast
+        .art__list
+            display: block
+
+    .section--google
+        .section__header
+            img
+                max-width: 80%
+
+        .article
+            padding-left: 15px
+            padding-right: 15px
+
+
+    .article
+        padding-left: 15px
+        padding-right: 15px
+        > 
+            p
+                text-align: justify
+
+    .section--intro-text
+        .content--max
+            padding-left: 15px
+            padding-right: 15px
+            text-align: justify
+            line-height: 1.3
+
+    .page-banner.banner--home
+        display: none
+    .section
+        .section__title
+            text-align: center
+            line-height: 1
+            font-size: 34px
+    .section__subtitle,
+    p.section__subtitle
+        display: block
+        +rem(13)
+
+
+    .section__content
+        text-align: left
+        margin: 15px 0
+
+    .section--free
+        .section__title
+            font-size: 34px 
+        .section__subtitle
+            font-size: 16px
+
+    .section--products
+        margin-top: 0
+
+    .section--premium
+        margin-bottom: 0
+        .section__title
+            font-size: 34px
+        .article
+            text-align: justify
+            padding-left: 15px
+            padding-right: 15px

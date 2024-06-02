@@ -1,0 +1,265 @@
+.fsbasket-sum
+    border-radius: 5px
+    background: #f5f5f5
+    padding: 30px
+    position: relative
+
+.fsbasket-belt
+
+    .label
+        font-size: 14px
+        font-weight: 500
+        color: white
+        color: #212121
+
+        &.t-left
+            text-align: left
+
+    .value
+        line-height: 1
+        font-size: 24px
+
+
+
+.fsbasket-belt
+    // position: relative
+    background: #ddd
+    // color: white
+    padding: 15px
+    border-radius: 5px
+    +flex-wrap(wrap)
+    +flexbox()
+    +align-items(center)
+    +justify-content(space-between)
+
+
+    .label
+        display: block
+        //text-align: center
+
+    .value
+        display: block
+        color: $c-black
+        font-weight: 500
+
+#cart-subtotal-discount
+    position: absolute
+    top: 0
+    right: 15px
+    padding: 5px 8px 8px
+    background: $cp1
+
+    .value
+        color: white
+
+
+.fsbasket-belt__titlepay
+    font-size: 27px
+    font-weight: 400
+    margin-bottom: 15px
+
+
+
+.fspromo-form
+    +flexbox()
+    +align-items(center)
+    +flex-wrap(wrap)
+
+
+
+.fspromo
+
+    .js-error-text
+        color: $c-black
+        // border: 1px $cp1 solid
+        display: block
+        padding: 15px
+
+.fspromo-form
+    margin-bottom: 15px
+
+
+.fspromo-form__label
+    margin-bottom: 5px
+    font-size: 14px
+    font-weight: 400
+
+
+.fsbasket-item__actions
+    margin-left: auto
+
+    .qty
+        width: 70px
+
+    .input-group-btn-vertical
+        display: none
+
+
+.fspromo-voucher__name
+    .value
+        display: none
+
+    i
+        font-size: 18px
+        vertical-align: top
+        margin: 4px 5px
+        color: $c-black
+
+
+.fspromo-code__item
+    text-align: center
+    margin-bottom: 15px
+
+    .label
+        font-size: 16px
+        cursor: pointer
+        text-decoration: underline
+
+        &:hover
+            color: $cp1
+
+.fsbasket-aside
+    width: 35%
+    .cart-detailed-actions
+        margin-top: 30px
+        text-align: center
+
+
+.fsbasket-list
+    width: 60%
+
+.fspromo-code__title
+    text-align: center
+
+.fsbasket
+    margin-bottom: 60px
+    +flexbox()
+    +flex-wrap(wrap)
+    +justify-content(space-between)
+
+    .product-line-info
+        max-width: 80%
+.fsbasket-item
+    position: relative
+    +flexbox()
+    +align-items(center)
+    border: 1px $c-border solid
+    padding: 15px 30px
+    border-radius: $radius
+    margin-bottom: 8px
+
+    .current-price
+        font-weight: 400
+        font-size: 20px
+
+    .qty
+        position: relative
+
+    .qty__label
+        margin: 0
+        font-weight: 400
+        position: absolute
+        bottom: 100%
+        margin-bottom: 10px
+        font-size: 20px
+        right: 0
+        white-space: nowrap
+        text-align: right
+        
+
+
+    .remove-from-cart
+        // position: absolute
+        top: 0
+        right: 0
+        color: #b3b3b3
+        +flexbox()
+        +align-items(center)
+        
+
+        span
+            display: inline-flexbox
+            margin-left: 5px
+            font-size: 12px
+            color: #ddd
+
+        &:hover
+            color: $cp1
+
+
+.fsbasket-item__content
+    font-size: 16px
+    // margin: 0 auto
+
+
+    .current-price
+        font-weight: 300
+
+.fsbasket-item__title
+    font-size: 19px
+    line-height: 1
+    font-weight: 400
+    color: $c-black
+    margin-bottom: 10px
+    display: block
+
+    &:hover
+        color: $cp1
+
+
+.fsbasket-item__versions
+    margin-bottom: 10px
+
+.fsbasket-item__value
+    color: $cp1
+    font-weight: 400
+
+
+.fsbasket-item__img
+    margin-right: 30px
+
+
+.fspromo-basket
+    padding: 10px
+    border: 1px $cp1 solid
+    padding: 15px
+    display: flex
+    +flex-wrap(wrap)
+    +justify-content(center)
+
+
+
+.lowercase
+    text-transform: lowercase
+
+
++breakpoint(tablet)
+    .fsbasket-item,
+    .fsbasket-item__versions
+        display: block
+        text-align: center
+
+    .fsbasket .product-line-info
+        width: 100%
+        max-width: 100%
+        text-align: center
+
+    .fsbasket-item__img
+        margin-right: 0
+        text-align: center
+        margin-bottom: 15px
+
+
++breakpoint(mobilewide)
+    .fsbasket
+        display: block
+    .fsbasket-list,
+    .fsbasket-aside
+        width: 100%
+
+    .fsbasket-aside
+        margin-top: 30px
+
++breakpoint(mobile)
+    .fsbasket-sum
+        padding: 15px

@@ -1,0 +1,40 @@
+.product-tile
+    position: relative
+    padding: 30px 30px 45px
+    border: 1px #ddd solid
+    border-radius: 12px
+    text-align: center
+    color: $c-black
+    margin: 15px
+    max-width: 360px
+
+    &:hover
+        background: $cp1
+        color: white
+
+        .product-tile__title
+            color: white
+
+        .product-tile__price
+            background: $c-black
+
+
+.section .product-tile__title
+    // color: $cp1
+    +rem(22)
+
+
+.product-tile__price
+    position: absolute
+    bottom: -12px
+    left: 50%
+    background: #a31fda
+    color: white
+    border-radius: 6px
+    +translate3d((-50%, 0, 0))
+    white-space: nowrap
+    // +translate3d((-50%, 0, 0))
+
+    .price
+        display: block
+        padding: 6px 30px

@@ -1,0 +1,173 @@
+
+.page-padding
+    width: 100%
+    max-width: 1400px
+    margin: 0 auto
+    padding:
+        left: $page-padding
+        right: $page-padding
+
+
+p.page-padding
+    max-width: 1200px
+    padding-left: 5%
+    padding-right: 5%
+    margin: 0 auto
+
+
+.overflow-x
+    overflow-y: hidden
+    overflow-x: auto
+
+.mg-t-60
+    margin-top: 60px
+
+.mg-t-15
+    margin-top: 15px
+
+
+.mg-t-30
+    margin-top: 30px
+
+
+.mg-b-30
+    margin-bottom: 30px
+
+
+.mg-b-15
+    margin-bottom: 15px
+
+
+.mg-b-60
+    margin-bottom: 60px
+
+.pd-b-30
+    padding-bottom: 30px
+
+    
+.pd-b-60
+    padding-bottom: 60px
+
+.pd-t-60
+    padding-top: 60px
+
+
+.pd-t-30
+    padding-top: 30px
+
+
+.article
+    margin: 4% 0
+    margin-top: 6%
+
+    &:first-child
+        margin-top: 4%
+
+    figure
+        margin: 0 4%
+
+        & ~ *
+            margin: 0 4%
+
+#bgvideo__play
+    position: absolute
+    top: 50%
+    left: 50%
+    z-index: 2
+
+
+
+.m-image
+    border-radius: $radius
+    img
+        border-radius: $radius
+
+.
+    opacity: 0
+    +multipleTransition(( opacity 1.55s))
+
+img.lazybg
+    min-height: 10px
+
+img
+    opacity: 1
+    +multipleTransition(( opacity 1.55s))
+
+
+address
+    font-style: normal
+    margin-top: 40px
+
+
+.heading--primary
+    +rem(60)
+    font-weight: 300
+
+    strong
+        ont-weight: 400
+
+
+.heading--sec
+    +rem(32)
+    font-weight: 300
+
+    strong
+        font-weight: 400
+
+.fslightbox-open
+    overflow: initial !important
+
+
+
+.seo
+    margin-top: 60px
+    padding-left: 5%
+    padding-right: 5%
+    font-size: 14px
+    opacity: 0.6
+
+    p
+        font-size: 14px
+
+    h4
+        font-size: 22px
+
+
++breakpoint(mobilewide)
+    .lazybg
+        // opacity: 1
+
+    .heading--primary
+        +rem(40)
+
+    .heading--sec
+        +rem(20)
+
+
+    // .flex-row-center-mid
+    //     +flex-wrap(wrap)
+
+    //     .col
+    //         width: 100%
+
+
+
+    .article figure
+        display: none
+
+
+
++breakpoint(mobilewide)
+
+    
+    .page-padding
+        padding:
+            left: 4%
+            right: 4%
+
+
++breakpoint(mobile)
+    .page-padding
+        padding:
+            left: 5%
+            right: 5%

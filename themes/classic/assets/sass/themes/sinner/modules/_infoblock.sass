@@ -1,0 +1,133 @@
+.infoblock
+    opacity: 0
+    background: #f4f4f4
+    border: 1px solid #e5e5e5
+    padding: 30px
+    border-radius: 8px
+    background: $fshop
+    // background: #fa3b15
+    color: white
+    font-weight: 300
+    list-height: 1.1
+    font-style: normal
+    position: static
+    right: 0
+    +flexbox()
+    line-height: 1.2
+    z-index: 2
+    gap: 15px
+    position: absolute
+    max-width: 25%
+    top: 100%
+    margin-top: -55px
+    right: 2%
+    // top: auto
+    font-size: 18px
+    padding: 15px 10px
+    +rem(18)
+    min-width: 520px
+    text-align: left
+    box-shadow: 5px 7px 10px rgb(0 0 0 / 27%)
+    border-width: 2px
+    +align-items(center)
+    +transform(translateY(30px))
+    +multipleTransition((opacity 0.25s ease-in-out, transform 0.25s ease-in-out, margin 0.25s ease-in-out))
+
+    .arrow-down
+        position: absolute
+        bottom: 99%
+        right: auto
+        left: 30px
+        width: 0
+        height: 0
+        border-left: 20px solid transparent
+        border-right: 20px solid transparent
+        border-bottom: 20px solid $fshop
+
+    &.pos--bl
+        right: auto
+        left: 2%
+
+
+
+    &.pos--tbl,
+    &.pos--tr
+        bottom: auto
+        top: -30px
+        right: auto
+        left: 2%
+
+        .arrow-down
+            top: 100%
+            bottom: auto
+            border: 0
+            border-left: 20px solid transparent
+            border-right: 20px solid transparent
+            border-top: 20px solid $fshop
+
+    &.pos--tr
+        right: 2%
+        left: auto
+
+
+    
+
+    &.pos--tbr
+        bottom: auto
+        top: -30px
+        lefto: auto
+        right: 2%
+
+        .arrow-down
+            top: 100%
+            bottom: auto
+            border: 0
+            border-left: 20px solid transparent
+            border-right: 20px solid transparent
+            border-top: 20px solid $fshop
+
+
+    .ico
+        // position: absolute
+        top: 50%
+        left: 15px
+        color: white
+        position: static
+        margin: 9px 0 0 20px
+        margin-top: 0
+        padding: 0
+        +rem(55)
+        
+
+    .msg
+        +flex(1)
+
+        p
+            margin: 0
+            font-weight: 300 !important
+            +rem(17)
+
+        small
+            margin: 15px 0 0
+            display: block
+            color: black
+            font-weight: 500
+            +rem(12)
+
+
+
+#index
+    .home-top,
+    .section,
+    #custom-text
+        &:hover
+            .infoblock
+                opacity: 1
+                +transform(translateY(0))
+
+
+
+
++breakpoint(tablet)
+    .infoblock
+        display: none !important

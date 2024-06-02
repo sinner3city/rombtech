@@ -1,0 +1,76 @@
+.topinfo
+    position: relative
+    color: #212121
+    font-size: 16px
+    font-weight: 400
+    height: 65px
+    margin-bottom: -60px
+    //margin-top: 60px
+    width: 100%
+    z-index: 99
+    +flexbox()
+    +align-items(center)
+    +multipleTransition((opacity 0.95s ease, transform 0.95s ease))
+
+
+.page-index 
+    .topinfo
+        opacity: 0
+    &.animation--end
+        .topinfo
+            opacity: 1
+
+    
+
+
+.topinfo__link
+    text-decoration: underline
+    line-height: 1.1
+
+    // .info--green &
+    //     color: $cp3a
+    &:hover
+        color: $cp1
+        text-decoration: none
+
+
+.topinfo-raty
+    strong
+        margin-right: 5px
+
+.topinfo-raty__payu
+    margin: -7px 0 0 5px
+
+
+.pp__ico
+    margin: -2px 5px 0 0
+
+.pp__link
+    margin-left: 5px
+
+
+
+
++breakpoint(desktop)
+    .topinfo
+        margin-bottom: 0
+
+        #index &
+            // margin-bottom: -60px
+    .topinfo-raty
+        strong
+            color: $c-black
+        p
+            display: none
+
+    .topinfo__left
+        a
+            color: $c-black
+        strong
+            display: none
+
++breakpoint(mobilewide)
+
+    .topinfo-raty
+        strong
+            display: none

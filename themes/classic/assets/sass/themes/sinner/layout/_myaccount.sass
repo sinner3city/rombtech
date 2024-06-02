@@ -1,0 +1,322 @@
+
+    
+.page-my-account #content .links #returns-link
+    // display: none
+
+#address
+    .js-address-form
+        form
+            max-width: 900px
+
+    .form-footer
+        max-width: 320px
+        padding-top: 30px
+        margin: 0 auto
+        justify-content: space-around
+
+
+.register-as-guest
+    text-align: center
+
+.payment_module_17
+    text-align: center
+
+div.glogin div.customGPlusSignIn
+    height: auto
+    background: none
+
+    &::before,
+    &::after
+        display: none
+#addresses
+    .js-address-form
+        form
+            max-width: 900px
+    .address
+        margin-bottom: 1.875rem
+        font-size: .875rem
+        color: #232323
+        text-align: center
+        border: 2px #f5f5f5 solid
+        border-radius: 5px
+
+    .div-address
+        width: 40%
+        margin: 2%
+        min-width: 280px
+
+
+.page-addresses .address .address-footer
+    border-top: 1px solid #f5f5f5
+    padding: 12px 20px
+
+
+.address .address-body
+    padding: 30px
+    h4
+        font-weight: 400
+        font-size: 24px
+    address
+        margin-top: 15px
+        overflow: hidden
+        max-height: 82px
+        min-height: 0
+
+.page-addresses .address .address-footer a 
+    &:hover
+        color: $cp1
+    i
+        color: $cp1
+
+
+.address
+    .address-footer
+        +flexbox()
+        +justify-content(space-between)
+
+        a
+            +flexbox()
+            +align-items(center)
+
+            i
+                font-size: 17px
+                margin-right: 8px
+
+
+
+#history 
+    #main .page-content h6
+        font-weight: 300
+        text-align: center
+        font-size: 18px
+        padding: 0
+        margin: 0
+        margin-bottom: 30px
+        color: #212121
+    .order-actions
+        a
+            white-space: nowrap
+#main
+    position: relative
+
+#order-infos
+    text-align: center
+
+#order-detail,
+#history
+    #content
+        max-width: 1200px
+        margin: 0 auto
+
+    .date,
+    .total
+        display: inline-block
+        color: #212121
+        font-size: 18px
+
+
+.label.label-pill
+    text-align: center
+    // margin: 0 30px
+    background: none !important
+    display: inline-flex
+    padding: 7px 20px
+    border-radius: 5px
+    color: $c-black
+    border: 2px $c-black solid
+    line-height: 1.4
+    font-size: 14px
+    font-weight: 400
+
+
+.order-message-form 
+    .box__header
+    margin-top: 30px
+        text-align: center
+#order-history 
+    h3
+        display: none
+        font-weight: 400
+
+
+#order-detail
+    #invoice-address.box
+        padding: 0
+        margin: 0
+        max-width: 100%
+
+    address
+        margin: 0
+.page-order-detail 
+    #delivery-address
+        padding: 0
+    #order-infos
+        label.label-pill,
+        .btn
+            margin: 10px
+
+#main .page-content h6
+    font-weight: 300
+    font-size: 22px
+    text-align: center
+
+
+
+#module-myprestaloyalty-default h2
+    text-align: center
+    margin-bottom: 15px
+
+
+#module-myprestaloyalty-default
+    table
+        min-width: 600px
+
+
+.myaccount-dash__links
+    +flexbox()
+    +flex-wrap(wrap)
+    
+
+.myaccount-dash__link,
+.myaccount-dash__links .col-lg-4.col-md-6.col-sm-6.col-xs-12
+    width: 30%
+    margin: 1.5%
+    color: $c-black
+    text-align: center
+    border: 1px $c-border solid
+    padding: 30px
+    display: block
+
+    &:hover
+        border-color: $cp1
+
+    i
+        display: block
+        color: $cp1
+        font-size: 60px
+        margin-bottom: 15px
+
+
+.order-message-form form
+    max-width: 100%
+
+#order-detail
+    #invoice-address.box
+        margin-top: 30px
+
+#order-infos
+    padding-bottom: 30px
+    p
+        margin: 5px 0
+
+
+#order-detail
+    table
+        font-size: 17px
+        th
+            font-size: 15px
+
+        .line-total
+            font-weight: 400
+
+    address
+        font-size: 15px
+
+    .messages
+        h3
+            margin-bottom: 10px
+            font-size: 24px
+        .message
+            background: #f5f5f5
+            padding: 10px
+            font-size: 16px
+
+
+.history-padding .addresses .div-invoice, .box.messages .addresses .div-invoice
+    width: 45%
+
+
+
++breakpoint(mobilewide)
+    #history 
+        .orders .order
+            border-bottom: 1px #ddd solid
+            padding-bottom: 15px
+            margin-bottom: 15px
+        h3
+            font-size: 28px
+            font-weight: 400
+    #history .orders
+        .order .label
+            background: none !important
+            border: 2px $c-black solid
+            color: $c-black
+            font-size: 14px
+            padding: 6px 15px
+            text-transform: uppercase
+            text-align: center
+
+    #customer-formwa
+        > section
+            .form-group:first-child
+                .form-control-label
+                    display: none
+
+    #my-account .page-content
+        max-width: 100%
+        width: 100%
+    
+    
+
+    .addresses
+        margin-top: 60px
+
+    .myaccount-dash__link,
+    .myaccount-dash__links .col-lg-4.col-md-6.col-sm-6.col-xs-12
+        padding: 15px
+        width: 47%
+        line-height: 1.2
+
+
+
++breakpoint(mobile)
+    .history-padding 
+        .addresses
+            +flex-wrap(Wrap)
+            .div-delivery,
+            .div-invoice
+                width: 100%
+                margin: 30px 15px
+
+
+    #addresses .div-address
+        width: 100%
+
+
+    #order-infos
+        .label.label-pill
+            margin-top: 5px
+
+    #order-detail
+        .order-totals
+            margin: 15px 0
+
+
+    .history-padding .addresses, .box.messages .addresses
+        margin: 0
+
+    .history-padding .addresses .div-delivery, .history-padding .addresses .div-invoice
+        margin: 0
+
+    #order-detail
+        .box.messages
+            margin-top: 30px
+
+        form .form-group.row
+            padding: 0
+            margin-left: 0
+            margin-right: 0
+
+            > div
+                padding-left: 0
+                padding-right: 0

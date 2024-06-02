@@ -1,0 +1,30 @@
+.blog-cats
+    .link--border
+        margin: 8px
+
+
+.blog-list
+    +justify-content(center)
+    +flex-wrap(wrap)
+    width: 100%
+    .art
+        min-width: 280px
+        max-width: 100%
+        border: 1px #eee solid
+        padding: 20px
+        +flex(1)
+        &::before
+            display: none
+
+    .art__figure
+        height: auto
+
+
+
++breakpoint(mobilewide)
+
+    .blog-list
+        margin: 0
+
+        .art
+            width: 100%

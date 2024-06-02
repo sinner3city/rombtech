@@ -1,0 +1,306 @@
+
+.product-item__quick
+    @extend .noselect
+    &.quick--active
+        pointer-events: none
+        color: $c-black
+        
+    
+.modal-backdrop
+    display: none
+    
+    
+.modal.quickview
+    // display: block
+    position: fixed
+    left: 15px
+    width: 460px
+    // overflow: auto
+    z-index: 2
+    margin-top: 105px
+    opacity: 0
+    max-height: calc(100% - 120px)
+    max-height: 100%
+    padding: 0
+    pointer-events: none
+    overflow: hidden
+    // background: white
+    +multipleTransition((opacity 0.45s ease))
+
+    .qm &
+        opacity: 1
+        +multipleTransition((opacity 0.45s ease 1s))
+
+
+    .close
+        position: absolute
+        top: -5px
+        right: -5px
+        color: $cp1
+        opacity: 1
+        +flexbox()
+
+        i
+            font-size: 34px
+
+        &:hover
+            color: $c-black
+
+
+    .modal-body
+        padding: 0 0 0 0
+
+    .modal-dialog
+        height: 95%
+        margin-top: 0
+        overflow-y: auto
+        transition-delay: 0.2s
+        pointer-events: auto
+
+    .modal-content
+        border-color: #eee
+        border: 0
+        padding-right: 10px
+        border: 1px #eee solid
+        padding: 20px
+        border-radius: 0
+
+    .modal-header
+        // border-bottom: 0
+
+    .product-variants
+        display: none
+
+    .product-flags
+        position: absolute
+        top: -25px
+        +flexbox()
+        +align-items(center)
+    .product-flag
+        margin-right: 10px
+        color: white
+        font-size: 14px
+        font-weight: 400
+        padding: 1px 10px
+
+        &.on-sale
+            background: $cp3a
+
+        &.new
+            background: $cp2
+        &.discount
+            background: $cp1
+
+    .btn--border
+        border: 1px #ddd solid
+        border-radius: 0
+
+            
+
+
+.qm-info
+    padding: 15px
+    border: 1px #eee solid
+    margin: 15px 0
+    font-size: 15px
+
+.qm-info__title
+    font-size: 15px
+    font-weight: 400
+    margin-bottom: 5px
+
+.qm-product__title
+    margin-top: 0
+    font-size: 26px
+    margin-bottom: 30px
+    line-height: 1.1
+    border-bottom: 1px #ddd solid
+    padding-bottom: 15px
+    padding-right: 35px
+    
+
+
+.qm
+    .page-content-listing,
+    .breadcrumb
+        padding-left: 470px
+        +multipleTransition((padding 0.65s ease))
+
+        .loader-svg
+            +multipleTransition((opacity 0.35s ease 0.3s))
+            opacity: 1
+
+    .product-item
+        &:hover
+            .art__header
+                opacity: 1 !important
+
+            .product-item__shortdesc
+                opacity: 0 !important
+
+
+    &.grid--2 
+        .list--products[data-slider=false] .art__figure
+            // max-width: 35%
+
+    &.grid--3
+        .list--products[data-col]
+            margin-left: -1%
+            margin-right: -1%
+            .art
+                max-width: 31.5%
+                margin: 1%
+
+    &.grid--2 .list--products[data-col] .art__figure
+        max-width: 130px
+            
+
+
+
+.page-content-left,
+.page-content-listing
+    +multipleTransition((padding 0.65s ease 0.3s))
+
+.page-content-listing
+    min-height: 640px
+
+.loader-svg
+    position: absolute
+    pointer-events: none
+    opacity: 0
+
+.qm
+    .page-content-left
+        position: absolute
+        left: 0
+        top: 0
+
+        .loader-svg
+            +multipleTransition((opacity 0.35s ease 0.5s))
+            opacity: 1
+            position: absolute
+            top: 200px
+            left: 150px
+            // +translate3d((-50%, -50%, 0))
+            pointer-events: none
+
+.page-content-left
+    position: relative
+    width: 1px
+
+
+
+
+.qm-photos
+    position: relative
+
+    .js-qv-mask
+        position: absolute
+        overflow: hidden
+        top: 0
+        border-left: 3px white solid
+        right: 0
+        opacity: 1
+        height: calc(100% - 30px)
+        z-index: 2
+
+    .js-arrows
+        position: absolute
+        bottom: -8px
+        right: -5px
+        z-index: 2
+
+        i
+            display: inline-flex
+            padding: 5px
+            cursor: pointer
+            @extend .noselect
+
+            &:hover
+                color: $cp1
+
+    
+    .images-container
+        position: relative
+
+
+
+    > .qm-photos__container
+        padding-right: 70px
+        height: 300px
+        overflow: hidden
+        +flexbox()
+        +align-items(center)
+        +justify-content(center)
+
+    .product-cover
+        overflow: hidden
+        img
+            height: auto
+            width: auto
+            max-height: none
+            // max-width: none
+
+    > .product-cover
+        padding-right: 0
+    .layer
+        display: none
+
+
+    .thumb-container
+        max-width: 60px
+
+        img
+            display: block
+            opacity: 1
+            border: 2px white solid
+            cursor: pointer
+            +multipleTransition((opacity 0.15s, border 0.15s))
+
+            &.selected
+                border-color: $cp1
+
+            &:hover
+                opacity: 0.3
+
+
+.qm-prices
+    padding-top: 15px
+    .regular-price
+        text-decoration: line-through
+        color: $cp1
+        margin-right: 5px
+        font-size: 26px
+        
+
+    .current-price
+        .price
+            display: block !important
+            text-transform: lowercase
+
+        .discount-amount
+            display: none
+
+
+    .product-prices
+        +flexbox()
+        +align-items(center)
+
+
+
+
++breakpoint(desktop)
+    .qm
+        .page-content-listing,
+        .breadcrumb
+            padding-left: 0
+
+@media only screen and (max-height: 780px)
+
+    .qm-photos
+        .js-qv-product-cover
+            max-height: 200px
+
+
+    .qm-product__title
+        font-size: 19px

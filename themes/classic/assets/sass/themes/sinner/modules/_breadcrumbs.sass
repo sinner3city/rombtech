@@ -1,0 +1,196 @@
+.breadcrumb
+    border-bottom: 1px #ddd solid
+    padding-bottom: 0
+    margin-bottom: 50px
+    font-size: 12px
+    border-top: 1px #ddd solid
+    padding-top: 15px
+    margin-bottom: 0
+    border-bottom: 0
+    text-align: center
+    border-top: 0
+    padding-top: 0
+    margin: 0
+    margin-bottom: auto
+    padding-left: 0
+    // margin-top: -20px
+    padding-right: 0
+    +flex-wrap(wrap)
+
+    .page--lp &,
+    .page-index &
+        display: none
+
+    ol
+        list-style: none
+        +flexbox()
+        +flex-wrap(wrap)
+
+
+
+    .sep
+        color: $cp1
+        margin: 0 2px
+        font-weight: 700
+        font-size: 18px
+
+
+.category-reklama-w-google
+    .breadcrumb
+        display: none
+
+
+.breadcrumbs__item
+
+    &:last-child
+        a
+            // color: $cp1
+            margin-right: 0
+
+        .sep
+            display: none
+    a
+        color: #444
+        font-size: 14px
+
+        &:hover
+            color: $cp1
+
+
+.category-id-2
+    .breadcrumbs__item
+        &:nth-child(2)
+            .sep
+                display: none
+    
+.breadcrumbs__list
+    margin: 0 0 15px
+    +flexbox()
+    +justify-content(flex-start)
+    +align-items(center)
+    // background: #f9f9f9
+    // margin: 0 -30px 20px
+    // margin-bottom: 0
+
+    .qm &
+        background: none
+
+
+    .block-categories &
+        margin-bottom: 0
+        margin-top: 15px
+
+
+
+
+.breadcrumbs__item
+    +flexbox()
+    +justify-content(center)
+    +align-items(center)
+    padding-right: 8px
+    color: $c-black
+
+    &:last-child
+        padding-right: 0
+
+.breadcrumbs__link
+    color: $cp1
+    margin-right: 8px
+
+    &:hover
+        color: $c-black 
+    .breadcrumb[data-depth="1"]
+        display: block
+
+        #index &
+            display: none
+
+    .breadcrumb[data-depth="1"]
+        display: none
+
+
+
+
+#authentication,
+#my-account,
+#sitemap,
+#module-myprestaloyalty-default,
+#order-confirmation,
+#password,
+#addresses,
+#address,
+#identity,
+#history,
+#order-detail,
+.page-cms,
+.page-product
+    .breadcrumbs__item:nth-child(1)
+        display: none
+    .breadcrumb[data-depth="1"]
+        // display: none
+
+
+
+#order-detail,
+.page-cms
+    .breadcrumbs__item:nth-child(2)
+        display: none
+
+#order-detail,
+#history,
+#order-slip,
+#module-myprestaloyalty-default,
+#module-psgdpr-gdpr,
+.page-cms
+    .breadcrumb
+        display: block
+
+#my-account,
+#authentication
+    .breadcrumbs__item
+        display: none
+
+    .page-header .page-menu
+        display: none
+
+.page-category
+    .breadcrumb
+        // opacity: 0
+        // height: 10px
+        // pointer-events: none
+
+
+#history
+    h6
+        font-size: 14px
+        padding-bottom: 15px
+
+
++breakpoint(desktop)
+    .cms-id-13
+        .breadcrumb
+            display: none
+
+
++breakpoint(tablet)
+
+    .page-category
+        &.category-id-2
+            .breadcrumb
+                display: none
+
+        .breadcrumbs__item:nth-child(1)
+            //display: none
+        .breadcrumb
+            margin-bottom: 0
+            border-bottom: 0
+            display: block
+            // margin-top: -33px
+            text-align: center
+            width: 100%
+
+
++breakpoint(mobilewide)
+
+
+    

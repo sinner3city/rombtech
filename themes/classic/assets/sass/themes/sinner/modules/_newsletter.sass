@@ -1,0 +1,148 @@
+
+
+.page-footer
+
+    .h3, .h4
+        margin-bottom: 15px
+        font-weight: 500
+
+
+    
+    .flex-row-center
+        +flex-wrap(wrap)
+
+    .block-social
+        width: 100%
+        margin: 15px 0
+
+    .block_newsletter 
+        width: 100%
+        .btn-primary
+            float: right
+        > .flex-row
+            width: auto
+            +justify-content(center)
+            
+
+    .block_newsletter form input.btn-primary
+        background: #222
+        border-color: #222
+
+        &:hover
+            background: $cp1
+            border-color: $cp1
+            color: white
+
+    #block-newsletter-label
+        width: auto
+        text-align: center
+        margin-bottom: 15px
+        margin: 0
+        text-align: left
+        // padding-right: 30px
+        order: 2
+        margin: 0 2%
+        p
+            color: #555
+            line-height: 1.2
+
+
+    .block_newsletter
+        font-size: 14px
+        line-height: 1
+        margin-bottom: 0
+        margin: 0 auto
+        margin-top: 0
+        max-width: 100%
+        background: #f5f5f5
+        padding: 15px 30px
+
+        .gdpr_consent
+            display: none
+
+            &.active
+                display: block
+
+        form input[type=email]
+            height: 40px
+            background: white
+
+        .btn-primary
+            position: relative
+            margin-left: -5px
+            z-index: 2
+            opacity: 1
+            height: 40px
+
+        
+        .newsletter-for
+            max-width: 490px
+            width: 100%
+            margin: 0 2%
+
+        p
+            font-size: 13px
+            line-height: 1
+
+        form p
+            display: none
+
+        .h4
+            margin-bottom: 2px
+            line-height: 1
+            font-size: 20px
+            // font-weight: 300
+            color: $cp1
+            color: #212121
+            margin-top: 2px
+
+        p
+            padding: 0
+            margin: 0
+            color: #999
+            font-weight: 300
+
+.page-footer
+    .block_newsletter
+        margin-top: auto
+        // display: none !important
+
+.input-wrapper
+    overflow: hidden
+
+#index,
+#product,
+#cms:not(.cms-id-13),
+#category
+    .block_newsletter
+        // display: block !important
+
++breakpoint(tablet)
+    .page-footer .block_newsletter
+        padding: 15px 0
+        display: none
+    .page-footer 
+        .block_newsletter
+            .newsletter-for
+                width: auto
+
+        .block_newsletter
+            #block-newsletter-label
+                width: 100%
+                text-align: center
+                order: 0
+
+            .newsletter-for
+                width: 100%
+                max-width: 80%
+                margin-top: 10px
+
+
++breakpoint(mobilewide)
+    .page-footer .block_newsletter #block-newsletter-label
+        width: 90%
+
+
++breakpoint(mobile)
+    .page-footer .block_newsletter #block-newsletter-label
+        width: 80%

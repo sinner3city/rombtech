@@ -1,0 +1,96 @@
+.pagination
+    margin: 30px 0 30px
+    +flexbox()
+    +justify-content(center)
+    +align-items(center)
+    +flex-wrap(wrap)
+    font-size: 14px
+
+
+.pagination--sum
+    float: none
+    text-align: center
+    width: 100%
+    margin: 0
+    margin-bottom: 8px
+    display: none
+
+
+.page-list-pagination
+
+    li
+        +flexbox()
+        +align-items(center)
+
+        &.current
+            .js-search-link
+                background: $cp1
+                color: white
+
+    .js-search-link
+        // background: #eee
+        +flexbox()
+        +align-items(center)
+        padding: 3px 10px
+        margin: 5px 3px
+        color: black
+        font-size: 17px
+        font-weight: 300
+        border: 1px #eee solid
+
+        &.next
+            padding-left: 15px
+
+        &.previous
+            padding-right: 15px
+
+        &:hover
+            background: $c-black
+            color: white
+
+
+
+
+.pagination__item
+    +rem(18)
+    padding: 8px 13px
+    font-weight: 400
+    background: #eee
+    color: $c-black
+    margin: 4px
+    border: 1px #ddd solid
+    background: transparent
+    line-height: 1
+
+    
+    &:hover
+        font-weight: 400
+        background: #ddd
+        color: $c-black
+
+    &.item--active
+        background: $cp1
+        color: white
+        // color: white
+
+
+    &.item--prev
+        margin-right: 20px
+
+    &.item--next
+        margin-left: 20px
+
+
++breakpoint(tablet)
+    .pagination
+        margin-bottom: 0
+
++breakpoint(mobile)
+
+    .pagination__item
+
+        &.item--prev
+            margin-right: 4px
+
+        &.item--next
+            margin-left: 4px

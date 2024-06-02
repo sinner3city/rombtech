@@ -1,0 +1,49 @@
+// przyjmuje parametry:
+// min: desktop | tablet | mobilewide | mobile | {\d}px
+// max: {\d}px
+=breakpoint($min, $max: 0)
+    @if $min == laptop
+        @media only screen and (max-width: $width_laptop_max)
+            @content
+
+    @else if $min == desktop
+        @media only screen and (max-width: $width_desktop_max)
+            @content
+
+    @else if $min == tablet
+        @media only screen and (max-width: $width_tablet_max)
+            @content
+
+    @else if $min == mobilewide
+        @media only screen and (max-width: $width_mobile_wide_max)
+            @content
+
+    @else if $min == mobile
+        @media only screen and (max-width: $width_mobile_max)
+            @content
+
+    @else if $min == mobilesmall
+        @media only screen and (max-width: $width_mobile_small_max)
+            @content
+
+    @else
+        @if $min == 0
+            @media only screen and (max-width: $max)
+                @content
+        @else if $max == 0
+            @media only screen and (min-width: $min)
+                @content
+        @else
+            @media only screen and (min-width: $min) and (max-width: $max)
+                @content
+
+=breakpointHeight($min, $max: 0)
+    @if $min == 0
+        @media only screen and (max-height: $max)
+            @content
+    @else if $max == 0
+        @media only screen and (min-height: $min)
+            @content
+    @else
+        @media only screen and (min-height: $min) and (max-height: $max)
+            @content

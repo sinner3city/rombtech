@@ -1,0 +1,477 @@
+
+.modal,.modal-open
+    overflow: hidden
+
+
+.modal
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 1050
+    display: none
+    outline: 0
+
+
+.modal.fade .modal-dialog
+    transition: -webkit-transform .3s ease-out
+    transition: transform .3s ease-out
+    transition: transform .3s ease-out,-webkit-transform .3s ease-out
+    +multipleTransition((transform .65s ease, opacity .65s ease))
+    opacity: 0
+    -webkit-transform: translateY(-5%)
+    transform: translateY(-5%)
+
+
+.modal.in .modal-dialog
+    -webkit-transform: translate(0)
+    transform: translate(0)
+    +multipleTransition((transform .65s ease, opacity .65s ease))
+    opacity: 1
+
+
+.modal-open .modal
+    overflow-x: hidden
+    overflow-y: auto
+    padding-left: 17px
+    padding-right: 17px
+
+
+.modal-dialog
+    position: relative
+    width: auto
+    margin: 10px
+
+
+.modal-content
+    position: relative
+    background-color: #fff
+    background-clip: padding-box
+    border: 1px solid rgba(0,0,0,.2)
+    border-radius: .3rem
+    outline: 0
+
+
+.modal-backdrop
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 1040
+    background-color: #000
+    +multipleTransition((opacity 0.6s ease, background 0.6s ease, color 0.2s, border 0.2s))
+
+
+.modal-backdrop.fade
+    opacity: 0
+
+
+.modal-backdrop.in
+    opacity: .5
+
+
+.modal-header
+    padding: 15px
+    border-bottom: 1px solid #e5e5e5
+
+
+.modal-header:after
+    content: ""
+    display: table
+    clear: both
+
+
+.modal-header .close
+    margin-top: -2px
+
+
+.modal-title
+    margin: 0
+    // line-height: 1.5
+
+
+.modal-body
+    position: relative
+    padding: 30px
+
+
+.modal-footer
+    padding: 15px
+    text-align: right
+    border-top: 1px solid #e5e5e5
+
+
+.modal-footer:after
+    content: ""
+    display: table
+    clear: both
+
+
+.modal-scrollbar-measure
+    position: absolute
+    top: -9999px
+    width: 50px
+    height: 50px
+    overflow: scroll
+
+
+.close
+    float: right
+    font-size: 1.5rem
+    font-weight: 700
+    line-height: 1
+    color: #000
+    text-shadow: 0 1px 0 #fff
+    opacity: .2
+
+
+.close:focus,.close:hover
+    color: #000
+    text-decoration: none
+    cursor: pointer
+    opacity: .5
+
+
+button.close
+    padding: 0
+    cursor: pointer
+    background: transparent
+    border: 0
+    -webkit-appearance: none
+
+
+
+@media (min-width: 576px)
+    .modal-dialog
+        max-width:600px
+        margin: 30px auto
+    
+
+    .modal-sm
+        max-width: 300px
+    
+
+
+@media (min-width: 992px)
+    .modal-lg
+        max-width:900px
+    
+
+
+#alert-modal
+    padding-right: 0 !important
+
+    .hotinfo_top
+        display: block
+
+    .close
+        right: 30px
+        position: absolute
+        top: 30px
+        color: $cp1
+        opacity: 1
+        text-shadow: none
+
+        i
+            font-size: 55px
+
+        &:hover
+            color: $c-black
+
+    .modal-dialog
+        margin: 0
+        max-width: 650px
+        min-width: 500px
+        margin-top: -5%
+
+    .modal-body
+        padding: 30px 60px
+
+    .modal-flex
+        +flexbox()
+        +align-items(center)
+        +justify-content(center)
+        +flex(1)
+        width: 100%
+        height: 100%
+
+    .modal-content
+        background: $cp1
+        border-radius: $radius
+        text-align: center
+        color: white
+
+    h1, h2, h3, h4
+        font-weight: 500
+        color: white
+        font-size: 34px
+
+    h2
+        font-size: 28px
+
+    h3
+        font-size: 24px
+    
+    h4
+        font-size: 18px
+
+
+.modal-backdrop
+    background: transparent
+    opacity: 0
+    // +multipleTransition((opacity 0.2s, background 0.2s, color 0.2s, border 0.2s))
+    +multipleTransition((opacity 0.6s ease, background 0.6s ease, color 0.2s, border 0.2s))
+
+    &.fade.in
+        background: black
+        opacity: 0.85
+        +multipleTransition((opacity 0.6s, background 0.6s, color 0.2s, border 0.2s))
+
+
+body.modal-open
+    overflow: initial
+    overflow-x: hidden
+    padding-right: 0 !important
+
+#checkout.modal-open
+    overflow: hidden
+
+
+// KOSZYK MODAL
+
+#blockcart-modal
+
+    & ~ .modal-backdrop
+        display: block
+    .row-info,
+    .row-image
+        width: 100%
+        padding: 0
+        text-align: center
+
+        .product-image
+            max-height: 150px
+            width: auto
+        
+        .product-name
+            font-size: 16px
+            margin-top: 0
+            margin-bottom: 0
+        
+        .mc-label
+            color: $cp1
+            margin-right: 10px
+
+        br
+            display: none
+
+        .btn
+            padding: 0 15px
+
+    .col-md-7
+        width: 100%
+
+#blockcart-modal
+    color: #232323
+    padding: 0
+    // +flexbox()
+    // +justify-content(center)
+
+#blockcart-modal .modal-header
+    background: #fff
+
+#blockcart-modal .modal-header .close
+    opacity: 1
+
+#blockcart-modal .modal-header .close .material-icons
+    color: #363a42
+
+#blockcart-modal .modal-body
+    background: #fff
+    // padding: 3.125rem 1.875rem
+
+#blockcart-modal .modal-body .divide-right span
+    display: inline-block
+    margin-bottom: .3125rem
+
+
+#blockcart-modal .modal-dialog
+    max-width: 1140px
+    width: 100%
+    height: 100%
+    margin: auto
+    +flexbox()
+    +justify-content(center)
+    +align-items(center)
+
+#blockcart-modal .product-image
+    width: 100%
+    max-width: 9.375rem
+    display: block
+    margin: 0 0 0 auto
+
+#blockcart-modal .modal-title
+    color: #353943
+    font-weight: 400
+    +justify-content(flex-start)
+    +align-items(center)
+    +flexbox()
+    font-size: 16px
+
+#blockcart-modal .modal-title i.material-icons
+    margin-right: 5px
+    color: $cp1
+    +justify-content(center)
+    +align-items(center)
+    +flexbox()
+
+#blockcart-modal .product-name
+    //color: $cp1
+    font-size: 16px
+    font-weight: 400
+    line-height: 1.2
+
+@media (max-width: 767px)
+    #blockcart-modal .product-name
+        // padding:0 .5rem
+
+
+#blockcart-modal .product-price
+    color: #363a42
+    display: block
+
+@media (max-width: 767px)
+    #blockcart-modal .product-price
+        // padding:0 .5rem
+
+
+#blockcart-modal .cart-content
+    // padding-left: 2.5rem
+
+#blockcart-modal .cart-content p
+    /* color: #363a42 */
+    // display: -webkit-box
+    // display: -ms-flexbox
+    // display: flex
+    // -webkit-box-pack: justify
+    // -ms-flex-pack: justify
+    // justify-content: space-between
+    // padding: 0 .5rem
+    // margin-bottom: 5px
+    // font-weight: 300
+
+#blockcart-modal .cart-content p.product-total
+    background-color: #f1f1f1
+    padding: .5rem
+    margin-top: 20px
+
+#blockcart-modal .cart-content p.cart-products-count
+    font-size: 1rem
+    color: #6c868e
+    font-weight: 600
+
+#blockcart-modal .cart-content p.product-tax
+    display: inherit
+    font-size: .875rem
+
+#blockcart-modal .cart-content p .label,#blockcart-modal .cart-content p .value
+    font-weight: 600
+
+#blockcart-modal .cart-content .cart-content-btn
+    display: -webkit-inline-box
+    display: -ms-inline-flexbox
+    display: inline-flex
+    padding-top: 15px
+
+#blockcart-modal .cart-content .cart-content-btn button
+    margin-right: .9rem
+
+#blockcart-modal .cart-content .cart-content-btn 
+    
+    .btn
+        white-space: inherit
+        padding: 0px ​20px
+        // height: 36px
+        line-height: 1
+
+    .btn-primary
+        // height: 32px
+        padding-left: 25px
+
+        i
+            color: black
+
+#blockcart-modal .divide-right
+    // border-right: 1px solid #dbdbdb
+
+#blockcart-modal
+    text-align: center
+
+    .product-price
+        padding: 10px 0
+        text-align: center
+        font-weight: 400
+        display: block
+        // padding: 0
+        margin: 0
+        border-bottom: 1px #ddd solid
+
+    .col-text
+        text-align: left
+        padding: 0 10px
+
++breakpoint(tablet)
+
++breakpoint(mobilewide)
+
+    #alert-modal .close
+        top: 15px
+        right: 15px
+
+    .modal-backdrop.fade.in
+        opacity: 0.9
+
+    #blockcart-modal 
+        padding-right: 0 !important
+
+        .btn
+            margin: 5px 0
+
+        .modal-dialog
+            width: 90%
+
++breakpoint(mobile)
+    #blockcart-modal
+        .row-info
+            padding-right: 0
+        .modal-title
+            padding-right: 27px
+            text-align: left
+            display: flex
+            padding-left: 0.5em
+            
+            .material-icons
+                display: none
+
+        .cart-content
+
+            .cart-content-btn
+                width: 100%
+                +flex-wrap(wrap)
+                .btn
+                    display: flex
+                    +justify-content(center)
+                    +align-items(center)
+                    width: 100%
+                    margin: 5px 0
+                    padding: 5px !important
+
+    #blockcart-modal .modal-title i.material-icons
+        display: none
+
+
+    .modal-body
+        padding: 20px
+

@@ -1,0 +1,128 @@
+=rem($value)
+    font-size: ($value)+px
+    // font-size: ($value / 10)+rem    
+    
+=round ($value)
+    -webkit-border-radius: $value
+    -moz-border-radius: $value
+    border-radius: $value
+
+=opacity($value)
+    opacity: $value
+    filter: alpha(opacity=$value*100)
+
+=scale($scale: 1)
+    transform: scale($scale)
+    -ms-transform: scale($scale)
+    -webkit-transform: scale($scale)
+
+=rotate($rotate: 0)
+    transform: rotate(#{$rotate}deg)
+    -moz-transform: rotate(#{$rotate}deg)
+    -webkit-transform: rotate(#{$rotate}deg)
+    -o-transform: rotate(#{$rotate}deg)
+
+=translateX($translatex: 0)
+    transform: translateX($translatex)
+    -ms-transform: translateX($translatex)
+    -webkit-transform: translateX($translatex)
+
+=translateY($translatey: 0)
+    transform: translateY($translatey)
+    -ms-transform: translateY($translatey)
+    -webkit-transform: translateY($translatey)
+
+=translateZ($translatez: 0)
+    transform: translateZ($translatez)
+    -ms-transform: translateZ($translatez)
+    -webkit-transform: translateZ($translatez)
+
+=transform($transforms)
+    transform: $transforms !important
+    -ms-transform: $transforms !important
+    -webkit-transform: $transforms !important
+
+=translate3d($translate3d: 0)
+    transform: translate3d($translate3d)
+    -ms-transform: translate3d($translate3d)
+    -webkit-transform: translate3d($translate3d)
+
+=multipleTransition($value)
+    @if $value == none
+        -webkit-transition: none
+        -moz-transition: none
+        -o-transition: all 0 linear
+        transition: none
+    @else
+        -webkit-transition: $value
+        -moz-transition: $value
+        -o-transition: $value
+        transition: $value
+
+=transition($elements, $in, $type: linear, $out: 0s)
+    @if $elements == none
+        transition: none
+        -moz-transition: none
+        -webkit-transition: none
+        -o-transition: all 0 linear
+    @else
+        -moz-transition: $elements $in $type $out
+        -webkit-transition: $elements $in $type $out
+        -o-transition: $elements $in $type $out
+        transition: $elements $in $type $out
+
+
+
+// gradient
+
+=makeGradient($start, $middle, $stop, $start_percent: 0%, $middle_percent: 52%, $stop_percent: 100%)
+    background: $start
+    background: -moz-linear-gradient(top, $start $start_percent, $middle $middle_percent, $stop $stop_percent)
+    background: -webkit-linear-gradient(top, $start $start_percent, $middle $middle_percent, $stop $stop_percent)
+    background: -o-linear-gradient(top, $start $start_percent, $middle $middle_percent, $stop $stop_percent)
+    background: -ms-linear-gradient(top, $start $start_percent, $middle $middle_percent, $stop $stop_percent)
+    background: linear-gradient(top, $start $start_percent, $middle $middle_percent, $stop $stop_percent)
+
+=makeGradientHorizontal($start, $middle, $stop, $start_percent: 0%, $middle_percent: 52%, $stop_percent: 100%)
+    background: $start
+    background: -moz-linear-gradient(left, $start $start_percent, $middle $middle_percent, $stop $stop_percent)
+    background: -webkit-linear-gradient(left, $start $start_percent, $middle $middle_percent, $stop $stop_percent)
+    background: -o-linear-gradient(left, $start $start_percent, $middle $middle_percent, $stop $stop_percent)
+    background: -ms-linear-gradient(left, $start $start_percent, $middle $middle_percent, $stop $stop_percent)
+    background: linear-gradient(left, $start $start_percent, $middle $middle_percent, $stop $stop_percent)
+
+
+
+// arrows
+
+
+=makeArrow($direction, $color, $width, $height)
+    width: 0
+    height: 0
+    @if $direction == down
+        border:
+            top: $width solid $color
+            right: $height solid transparent
+            bottom: none
+            left: $height solid transparent
+
+    @else if $direction == up
+        border:
+            top: none
+            right: $height solid transparent
+            bottom: $width solid $color
+            left: $height solid transparent
+
+    @else if $direction == right
+        border:
+            top: $height solid transparent
+            right: none
+            bottom: $height solid transparent
+            left: $width solid $color
+
+    @else if $direction == left
+        border:
+            top: $height solid transparent
+            right: $width solid $color
+            bottom: $height solid transparent
+            left: none

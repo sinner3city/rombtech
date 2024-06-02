@@ -1,0 +1,197 @@
+
+
+
+.section--intro
+    height: auto
+    padding-top: 0
+    // margin-top: 80px
+    background: $cp3 no-repeat top right
+    background-size: cover
+    background-attachment: fixed
+    background-repeat: no-repeat
+    background-color: #fbb347
+    overflow: hidden
+    // background: black !important
+    // min-height: 100vh
+    // min-height: -webkit-fill-available
+    height: 100vh
+    height: var(--app-height)
+    // +gradientOrange()
+    // margin-bottom: 350px
+    // overflow: hidden
+    // border-bottom: 30px #f0f0f0 solid
+    
+
+    .label-price__price
+        +rem(123)
+
+
+
+.intro-caption__header
+    margin: 30px 0
+
+    .cp1
+        color: white
+        +rem(55)
+
+
+.intro-caption
+    position: absolute
+    right: 5%
+    top: 120px
+    text-align: right
+    top: 50%
+    opacity: 0
+    pointer-events: none
+    +multipleTransition((opacity 0.6s, transform 0.6s ease-in-out))
+    +translate3d((80px, -30%, 0))
+    // margin-top: -300px
+
+    &.item--active
+        opacity: 1
+        pointer-events: auto
+        +translate3d((0, -30%, 0))
+        +multipleTransition((opacity 0.6s linear 0.2s, transform 0.6s ease-in-out  0.2s))
+
+.intro-caption__title
+    font-weight: 300
+    +rem(66)
+    line-height: 1
+
+
+.intro-caption__subtitle
+    font-weight: 300
+    +rem(17)
+    line-height: 1
+    margin: 5px
+
+
+.intro-caption__footer
+    display: flex
+    font-weight: 700
+    font-size: 18px
+    +align-items(center)
+    +flexbox()
+    +justify-content(flex-end)
+    // align-items: center
+
+    .and
+        margin: 0 15px
+        font-weight: 400
+        font-style: italic
+
++breakpoint(desktop)
+    .section--intro
+        // background-size: contain
+
+
+
+
++breakpoint(tablet)
+
+
+    .section--intro
+        // background-image: url('../images/bg-guy-rwd2.jpg') !important
+        background-size: contain
+        background-size: auto
+        background-attachment: initial
+        background-position: top
+        background-color: #fbb347
+        padding: 0
+        +flexbox()
+        +justify-content(flex-end)
+        +align-items(flex-end)
+
+        .intro-caption
+            position: absolute
+            top: initial
+            bottom: 0
+            left: 0
+            +translate3d((0, 0, 0))
+            background: rgb(255 166 0 / 80%)
+            padding: 60px
+            width: 100%
+            margin: 0
+            text-align: center
+            padding: 20px 30px 30px
+
+        .intro-caption__footer
+            +justify-content(center)
+
+
+        .label-price
+            position: absolute
+            // top: 0
+            // right: 0
+            bottom: 100%
+            margin-bottom: -60px
+            left: 50px
+            // transform: scale(0.5)
+            // +translate3d((-50%, 0, 0))
+            text-shadow: 1px 1px white
+
+        .label-price__price
+            padding: 8px 15px 30px
+            background: rgb(255 166 0 / 80%)
+            +rem(40)
+            width: 200px
+            border-radius: 12px
+            padding-bottom: 30px
+            +rotate(-15)
+            border: 2px #fff solid
+
+        .label-price__label
+            margin-top: -25px
+            margin-bottom: 20px
+            color: white
+            text-shadow: none
+            +rem(14)
+            padding: 0
+            letter-spacing: 0
+            +rotate(-15)
+            padding-left: 20px
+
+
+        .btn
+            padding: 7px 10%
+
+
+    .intro-caption__header 
+        margin: 0 0 30px
+        .cp1
+            +rem(22)
+
+    .intro-caption__title
+        +rem(46)
+
+    .intro-caption__subtitle
+        // display: none
+
+
+
+
+@media only screen and (max-height: 600px)
+    .section--intro
+        background-size: cover
+    .intro-caption__subtitle
+        display: none
+
++breakpoint(mobilewide)
+
+    .section--intro .intro-caption
+        padding: 20px 15px 30px
+
+    .intro-caption__title
+        +rem(44)
+
+    .intro-caption__header .cp1
+        +rem(22)
+
+    
+    .section--intro .label-price
+        left: 35px
+        margin-bottom: -35px
+
+
+
+    

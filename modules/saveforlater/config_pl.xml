@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>saveforlater</name>
+    <displayName><![CDATA[Zapisz na p&oacute;źniej - darmowa wersja]]></displayName>
+    <version><![CDATA[1.0.3]]></version>
+    <description><![CDATA[Umożliwia klientom zaoszczędzić dowolny produkt do kr&oacute;tkiej listy.]]></description>
+    <author><![CDATA[Knowband]]></author>
+    <tab><![CDATA[front_office_features]]></tab>
+	<confirmUninstall><![CDATA[Jesteś pewien, że chcesz odinstalować?]]></confirmUninstall>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>

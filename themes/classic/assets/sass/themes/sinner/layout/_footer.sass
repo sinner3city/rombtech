@@ -1,0 +1,365 @@
+
+.page-footer
+    position: relative
+    margin-top: 0
+    padding-top: 0
+    display: flex
+    flex-wrap: wrap
+    width: 100%
+    z-index: 2
+    +multipleTransition((opacity 0.2s, background 0.2s, margin 0.35s ease, border 0.2s, transform 0.2s))
+
+    &::before
+        position: absolute
+        display: none
+        content: ''
+        bottom: 100%
+        left: 0
+        width: 100%
+        z-index: 1
+        box-shadow: 1px 1px 10px #ddd
+
+
+
+.page-footer,
+.footer-container
+    border-top-color: $c-border
+ 
+.block-contact
+    line-height: 1.6
+    font-size: 14px
+    .h4
+        font-weight: 700
+        margin-left: -15px
+
+    > div
+        margin-left: 15px
+
+.block-social
+    width: auto
+    > ul
+        display: block
+        margin-left: auto
+
+.block-social ul li
+    +multipleTransition((opacity 0.2s, background 0.2s, color 0.2s, border 0.2s, transform 0.2s))
+    &:hover
+        background-color: $cp1
+        +multipleTransition((opacity 0.2s, background 0.2s, color 0.2s, border 0.2s, transform 0.2s))
+
+.footer-copy
+    display: none
+    margin: 20px -30px 0 -30px
+    font-size: 11px
+    background: #fafafa
+    padding: 5px
+
+
+.footer-container
+    // border-top: 1px #eee solid
+    // padding-top: 45px
+    padding: 45px 3%
+
+
+.mg-ver-30
+    margin: 0 30px
+// .page-footer
+
+
+.page-footer
+    ul
+        margin-left: 15px
+        width: 100%
+        font-weight: 300
+
+
+#block_myaccount_infos .myaccount-title a
+    font-weight: 500
+
+
+.footer-info
+    padding-top: 30px
+    padding-bottom: 30px
+    +flexbox()
+    +justify-content(center)
+    +align-items(center)
+
+
+
+    
+.section.section--contact
+    position: relative
+    background: bottom -20px center no-repeat #222
+    background-size: initial
+    padding-top: 0
+    margin-top: 15px
+    margin-left: 0
+    margin-right: 0
+    // min-height: 470px
+    +flexbox()
+    flex-direction: column
+    +justify-content(flex-end)
+    padding-bottom: 0
+    margin-bottom: 0
+    margin-top: 0
+    width: 100%
+
+
+.footer-contact
+    +flexbox()
+    +justify-content(center)
+    +align-items(center)
+    margin-bottom: 25px
+    font-weight: 300
+    margin-right: 30px
+
+    .material-icons
+        display: none
+        font-size: 100px
+    
+
+
+    .sep
+        color: white
+        line-height: 1
+        margin: 0 15px
+        +rem(40)
+        color: $cp1
+
+
+.social__list
+    +flexbox()
+    +align-items(center)
+
+.social__item
+    margin: 5px 10px
+
+.social__link
+
+    &:hover
+        img
+            opacity: 0.4
+
+    img
+        display: block
+        max-height: 36px
+        +multipleTransition((opacity 0.2s, background 0.2s, color 0.2s, border 0.2s, transform 0.2s))
+
+    &.link--tw
+        img
+            max-height: 32px
+
+    &.link--insta
+
+        img
+            // margin-top: 12px
+            filter: invert(1)
+
+
+.footer-contact--page
+    a
+        color: $cp1
+
+        &:hover
+            color: $cp2
+
+.footer-contact
+    color: #666
+    margin-bottom: 0
+    +flexbox()
+    +justify-content(center)
+    +align-items(center)
+
+    
+    p
+        margin: 0 0 2px
+        font-size: 13px
+        color: rgb(255 255 255 / 45%)
+
+
+
+.footer-contact__link
+    +rem(28)
+    color: white
+
+    &:hover
+        color: $cp1
+
+
+
+.footer-menu
+    border-top: 1px #444 solid
+    margin-bottom: 20px
+    padding-top: 15px
+
+.footer-menu__list,
+.footer-menu
+    +flexbox()
+    +align-items(center)
+
+    a
+        opacity: 0.7
+        color: white
+
+        &:hover
+            opacity: 1
+
+
+.footer-menu__list
+    text-align: center
+    margin: 0 auto
+    justify-content: center
+
+
+.footer-menu__item
+    margin-left: 10px
+
+    &:first-child
+        margin-left: 0
+
+    &:last-child
+        .footer-menu__link
+            border-right: 0
+
+
+
+.footer-menu__link
+    +rem(12)
+    text-transform: uppercase
+    padding-right: 10px
+    border-right: 1px #333 solid
+    letter-spacing: 2px
+    color: $cp2
+
+    &:hover
+        color: $cp4
+
+
+.copyrights
+    display: none
+    color: #666
+    padding-bottom: 30px
+    +rem(12)
+    letter-spacing: 1px
+
+    .counterjs &
+        padding-bottom: 70px
+
+
+    a
+        color: $cp2
+
+        &:hover
+            color: $cp1
+
+
+
+
+
+
++breakpoint(tablet)
+    .footer-menu__list
+        +flex-wrap(wrap)
+
+    .footer-contact
+        margin-bottom: 15px
+
+    .footer-contact__link
+        +rem(30)
+
+    .footer-info
+        +flex-wrap(wrap)
+
+    .page-footer
+        padding-top: 0
+
++breakpoint(mobilewide)
+    
+    .page-footer, .footer-container
+        padding-bottom: 65px
+
+
+    
+    .section.section--contact
+        background-position: top center
+        background-color:  #262626
+        background-size: contain
+        padding-top: 25px
+        // padding-bottom: 50px
+
+    .section.section--contact
+        // min-height: 350px
+        // padding-bottom: 110px
+
+        .copy1
+            display: block
+            color: $cp3
+
+        .copyrights
+            // padding-bottom: 0
+
+    .footer-contact__link
+        font-size: 20px
+
+
+    .footer-contact
+        +flex-wrap(wrap)
+        margin-top: 15px
+        line-height: 1
+
+        .sep
+            display: block
+            width: 100%
+            text-align: center
+            height: 5px
+            color: #212121
+            pointer-events: none
+
+    .footer-menu__link
+        display: block
+        padding: 15px
+    .footer-menu__item
+        width: 100%
+        margin-left: 0
+        border-bottom: 1px #ddd solid
+
+    .footer-menu__link
+        border: 0
+
+    .copyrights
+        text-align: center
+        width: 80%
+        margin: 0 auto
+
+        .footer-menu__link
+            +rem(10)
+
+    .page-footer, .footer-container
+        padding-bottom: 0
+
+        .counterjs &
+            padding-bottom: 30px
+
+    .page-footer
+        margin-top: 40px
+
+
+    .footer-contact
+        margin: 0 0 15px 0
+        *
+            display: block
+            text-align: center
+            margin: 0
+            padding: 0
+
+    .page-footer ul
+        margin-left: 0
+
+    .footer-menu__list
+        display: none
+
+
++breakpoint(mobile)
+    .footer-contact__link
+        +rem(24)
+

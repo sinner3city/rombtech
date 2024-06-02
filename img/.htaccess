@@ -1,0 +1,35 @@
+### PSOPTIMIZER_IMAGE_START - Do not remove this line, PSoptimizer plugin will automatically update it
+<IfModule !mod_authz_core.c>
+    Order deny,allow
+    Deny from all
+    <Files ~ "(?i)^.*\.(webp)$">
+        Allow from all
+    </Files>
+</IfModule>
+<IfModule mod_authz_core.c>
+    Require all denied
+   <Files ~ "(?i)^.*\.(webp)$">
+        Require all granted
+    </Files>
+</IfModule>
+### PSOPTIMIZER_IMAGE_END
+<IfModule mod_php5.c>
+    php_flag engine off
+</IfModule>
+
+# Apache 2.2
+<IfModule !mod_authz_core.c>
+    Order deny,allow
+    Deny from all
+    <Files ~ "(?i)^.*\.(jpg|jpeg|gif|png|bmp|tiff|svg|pdf|mov|mpeg|mp4|avi|mpg|wma|flv|webm|ico)$">
+        Allow from all
+    </Files>
+</IfModule>
+
+# Apache 2.4
+<IfModule mod_authz_core.c>
+    Require all denied
+    <Files ~ "(?i)^.*\.(jpg|jpeg|gif|png|bmp|tiff|svg|pdf|mov|mpeg|mp4|avi|mpg|wma|flv|webm|ico)$">
+        Require all granted
+    </Files>
+</IfModule>

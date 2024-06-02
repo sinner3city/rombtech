@@ -1,0 +1,79 @@
+
+
+
+
+.stats__title
+    +rem(55)
+    font-weight: 300
+    color: $cp3
+    line-height: 1
+    color: white
+    text-shadow: 0px 1px 2px #714504
+
+.stats__subtitle
+    margin: 0
+    font-weight: 400
+    letter-spacing: 2px
+    font-size: 16px
+    // padding-left: 3px
+
+
+.stats-container
+    padding: 0 15px
+    +flexbox()
+    +align-items(center)
+    +justify-content(space-around)
+
+
+.stats__item
+    text-align: center
+    color: $c-black
+
+
+
+
+.section--stats
+    margin-top: 0
+    border-bottom: 1px #ddd solid
+    background: $cp3
+    padding: 30px 0
+    +gradientYellow()
+
+    .sep
+        height: 70px
+        width: 1px
+        background: rgb(246 246 246 / 42%)
+        &:first-child
+            border-left: 0
+
+
+
++breakpoint(tablet)
+
+    .stats__title
+        +rem(50)
+
+    .stats__subtitle
+        letter-spacing: 1px
+
+
++breakpoint(mobilewide)
+
+    .stats__title
+        +rem(40)
+
++breakpoint(mobile)
+
+    .stats__title
+        +rem(40)
+
+    .stats-container
+        flex-wrap: wrap
+        .sep
+            display: none
+    .stats__item
+        width: 35%
+        margin: 15px 0
+
+      
+

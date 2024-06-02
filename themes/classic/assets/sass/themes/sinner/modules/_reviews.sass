@@ -1,0 +1,129 @@
+
+.section--review
+    +flexbox()
+    +align-items(center)
+    background-attachment: initial
+    margin-bottom: 0
+    // padding-bottom: 30px
+
+    // min-height: 520px
+    // background: no-repeat top center
+
+
+.review__author
+    color: #212121
+    font-weight: 400
+    // font-weight: bold
+    // color: $cp2
+    // font-style: italic
+
+
+.review
+    position: relative
+    width: 50%
+    background: url('../images/quote.png') no-repeat bottom right
+    margin-left: 120px
+    padding: 30px 0
+    background: rgb(255 255 255 / 90%)
+    padding: 30px
+    margin-left: 60px
+    // width: 80%
+    
+
+    &:before
+        position: absolute
+        content: ''
+        top: -15px
+        left: -60px
+        width: 45px
+        height: 35px
+        background: url('../images/quote-start.png') no-repeat bottom right
+
+
+
+
+.review__stars
+    +flexbox()
+    +align-items(center)
+    +justify-content(center)
+
+    i
+        color: $cp2
+        font-size: 34px
+
+
+.review__header
+    +flexbox()
+    +align-items(center)
+    // margin-top: 30px
+
+.review__star
+    // width: 29px
+    // height: 29px
+    // background: url('../images/star.png') no-repeat
+    margin: 0 2px
+
+    &.star--empty
+        // background: url('../images/star--empty.png') no-repeat
+
+
+
+.review__rating
+    font-size: 32px
+    line-height: 1
+    color: #ae1fda
+    font-weight: 300
+    color: $c-black
+    margin: 0
+    margin-right: 15px
+
+    .color
+        color: $cp1
+
++breakpoint(desktop)
+
+    .section--review
+        background-position: top right -100px
+
++breakpoint(tablet)
+
+    .review
+        background: rgb(255 255 255 / 90%)
+        padding: 30px
+        margin-left: 60px
+        width: 80%
+
+    .section--review
+        background-position: right
+
+    .review__text
+        font-size: 18px
+
+
++breakpoint(mobilewide)
+    
+
+    .review
+        width: 100%
+        margin-left: 6%
+        margin-right: 6%
+
+
+    .stats__title
+        +rem(44)
+
+    .review__text
+        font-size: 16px
+
+
++breakpoint(mobile)
+
+    .review
+        width: auto
+        margin: 0
+
+    .section--review
+        background-position: right
+
+    .review__rating
+        font-size: 44px

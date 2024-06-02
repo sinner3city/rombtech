@@ -1,0 +1,76 @@
+.splide__pagination__page.is-active
+    background: $c-black
+
+.splide__pagination
+    bottom: 0
+    display: none
+
+.splide
+    padding-bottom: 0
+    
+        
+.splide
+    max-width: 100%
+
+
+.splide__slide
+    padding-bottom: 0
+    max-width: 100%
+    margin: 0 8px 8px 0
+    margin: 0
+    .art
+        height: 100%
+        max-width: 100% !important
+        //margin: 8px !important
+
+
+.splide__arrow--next
+    right: 0
+    border-radius: $radius
+.splide__arrow--prev
+    left: 0
+    border-radius: $radius
+
+
+.splide__slide img
+    width: auto
+    height: auto
+
+.splide--categories .splide__slide img
+    width: 100%
+
+
+.splide--categories
+    .splide__slide
+        margin: 0
+
+.splide__arrow
+    +multipleTransition((opacity 0.25s, background 0.25s, color 0.25s))
+    &:hover
+        background: $cp1
+        color: white
+
+        svg
+            fill: white
+
+.splide
+    position: relative
+
+.splide__arrows
+    position: absolute
+    z-index: 102
+    top: 50%
+    width: 100%
+    z-index: 2
+    opacity: 0
+    +multipleTransition((opacity 0.25s))
+
+.splide:hover
+    .splide__arrows
+        opacity: 1
+
+
+
++breakpoint(mobilewide)
+    .splide__arrows
+        display: none !important

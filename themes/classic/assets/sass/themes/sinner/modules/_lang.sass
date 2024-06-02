@@ -1,0 +1,84 @@
+.nav-top-lang
+    position: absolute
+    left: 260px
+    // right: 360px
+    top: 15px
+    z-index: 2
+    display: none
+    
+    a[data-iso-code="gb"],
+    a[data-iso-code="es"]
+        pointer-events: none
+        opacity: 0.1
+
+    .dropdown-item
+        white-space: nowrap
+        font-size: 14px
+        padding-right: 15px
+
+        img
+            margin-right: 5px
+            border: 1px #ddd solid
+
+.nav-top-currency
+    position: absolute
+    left: 325px
+    // right: 360px
+    top: 15px
+    z-index: 2
+    display: none
+
+    a[title="Euro"],
+    a[title="Dolar amerykański"]
+        pointer-events: none
+        opacity: 0.1
+
+
+.nav-top-currency,
+.nav-top-lang
+    .btn-unstyle
+        i
+            // display: none
+
+
+
++breakpoint(mobilewide)
+    .nav-top-lang
+        margin-left: -15px
+
+
++breakpoint(mobile)
+    .page-header
+        .nav-top-lang
+            //display: block
+            left: 85px
+            top: 10px
+
+            .material-icons
+                display: none
+            
+        .nav-top-currency
+            //display: block
+            left: 105px
+            top: 10px
+
+            .material-icons
+                display: none
+
+            span
+                margin: 0
+                padding: 0
+
+
+        .nav-top-lang,
+        .nav-top-currency
+            .btn-unstyle
+                width: 30px
+                text-align: center
+                +justify-content(center)
+
+
+
+
+        .js-dropdown .btn-unstyle > .expand-more
+            margin-left: 0

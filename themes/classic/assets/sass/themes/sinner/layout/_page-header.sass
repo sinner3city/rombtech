@@ -1,0 +1,551 @@
+$z-header: 104
+$z-burger: 105
+$z-intro: 101
+$z-page: 103
+    
+.shadow
+    &::after
+        content: ""
+        border-radius: 5px
+        position: absolute
+        z-index: -1
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3)
+        opacity: 0
+        -webkit-transition: opacity 0.9s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.45s ease
+        transition: opacity 0.9s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.45s ease
+
+
+
+
+.page-header
+    position: $header-position
+    top: 0
+    left: 0
+    width: 100%
+    padding: 0
+    background: transparent
+    border-bottom: 1px transparent solid
+    @extend .shadow
+    +translate3d((0, 0, 0))
+    background: rgb(255 255 255 / 99%)
+    z-index: $header-index
+    // height: $header-height
+    z-index: 105
+    +multipleTransition((transform 0.85s ease, height 0.45s ease, top 0.45s ease, opacity 0.45s ease, boxShadow 0.75s ease))
+
+    .scrolling--bottom &
+        // z-index: 99
+    &::after
+        opacity: 0
+
+    .animation--start &
+        // z-index: 123
+        margin-top: 0
+        +translate3d((0, 0, 0))
+        // background: white
+        +multipleTransition((transform 0.85s ease, height 0.45s ease, top 0.45s ease, background 0.75s ease, margin 0.75s ease, opacity 0.45s ease))
+
+    .header--scroll &
+        // position: fixed
+        // margin-top: -100px
+        // z-index: 103
+        // margin-top: -100px
+        // top: -60px
+        border-bottom: 1px $c-border solid
+        border-bottom: 1px transparent solid
+        +translate3d((0, 0, 0))
+        background: rgb(255 255 255 / 99%)
+        +multipleTransition((transform 0.85s ease, height 0.75s, margin 0.45s, background 0.25s ease, opacity 0.45s ease, top 0.45s ease))
+
+    &::after
+        opacity: 0.3
+        top: 0
+        -webkit-transition: opacity 0.9s cubic-bezier(0.165, 0.84, 0.44, 1), top 0.45s ease
+        transition: opacity 0.9s cubic-bezier(0.165, 0.84, 0.44, 1), top 0.45s ease
+
+    &:hover
+        // background: rgb(255 255 255 / 99%)
+
+
+
+#index 
+    .page-header
+        +translate3d((0, 0, 0))
+
+    &.animation--start
+        .page-header
+            +translate3d((0, 0, 0))
+            +multipleTransition((transform 0.85s ease, height 0.45s ease, top 0.45s ease, background 0.75s ease, opacity 0.45s ease))
+
+
+//     &.header--scroll
+//         .page-header
+//             background: rgb(255 255 255 / 0%)
+
+            &:hover
+                // background: rgb(255 255 255 / 99%)
+
+
+#index > .page-container
+    // padding-top: 60px
+
+.page-header__bg
+    padding: 8px $page-padding
+    // height: 60px
+    // @extend .shadow
+    +flexbox()
+    +translate3d((0, 0, 0))
+    +align-items(center)
+    +justify-content(space-between)
+    +multipleTransition((transform 0.25s ease, height 0.45s ease, padding 0.75s ease))
+
+
+    .header--scroll &
+        // background: white
+        // @extend .shadow
+        // +translate3d((0, 60px, 0))
+        +multipleTransition((transform 0.45s ease 0.6s, height 0.45s ease, boxShadow 0.75s ease))
+
+
+        &::after
+            opacity: 0.3
+            top: 0
+            -webkit-transition: opacity 0.9s cubic-bezier(0.165, 0.84, 0.44, 1) 1s, top 0.45s ease
+            transition: opacity 0.9s cubic-bezier(0.165, 0.84, 0.44, 1) 1s, top 0.45s ease
+
+
+.page-product
+    .page-header__bg
+        padding-left: 0
+
+.page-header__right
+    padding-right: 50px
+    margin-left: auto
+    opacity: 1
+    +multipleTransition((padding 0.75s ease, opacity 0.95s ease))
+
+    .animation--loaded &
+        opacity: 1
+        
+.nav-top
+    // position: fixed
+    top: 0
+    height: $header-height
+    right: $page-padding
+    margin-left: auto
+    z-index: 124
+    @extend .center
+    +multipleTransition((transform 0.75s ease, top 0.75s ease, height 0.75s ease))
+    top: 0
+    height: 60px
+    +multipleTransition((transform 0.75s ease, top 0.75s ease, height 0.75s ease))
+
+    .menu--active &
+        +translate3d((0, 0, 0))
+        
+
+
+
+
+.page-logo,
+.page__panel-logo
+    color: $c-black
+    @extend .center
+
+    &:hover
+        color: $c-black
+
+    img
+        height: 26px
+        opacity: 1
+        +translate3d((0, 0, 0))
+        +multipleTransition((transform 0.75s, opacity 0.75s, width 0.45s ease, height 0.45s ease))
+
+        .animation--start &
+            opacity: 1
+            +translate3d((0, 0, 0))
+            +multipleTransition((transform 0.75s, opacity 0.75s, width 0.75s, height 0.45s ease))
+
+
+#index.animation--start
+    .page-logo img
+        +multipleTransition((transform 0.75s 1s, opacity 0.75s 1s, width 0.75s, height 0.45s ease))
+
+.page-logo__name
+    // font-size: 24px
+    margin: 0 0 0 15px
+    font-weight: 400
+    opacity: 0
+    opacity: 1
+    font-size: 20px
+    +translate3d((0, 0, 0))
+    +multipleTransition((transform 0.75s, opacity 0.75s, font 0.45s ease))
+
+    .animation--start &
+        opacity: 1
+        +translate3d((0, 0, 0))
+        +multipleTransition((transform 0.75s 0.1s, opacity 0.75s 0.1s, width 0.75s))
+
+
+.page__panel-right
+    .page-logo__name
+        margin-left: 0
+
+#index.animation--start
+    .page-logo__name
+        +multipleTransition((transform 0.75s 1s, opacity 0.75s 1s, width 0.75s))
+
+
+.page-header
+    .nav-top-search
+        display: none
+    .nav-top-search__form
+        position: relative
+        opacity: 1
+        +multipleTransition((opacity 0.75s ease, top 0.75s ease))
+        
+        .menu--active &
+            // opacity: 0
+            // pointer-events: none
+            +multipleTransition((opacity 0.75s ease, top 0.75s ease))
+
+
+    .nav-top-search__input
+        position: absolute
+        width: 200px
+
+
+    .nav-top-search__input
+        position: absolute
+        top: 0
+        right: 100%
+        right: 10px
+
+// RWD NAVI
+
+.rebate-topinfo__name
+    margin: 0
+    padding: 0
+    font-size: 14px
+    font-weight: 400
+    margin-left: 5px
+
+.rebate-topinfo
+    +flexbox()
+    +align-items(center)
+    font-size: 14px
+    cursor: help
+
+.rebate-topinfo__label
+    // color: $cp1
+    margin-right: 5px
+
+.topcontact
+    margin: 0
+    padding: 0
+    font-size: 14px
+    font-weight: 400
+    +flexbox()
+    +align-items(center)
+    // margin-right: auto
+    margin-right: 30px
+    display: none
+
+    > i
+        font-weight: 700
+        padding: 0 8px 0 5px
+
+.header-banner
+    margin-left: auto
+    margin-right: 30px
+
+// .page-product
+//     .header-banner,
+//     .topcontact
+//         display: none
+
+.topcontact__phone
+    +flexbox()
+    +align-items(center)
+    color: $c-black
+    &:hover
+        color: $cp1
+
+    i
+        font-size: 16px
+        margin-right: 5px
+        color: $cp1
+        line-height: 1.2
+
+.page-header__basket-count
+    background: $cp1
+    position: absolute
+    color: white
+    border-radius: 50%
+    top: 25%
+    font-weight: 400
+    text-align: center
+    align-items: center
+    padding: 0
+    height: 15px
+    width: 15px
+    display: inline-flex
+    justify-content: center
+    font-size: 13px
+    left: 100%
+    margin-left: -15px
+    line-height: 1
+    +multipleTransition((opacity 0.45s ease, background 0.45s ease, color 0.45s ease, top 0.45s ease, left 0.45s ease))
+
+    
+    &.header--scroll
+        background: $cp1
+        display: block
+        position: absolute
+        text-align: center
+        align-items: center
+        padding: 0
+        height: 15px
+        width: 15px
+        display: inline-flex
+        justify-content: center
+        line-height: 1
+        font-size: 13px
+        left: 100%
+        margin-left: -7px
+
+
+.page-header
+    .nav-top-search__form
+            
+        .nav-top-search__input[type="text"]
+            position: absolute
+            top: 0
+            width: 50px
+            padding: 0 15px
+            overflow: hidden
+            max-width: none
+            opacity: 0
+            height: 40px
+            pointer-events: none
+            +multipleTransition((opacity 0.45s ease, background 0.45s ease, color 0.45s ease, border 0.45s ease, width 0.85s ease))
+            // .header--scroll 
+            height: 30px
+
+            &:focus
+                border-color: #b3b3b3
+                +multipleTransition((opacity 0.45s ease, background 0.45s ease, color 0.45s ease, border 0.45s ease, width 0.85s ease))
+
+
+
+.page-header
+    &:hover
+        .nav-top-search__form
+            .nav-top-search__btn
+                color: $c-black
+            .nav-top-search__input[type="text"]
+                border-color: $c-border
+
+                &::placeholder
+                    opacity: 1
+    .nav-top-search__form
+        position: relative
+
+        .nav-top-search__btn
+            // color: white
+            +multipleTransition((color 0.25s))
+
+            .header--scroll &
+                color: $c-black
+                +multipleTransition((color 0.25s))
+
+        .nav-top-search__input[type="text"]
+            opacity: 1
+            width: 220px
+            max-width: none
+            pointer-events: auto
+            // border-color: rgb(255 255 255 / 48%)
+            background: rgb(250 250 250 / 25%)
+            +multipleTransition((opacity 0.45s ease, background 0.45s ease, color 0.45s ease, border 0.45s ease, width 0.85s ease))
+
+            &::placeholder
+                // opacity: 0
+                +multipleTransition((opacity 0.25s))
+                font-size: 12px
+                font-weight: 300
+                letter-spacing: 0
+                // display: none
+                // color: black
+
+            .header--scroll &
+                border-color: $c-border
+                &::placeholder
+                    opacity: 1
+
+                    
+
+            &:focus
+                border-color: #b3b3b3
+                border-color: $c-border
+
+.nav-top-cart
+    // margin-right: 10px
+    border-right: 1px #ddd solid
+    margin: 0
+    padding-right: 8px
+    i
+        font-size: 24px
+
+.nav-top-user
+
+.nav-top-user.js-dropdown
+    order: 1
+
+    &:hover
+        .dropdown-menu
+            display: block
+    .dropdown-menu
+        text-align: right
+        right: -7px
+        z-index: 140
+        background: whitesmoke
+        box-shadow: 0px 1px 21px rgb(0 0 34 / 22%)
+        padding: 0 5px 5px
+
+    .dropdown-item
+        padding: 7px 15px
+        background: #F5F5F5
+
+    li
+        border: 0
+        border-top: 0
+
+    li.current:last-child
+        .dropdown-item
+            padding-bottom: 7px
+            background: $cp1
+            color: white
+
+            &:hover
+                color: white
+                background: $c-black
+
+.page-product
+    .nav-top-currency,
+    .nav-top-lang
+        display: none
+
+
++breakpoint(desktop)
+    .nav-top-currency,
+    .nav-top-lang,
+    .topcontact,
+    .header-banner
+    
+        display: none
+
++breakpoint(tablet)
+
+    .page-header__bg
+        padding-left: 20px
+        padding-right: 15px
+    .page-header
+        z-index: 120
+
+    .nav-top-currency,
+    .nav-top-lang
+        display: none
+
+    .page-header .nav-top-search
+        display: block
+
+
+
+    .page-header
+        position: fixed
+        // height: 50px
+        border-bottom: 1px $c-border solid
+        background: white
+
+        .header--scroll &
+            +translate3d((0, 0, 0))
+            border-bottom: 1px $c-border solid
+
+
+        .nav-top-lang,
+        .nav-top-currency
+            display: none
+
+
+    .page-header__bg
+        // height: 50px
+        margin: 0
+        +translate3d((0, 0, 0))
+
+        .header--scroll &
+            margin: 0
+            +translate3d((0, 0, 0))
+
+    .page-header__right
+        padding-right: 30px
+
+    .page-logo__name
+        font-size: 19px
+
++breakpoint(mobilewide)
+
+    #index 
+        .page-header
+            +translate3d((0, 0, 0))
+    .page-header__bg
+        padding: 0 20px
+
+    .page-logo__name
+        font-size: 17px
+
+
+    .page__panel-right .nav-top-search
+        padding: 0
+
+
+    .page-logo,
+    .page__panel-logo
+        img
+            opacity: 1
+            +translate3d((0, 0, 0))
+            +multipleTransition((transform 0.75s, opacity 0.75s, width 0.75s, height 0.45s ease))
+
+    
+    .page__panel-logo
+        display: block
+
+
+    #index.animation--start
+        .page-logo img
+            +multipleTransition((transform 0.75s, opacity 0.75s, width 0.75s, height 0.45s ease))
+
+    .page-logo__name
+        opacity: 1
+        +translate3d((0, 0, 0))
+        +multipleTransition((transform 0.75s, opacity 0.75s, width 0.75s))
+
+    #index.animation--start
+        .page-logo__name
+            +multipleTransition((transform 0.75s, opacity 0.75s, width 0.75s))
+
+
+
++breakpoint(mobilesmall)
+    .page-header
+        .page-logo img
+            display: none
+        .page-logo__name
+            margin-left: 0
+
+
+
+        

@@ -1,0 +1,1065 @@
+// HEADER
+
+.nav-top-search__input[type=text]::placeholder
+    color: #c7c7c7
+    font-weight: 300
+
+::-webkit-scrollbar
+    width: 8px
+    
+.ui-autocomplete
+    background: white
+    padding: 5px 14px
+
+    .category,
+    .separator
+        display: none !important
+
+
+    a
+        .product
+            color: #999
+            display: block
+            padding: 5px 0 !important
+            border-bottom: 1px #b3b3b3 dashed !important
+        &:hover
+            .product
+                color: $c-black
+
+.ui-autocomplete-input
+    font-family: Arial
+
+.page__panel-right .page-menu__link
+    padding-top: 12px
+    padding-bottom: 12px
+
+
+.page-logo__demo
+    top: -10px
+    color: #999898
+    font-weight: 300
+    letter-spacing: 2px
+.page-logo
+    position: absolute
+    max-height: 46px
+    height: 36px
+    top: 5px
++breakpoint(desktop)
+    .page-header .nav-top-search__form .nav-top-search__input[type=text]
+        width: 170px
+
+
+    .page-header__bg
+        height: 55px
+    #product.page-product .page-logo
+        margin-left: 15px
+
++breakpoint(tablet)
+    .page-header__bg
+        height: 55px
+
+    .page__panel-right .page__panel-logo
+        display: inline-flex
+
+    .page-logo__demo
+        display: none
+
+
+    #product.page-product .page-logo
+        margin-left: 0
+
+     
+    #search_widget
+        .nav-top__link.link--search
+            margin-right: 0
++breakpoint(mobilewide) 
+
+    .page-header .page-logo img
+        margin-top: 0
+
+    .page__panel-right .page-menu__label
+        font-weight: 400
+
+
++breakpoint(mobile)
+    .page-logo
+        margin-top: 0
+
+    .menu--active .page-sidebar .nav-top__link.link--burger
+        right: 0
+        top: 0
+
+    .page__panel-right
+        padding-right: 15px
+
+
+
+
++breakpoint(0, 375px)
+    .page-header .page-logo__name
+        margin-left: 10px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// LISTA PRODUKTÓW
+
+.page-category
+    .page-main
+        padding-right: 15px
+
+
+.category-id-2
+    .category-heading
+        padding-bottom: 0
+        margin-bottom: 0
+
+
+.category-heading
+    padding-bottom: 0
+    margin-bottom: 0
+
+.product-item__flag
+    background: transparent
+    border-color: transparent
+
+.product-item__flag.on-sale
+    color: #5da936
+
+    .product-detail__scroll &
+        color: white
+
+.facet-list
+    width: max-content
+
+#js-active-search-filters
+    margin-bottom: 15px
+
+#category-description
+    line-height: initial
+    font-size: 17px
+    line-height: 1.3
+    border-radius: $radius
+    padding: 20px
+    margin-top: 20px
+    // border: 0
+    // padding-left: 0
+    margin-bottom: 0
+    // padding-bottom: 0
+    +flex(1)
+
+    .toggle-content__content
+        display: block
+
+    .toggle-content__link
+        display: none
+
+    p
+        margin: 0
+
+
+#js-product-list
+    margin-top: 25px
+
+.category-cover
+    max-width: 600px
+    margin-bottom: 15px
+
+.filter-navi
+    margin-top: 10px
+    margin-bottom: 0
+    // padding-bottom: 0
+
+.block-category-inner
+    +flexbox()
+    gap: 30px
+    +align-items(center)
+    margin-bottom: 15px
+    
+.list--products[data-col]
+    .product-item__quick
+        display: none
+
+#products
+    .product-item__quick
+        display: block
+
+.list--products[data-col][data-slider=true] .splide__slide,
+.list--products[data-col][data-slider=true] .splide__slide .art
+    min-width: 0
+
+#search_filters
+    padding-right: 0
+    min-width: 0
+.category-id-2 
+    .block-categories
+        display: block
+        margin: 0
+
+    .category-sub__item[data-depth="0"].item--submenu
+        padding-right: 0
+
+ 
+.block-categories
+    display: block
+    margin: 0
+    padding: 0
+
+.category-sub__arrow[data-depth="0"]
+    display: none
+
+.category-top-menu
+    padding-bottom: 15px
+
+    &::-webkit-scrollbar-track
+        -webkit-box-shadow: none
+        border-radius: 0
+        background-color: #f5f5f5
+
+    &::-webkit-scrollbar
+        width: 2px
+        height: 6px
+        background-color: white
+
+    &::-webkit-scrollbar-thumb
+        border-radius: 5px
+        -webkit-box-shadow: none
+        background-color: $cp1
+
+
+#index
+    .list--products[data-slider]
+        margin-left: 0
+        margin-right: 0
+        .product-item
+            margin: 0
+
+
++breakpoint(laptop)
+
+    .category-top-menu
+        .category-sub__item[data-depth="0"]
+            min-width: auto
+
+    .category-top-menu > li
+        display: initial
+        overflow-y: initial
+        overflow-x: initial
+        width: initial
+
+    .facet-list
+        width: auto
+
+        
+    .filter-wrapper .filter-close
+        top: 59px
+    .filter-wrapper.filters--open .filter-label-rwd
+        display: inline-flex
+        font-size: 16px
+        font-weight: 400
+        text-transform: uppercase
+
+    #category-description
+        margin-top: 0
+
+    .category-cover
+        margin: 15px auto
+
+    #category .block-categories
+        margin: 0
+
+    #category .block-category
+        margin-top: 0
+        padding-top: 0
+
+    #category-description
+        margin: 15px 0
+
+
+    ::-webkit-scrollbar
+        height: 6px
+
++breakpoint(tablet)
+    .category-heading span
+        +rem(26)
+
+    
+
+    #index
+        .section--news
+            .art__title
+                +rem(26)
+
++breakpoint(mobilewide)
+    .filter-wrapper.filters--open
+        margin-top: 10px
+
+    .category-id-2 .category-heading
+        padding-top: 0
+    
+    .filter-navi
+        padding-right: 15px
+
+    #search_filters
+        padding-left: 2px
+
+    .page-category
+        .active_filters .active-filter-title
+            display: none
+
+        #js-active-search-filters
+            padding: 0
+            border: 0
+
+
++breakpoint(mobile)
+
+    #category-description
+        +rem(14)
+        padding: 10px
+        line-height: 1.4
+
+        .toggle-content__content
+            display: none
+            margin-top: 10px
+
+        .toggle-content__link
+            display: block
+
+    .page-category
+        .filter-titler .filter-title__label
+            +rem(15)
+
+
++breakpoint(desktop)
+    .filter-wrapper.filters--open .filter-label-rwd
+        display: inline-flex
+
+    .block-category-inner
+        display: block
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// quick mode
+
+.qm-product-description-short
+    margin-bottom: 15px
+
+.qm-photos > .qm-photos__container
+    padding-right: 0
+
+.qm-product__title
+    margin-bottom: 10px
+
+.qm-photos .thumb-container img.selected
+    border-color: $cp1
+
+.qm .modal.quickview
+    +multipleTransition((opacity 0.45s ease 2s))
+
+    .discount-right
+        display: none
+
+.qm-photos > .qm-photos__container
+    +align-items(start)
+    +justify-content(start)
+.qm-photos .product-cover
+    height: 100%
+    margin-left: auto
+    margin-right: auto
+
+
+
+.qm
+    #products .product-item__quick
+        display: none
+
+    .qm-photos .js-qv-mask
+        position: static
+        margin-top: 0
+        border: 0
+        width: 60px
+        // background: white
+
+    .qm-photos .js-arrows
+        display: none
+
+.modal.quickview .modal-content
+    border: 2px $cp1 solid
+    
+.modal.quickview .close
+    top: -13px
+    right: -13px
+
+    i
+        // color: black
+
+    &:hover
+        i
+            // color: $cp1
+#search_filters,
+.filter-navi
+    opacity: 1
+    // overflow: hidden
+    +multipleTransition((opacity 0.4s, margin 0.4s, height 0.2s))
+    
+.qm
+    .btn-fastmode
+        .btn-grid__label
+            color: $cp1
+
+    .filter-navi
+        margin-top: -85px
+    #search_filters,
+    .filter-navi
+        opacity: 0
+        // height: 0
+        overflow: hidden
+        pointer-events: none
+        +multipleTransition((opacity 0.4s, margin 0.4s 0.35s, height 0.2s))
+
+
+.qm
+    &.grid--3 .list--products[data-col] .art,
+    .list--products[data-col="3"] .art
+        max-width: none !important
+
+
+
+@media only screen and (min-width: 1500px)
+    .qm.grid--2 .list--products[data-col] .art__figure
+        max-width: 50%
+
++breakpoint(laptop)
+    .qm
+        &.grid--4 .list--products[data-col] .art,
+        .list--products[data-col="4"] .art
+            min-width: 48% !important
+
+        &.grid--3 .list--products[data-col] .art,
+        .list--products[data-col="3"] .art
+            .art__figure
+                height: 160px
+
++breakpoint(desktop)
+
+    .qm
+        &.grid--2 .list--products[data-col] .art,
+        .list--products[data-col="2"] .art
+            min-width: 48% !important
+
+
+    .page-content-left
+        display: initial
+
+    .qm .page-content-listing, .qm .breadcrumb
+        padding-left: 470px
+
+    .qm
+        &.grid--4 .list--products[data-col] .art,
+        .list--products[data-col="4"] .art
+            .art__figure
+                height: 160px
+
+        
+        &.grid--3 .list--products[data-col] .art,
+        .list--products[data-col="3"] .art
+            max-width: 50%
+            min-width: 40%
+            .art__figure
+                height: 160px
+
+
+
++breakpoint(tablet)
+
+    .page-content-left
+        display: none
+
+    .qm .page-content-listing, .qm .breadcrumb
+        padding-left: 0
+
+        
+
+
+
+
+
+
+
+// DETAL PRODUKTU
+
+
+
+.product-detail__scroll
+    &:hover
+        .ico--scroll
+            .info-label,
+            .ico
+                color: $cp1
+                text-shadow: none
+    .ico--scroll
+        +justify-content(start)
+        background: none
+        &:hover
+            background: none
+        .info-label,
+        .ico
+            color: #a7a7a7
+            text-shadow: none
+#fs_product .product-detail__scroll
+    &::-webkit-scrollbar-track
+        background-color: #fff
+
+    &::-webkit-scrollbar
+        background-color: white
+
+    &::-webkit-scrollbar-thumb
+        background-color: #fff
+
+    
+.page-product
+    .toggle-content__content
+        margin-top: 20px
+        // margin: -20px -20px 0
+
+    .page-logo
+        margin-left: 5px
+        height: 20px
+    .product-prices
+        margin: 0
+        margin-bottom: 30px
+        
+@media only screen and (min-width: 1600px)
+
+    #product.page-product .product-detail, #product.page-product .page-logo, #product.page-product .breadcrumb
+        padding-right: 2%
+
++breakpoint(desktop)
+    .page-product
+        .tab-content
+            padding-left: 30px
+            padding-right: 30px
+
+        .nav-top-user .page-header__btn-label
+            display: none
+
++breakpoint(tablet)
+    #product
+        .page-main
+            padding-top: 50px
+
+        
+    .page-product
+        .tabs .nav-tabs
+            min-width: auto
+
+        .table-product
+            min-width: 400px
+
+        .product-detail-table
+            overflow: hidden
+            overflow-x: auto
+
+        .page-footer
+            padding-top: 0
+            
+
+    .page-product .product-options .product-variants
+        display: block
+
+    .page-up
+        position: static
+        text-align: right
+        padding: 30px 30px 0
+
+    .ico-swipe-mobile
+        text-shadow: 1px 0px 3px rgb(0 0 0 / 64%)
+
+    .page-product .breadcrumbs__list
+        margin-bottom: 5px
+
+    .page-header__bg
+        height: 53px
+
++breakpoint(mobilewide)
+    .product-actions
+        margin-bottom: 30px
+
+    .page-product
+        .product-values
+            overflow: hidden
+            overflow-x: auto
+            img
+                min-width: 400px
+                max-width: none
+
+    #product.page-product .breadcrumbs__list
+        margin-bottom: 10px
+        margin-top: 5px
+
+    .page-header__bg
+        height: 45px
+
+
+    .page-product .section-products__title
+        text-align: center
+        br
+            display: block
+
+        strong
+            margin-right: 0
+            background: $cp1 !important
+            color: white !important
+
+    .page-product .tab-content
+        padding: 20px !important
+
++breakpoint(mobile)
+
+    .page-product
+        .product-description
+            .toggle-content__content
+                +rem(15)
+
+        .qty-add
+            margin-right: 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// fix grid
+
+#js-product-list
+    .art__list
+        +justify-content(center)
+
+.art__img
+    min-height: 20px
+
+.grid--2 .list--products[data-col] .art__img, .list--products[data-col="2"] .art__img
+    min-height: 0
+
+
+// one
+
+#js-product-list 
+    .list--products[data-col].list--one
+        +justify-content(start)
+        
+        .art__figure,
+        .art,
+        img
+            max-width: none !important
+            max-height: none !important
+            min-width: 0 !important
+            min-height: 0 !important
+
+        .art__figure
+            width: 40% !important
+            height: auto !important
+            overflow: initial
+            min-width: 500px !important
+
+        .art__img
+            +transform(none)
+
+        .art__link-art
+            +flexbox()
+            +align-items(center)
+            +flex-wrap(wrap)
+            gap: 5%
+        .art__content
+            +flexbox()
+            +align-items(center)
+            height: auto
+            +flex-wrap(wrap)
+            padding: 0
+            // padding: 5%
+            +flex(1)
+            // min-width: 450px !important
+            // width: 60% !important
+            // padding: 30px !important
+
+        .art__title
+            margin: 0
+            padding: 0
+            +rem(44)
+            margin-bottom: 30px
+
+        .art__header
+            width: 100%
+            +justify-content(start)
+            text-align: left
+
+        .product-item__prices
+            position: static
+            +flexbox()
+
+            +transform(none)
+            +rem(24)
+            .product-item__price
+                +rem(24)
+
+            .product-item__current-price-vat
+                margin: 0 15px
+                +rem(18)
+                font-weight: 400
+
+        .product-item__desc
+            display: block !important
+            text-align: left
+            margin-top: 0
+            padding-top: 0
+            margin-bottom: 30px
+            width: 100%
+
+        .product-item__quick
+            display: none !important
+        .art
+            border: 0
+
+            &::after
+                display: none
+
+            &:hover
+                .art__title
+                    color: $cp1
+                // box-shadow: none
+            // width: 100% !important
+            // flex: 0 !important
+
++breakpoint(tablet)
+    #js-product-list 
+        .list--products[data-col].list--one
+            .art__figure,
+            .art__content
+                min-width: 100% !important
+                width: 100% !important
+
+            .art__figure
+                margin-bottom: 15px
+
++breakpoint(mobile)
+    #js-product-list 
+        .list--products[data-col].list--one
+            .art__figure,
+            .art__content
+                min-width: 100% !important
+                width: 100% !important
+
+            .art
+                padding: 0
+                overflow: initial
+
+            .art__title
+                +rem(24)
+
+            .product-item__prices
+                +rem(18)
+                .product-item__price
+                    +rem(18)
+
+                .product-item__current-price-vat
+                    +rem(15)
+
+@media only screen and (min-width: 1921px)
+
+    .grid--3 .list--products[data-col] .art__figure, .list--products[data-col="3"]
+        
+
+
+    .grid--6 .list--products[data-col="6"] .art, .list--products[data-col="6"] .art
+        min-width: calc((100% / 8) - 0.5% * 2)
+
+    .grid--4 .list--products[data-col="6"] .art, .list--products[data-col="4"] .art
+        .art__figure
+            max-height: 400px
+        .art__subtitle
+            //+rem(18)
+        .art__title
+            //+rem(24)
+
+        .product-item__regular-price
+            +rem(20)
+        .btn--price
+            +rem(22)
+
+        .product-item__current-price-vat
+            +rem(18)
+    
+    .grid--2 .list--products[data-col] .art__figure, 
+    .list--products[data-col="2"] .art__figure
+        max-width: -webkit-fill-available
+        // height: auto
+
++breakpoint(tablet)
+    #js-product-list
+        .art__list
+            margin-left: -1%
+            margin-right: -1%
+
+            &[data-col="4"]
+                margin-left: -0.5%
+                margin-right: -0.5%
+
+
+@media only screen and (min-width: 2701px)
+    .grid--2 .list--products[data-col="2"] .art, .list--products[data-col="2"] .art
+        max-width: calc((100% / (6 / 1)) - 0.5% * 2)
+        min-width: calc((100% / 6) - 0.5% * 2)
+
+    .grid--6 .list--products[data-col="6"] .art__figure, .list--products[data-col="6"] .art__figure
+        height: 250px
+
+    .grid--3 .list--products[data-col] .art, .list--products[data-col="3"] .art
+        max-width: calc((100% / (6 / 1)) - 0.5% * 2)
+        min-width: calc((100% / 6) - 0.5% * 2)
+
+
+@media only screen and (min-width: 1921px) and (max-width: 2700px)
+    .grid--2 .list--products[data-col="2"] .art, .list--products[data-col="2"] .art
+        max-width: calc((100% / (4 / 1)) - 0.5% * 2)
+        min-width: calc((100% / 4) - 0.5% * 2)
+    .grid--6 .list--products[data-col="6"] .art, .list--products[data-col="6"] .art
+        max-width: calc((100% / (6 / 1)) - 0.5% * 2)
+        min-width: calc((100% / 6) - 0.5% * 2)
+
+@media only screen and (min-width: 1800px) and (max-width: 2700px)
+    .grid--3 .list--products[data-col] .art, .list--products[data-col="3"] .art
+        min-width: calc((100% / 4) - 0.5% * 2)
+        .art__figure
+            // height: 450px
+
+    .grid--4 .list--products[data-col="4"] .art, .list--products[data-col="4"] .art
+        max-width: calc((100% / (6 / 2)) - 0.5% * 2)
+    .grid--6 .list--products[data-col="6"] .art__figure, .list--products[data-col="6"] .art__figure
+        height: 200px
+@media only screen and (min-width: 1500px) and (max-width: 1799px)
+
+    .grid--2 .list--products[data-col="2"] .art, .list--products[data-col="2"] .art
+        max-width: calc((100% / (3 / 1)) - 0.5% * 2)
+    
+    .grid--3 .list--products[data-col] .art, .list--products[data-col="3"] .art
+        min-width: calc((100% / 4) - 0.5% * 2)
+        .art__figure
+            height: 220px
+
+    .grid--6 .list--products[data-col="6"] .art, .list--products[data-col="6"] .art
+        max-width: calc((100% / (9 / 2)) - 0.5% * 2)
+        .art__figure
+            height: 180px
+
+    .grid--4 .list--products[data-col="4"] .art, .list--products[data-col="4"] .art
+        max-width: calc((100% / (6 / 2)) - 0.5% * 2)
+
+    .grid--4 .list--products[data-col="4"] .art, .list--products[data-col="4"] .art
+        padding-bottom: 30px
+
+    .list--products[data-col] .art__subtitle
+        +rem(10)
+    .list--products[data-col="6"] .art__title
+        +rem(15)
+
+@media only screen and (min-width: 1230px) and (max-width: 1499px)
+
+    .list--products[data-col="6"] .art__title
+        +rem(14)
+    .grid--6 .list--products[data-col="6"] .art, .list--products[data-col="6"] .art
+        min-width: calc((100% / 4) - 0.5% * 2)
+    .grid--2 .list--products[data-col="2"] .art__figure, .list--products[data-col="2"] .art__figure
+        max-height: 100px
+
++breakpoint(980px, 1229px)
+    .grid--6 .list--products[data-col="6"] .art, .list--products[data-col="6"] .art
+        min-width: calc((100% / (8 / 2)) - 0.5% * 2) 
+
+    .grid--3 .list--products[data-col] .art, .list--products[data-col="3"] .art
+        min-width: calc((100% / 4) - 0.5% * 2)
+
++breakpoint(768px, 1024px)
+    .list--products[data-col][data-slider=true] .splide__slide .art__figure
+        height: 150px
+
+    .grid--6 .list--products[data-col="6"] .art, .list--products[data-col="6"] .art
+        min-width: calc((100% / (9 / 2)) - 0.5% * 2)
+
+        .art__title
+            +rem(14)
+            font-weight: 400
+
+    .grid--6 
+        .list--products[data-col="6"] .art .art__title
+            font-size: 10px
+        .list--products[data-col="6"] .art .art__subtitle
+            font-size: 8px
+
+
++breakpoint(480px, 767px)
+    .grid--4 .list--products[data-col] .art, .list--products[data-col="4"] .art
+        margin: 0.5%
+
+
+
+
++breakpoint(mobilewide)
+    .grid--2 .list--products[data-col] .art__figure, 
+    .list--products[data-col="2"] .art__figure
+        width: -webkit-fill-available
+
+    .grid--3 .list--products[data-col] .art__figure, .list--products[data-col="3"] .art__figure
+        height: 190px
+
+
+    #js-product-list
+        .art__list
+            &[data-col="2"]
+                margin-left: 0
+                margin-right: 0
+
+
++breakpoint(mobile)
+    .grid--6 .list--products[data-col] .btn--price, .list--products[data-col="6"] .btn--price
+        +rem(12px)
+
+    .grid--3 .list--products[data-col] .art__figure, .list--products[data-col="3"] .art__figure
+        height: 140px
+
+    .grid--4 .list--products[data-col] .art, .list--products[data-col="4"] .art
+        .art__figure
+            height: max-content
+            max-height: 100%
+    #js-product-list
+        .art__list
+            &[data-col="4"],
+            &[data-col="2"]
+                margin-left: 0
+                margin-right: 0
+
+
+
+
++breakpoint(0, 390px)
+    .grid--3 .list--products[data-col] .art, .list--products[data-col="3"] .art
+        min-width: 100%
+
+        .art__figure
+            height: max-content
+            max-height: 100%
+    .grid--3
+        #js-product-list .art__list[data-col="3"]
+            margin: 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// STOPKA
+
+.page-footer
+    .material-icons
+        display: block
+
+
+    .block-contact
+        color: #a2a2a2
+        text-align: right
+        +rem(17)
+        line-height: 1.4
+
+        i:hover
+            color: white
+
+    .footer-contact
+        margin: auto
+
+.page-bottom
+    +justify-content(center)
+    gap: 15px
+
+
+
++breakpoint(desktop)
+    .page-footer 
+        .block-contact
+            display: none
+
+            
+        .footer-contact
+            margin: initial
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// demo modifi
+
+#fshopdemo
+    #custom-text
+        // display: none

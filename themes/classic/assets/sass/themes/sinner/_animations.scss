@@ -1,0 +1,91 @@
+$animation-speed: 0.65s !default;
+$animation-delay: 0s !default;
+$animation-left-offset: -60px !default;
+$animation-right-offset: 60px !default;
+$animation-top-offset: -40px !default;
+$animation-bottom-offset: -60px !default;
+
+
+@media only screen and (max-width: 1920px) {
+
+    .animation-header-border {
+        @include multipleTransition((width 0.55s ease, transform 0.55s ease-in-out));
+
+        &.animation--active {
+            width: 100%;
+            opacity: 1;
+            @include transform((translate3d(0, 0, 0)));
+            @include multipleTransition((width 0.75s ease 0.45s, transform 0.55s ease-in-out 0.45s));
+        }
+
+    }
+
+    .animation-from-left {
+        opacity: 0;
+        @include translate3d(($animation-left-offset, 0, 0));
+        @include multipleTransition((transform $animation-speed ease-in-out, opacity $animation-speed linear));
+    }
+
+
+    .animation-from-right {
+        opacity: 0;
+        @include translate3d(($animation-right-offset, 0, 0));
+        @include multipleTransition((transform $animation-speed ease-in-out, opacity $animation-speed linear));
+    }
+
+
+    .animation-from-top {
+        opacity: 0;
+        @include translate3d((0, $animation-top-offset, 0));
+        @include multipleTransition((transform $animation-speed ease-in-out, opacity $animation-speed linear));
+    }
+
+    .animation-from-bottom {
+        opacity: 0;
+        @include translate3d((0, -$animation-bottom-offset, 0));
+        @include multipleTransition((transform $animation-speed ease-in-out, opacity $animation-speed linear));
+    }
+
+    .animation-fade {
+        opacity: 0;
+        @include translate3d((0, -30px, 0));
+        @include multipleTransition((transform $animation-speed ease-in-out, opacity $animation-speed linear));
+    }
+
+
+
+    // *.animation--active {
+    //     opacity: 1;
+    //     @include translate3d((0, 0, 0));
+    //     @include multipleTransition((transform $animation-speed ease-in-out $animation-delay, opacity $animation-speed linear $animation-delay));
+
+    //     .app-header & {
+    //         @include multipleTransition((transform $animation-speed ease-in-out, opacity $animation-speed linear));
+    //     }
+    // }
+
+
+    .animation-two-columns {
+        > [class^="col"] {
+            opacity: 0;
+            @include translate3d(($animation-right-offset, 0, 0));
+            @include multipleTransition((transform $animation-speed ease-in-out, opacity $animation-speed linear));
+
+            &:first-child {
+                opacity: 0;
+                @include translate3d(($animation-left-offset, 0, 0));
+                @include multipleTransition((transform $animation-speed ease-in-out, opacity $animation-speed linear));
+            }
+
+        }
+
+        &.animation--active {
+            > [class^="col"] {
+                opacity: 1;
+                @include translate3d((0, 0, 0));
+                @include multipleTransition((transform $animation-speed ease-in-out $animation-delay, opacity $animation-speed linear $animation-delay));
+            }
+        }
+    }
+
+}

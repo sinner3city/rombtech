@@ -1,0 +1,36 @@
+div.googleflogin {
+    cursor: pointer;
+}
+
+.googleflogin-link {
+    float: right;
+    border-left: 1px solid #515151;
+    display: block;
+    color: white;
+    font-weight: bold;
+    padding: 8px 10px 4px 10px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    line-height: 18px;
+}
+
+.gloader {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 40px;
+    width: 80px;
+    background: #C9210D url('../../img/loading.gif') no-repeat center;
+}
+
+.loginpopupsocial {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.loginpopupsocial span {
+    color: #FFF;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+    font-family: Arial;
+}

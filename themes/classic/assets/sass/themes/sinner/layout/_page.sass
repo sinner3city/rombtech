@@ -1,0 +1,451 @@
+
+body
+    +flexbox()
+    +flex-wrap(wrap)
+    +align-items(flex-start)
+    min-height: 100vh
+
+body#index
+    padding-top: 85px
+
+.sitemap
+    +flexbox()
+    +flex-wrap(wrap)
+    +justify-content(space-around)
+    width: 100%
+    ul
+        margin: 15px
+
+    h2
+        font-weight: 300
+        font-size: 28px
+
+    a
+        color: $c-black
+
+        &:hover
+            color: $cp1
+
+.page-header
+    .page-menu
+        background: #f5f5f5
+        border-top: 1px #eee solid
+
+        &:hover
+            background: #f5f5f5
+
+.page-container
+    width: 100%
+
+.page-main
+    overflow: hidden
+    +flex-wrap(wrap)
+    // margin-bottom: auto
+    // +flexbox()
+    // +flex-wrap(wrap)
+
+.page-content2
+    width: 100%
+    +flexbox()
+    +flex-wrap(wrap)
+    +justify-content(center)
+
+.page-footer
+    margin-top: auto
+    background: white
+    padding-top: 60px
+
+.page-heading
+    width: 100%
+    text-align: center
+    border-bottom: 1px #ddd solid
+    padding-bottom: 15px
+    // border-top: 1px #ddd solid
+    padding-top: 15px
+    margin-bottom: 40px
+
+    h1
+        margin: 0
+
+.page-h1
+    font-weight: 300
+    font-size: 22px
+    font-size: 44px
+    //text-transform: uppercase !important
+
+.content-h1
+    font-size: 33px
+    font-weight: 300
+    color: #212121
+    margin-top: 5px
+    display: inline-flex
+    margin-right: 15px
+    white-space: nowrap
+
+.section--intro-page
+    margin-top: 65px
+    margin-bottom: 60px
+
+    .section__header
+        margin-bottom: 0
+        text-align: center
+
+#left-column
+    padding-right: 2%
+
+    & ~ #content-wrapper
+        padding-right: 0
+
+#pagenotfound #main .page-content
+    max-width: 100%
+    margin-bottom: 30px
+
+.section--blog-list
+    padding-top: 0
+    padding-bottom: 30px
+
+    .section__header
+        text-align: center
+        border-bottom: 1px #ddd solid
+        padding-bottom: 30px
+        margin-bottom: 60px
+
+.page-content.page-cms
+    padding: 0 10%
+
+    [style*="font-size:medium"]
+    font-size: 18px !important
+
+    ol, ul
+        margin: 15px 0 15px 30px
+        font-weight: 300
+        line-height: 1.8
+
+    ul li
+        list-style: disc
+
+    p
+        font-size: 18px
+
+.page-content.page-cms
+    h1
+        font-size: 44px
+    h2
+        font-size: 34px
+    h3
+        font-size: 24px
+    h4
+        font-size: 24px
+    h5
+        font-size: 18px
+        font-weight: 400
+
+    img
+        max-width: 100%
+        width: auto
+        height: auto
+        +translateZ(0)
+
+    .page-content.card-block
+        border: 0
+        text-align: center
+
+    .cms-category-list,
+    .cms-category-page
+        border: 1px #eee solid
+        padding: 30px
+        margin: 2%
+        +multipleTransition((border 0.25s ease-in-out, opacity 0.55s linear, margin 0.55s ease-in-out))
+
+        &:hover
+            border-color: $cp1
+            +multipleTransition((border 0.25s ease-in-out, opacity 0.55s linear, margin 0.55s ease-in-out))
+
+        p
+            margin-bottom: 0
+
+        .cms-category-page__title,
+        .cms-category__title
+            color: $cp1
+            font-weight: 400
+            font-size: 24px
+
+    .cms-category-page-title
+        font-weight: 400
+        border-bottom: 1px #ddd solid
+        padding-bottom: 25px
+
+        .sep
+            color: $cp1
+
+    .contact-sinner
+        padding-top: 30px
+        max-width: 980px
+        margin: 30px auto 0
+
+.cms-id-13
+    .content-header
+        // display: none
+
+    .contact-rich
+        display: none
+// #cms
+//     .custom--blog
+//         display: flex
+//         align-content: center
+//         img
+//             min-width: 280px
+//         div
+//             padding: 30px
+
+#cms
+    .custom--blog
+        img
+            min-width: 280px
+            max-width: 40%
+            float: left
+            margin-right: 30px
+
+#cms,
+#sitemap,
+#my-account,
+#identity,
+#authentication,
+#addresses,
+#history,
+#order-slip,
+#discount,
+#module-myprestaloyalty-default,
+#module-ps_emailalerts-account,
+#module-psgdpr-gdpr,
+#cart,
+#password,
+#order-confirmation,
+#checkout,
+#address,
+#order-detail
+    .content-header
+        text-align: center
+        border-bottom: 1px #ddd solid
+        padding-bottom: 15px
+        border-top: 1px #ddd solid
+        padding-top: 15px
+        margin-bottom: 40px
+
+        h1
+            margin: 0
+
+.page-cms,
+#cms
+    .card-block
+        padding-top: 0
+
+    .content-header
+        margin-bottom: 15px
+
+    .category-top-menu__title
+        &:hover
+            color: $c-black
+
+    .breadcrumbs__list
+        //margin-left: 0
+        //+justify-content(center)
+
+.link-list--border
+    +flexbox()
+    +align-items(center)
+    margin: 10px 0 0
+
+.link--border
+    position: relative
+    display: block
+    font-size: 18px
+    font-weight: 300
+    font-size: 14px
+    font-weight: 400
+    text-transform: uppercase
+    padding: 11px 15px
+    color: white
+    color: $c-black
+    border: 1px $c-border solid
+
+    &:hover
+        border-color: $cp1
+        color: $cp1
+
+.cms-category-page
+    .art__figure
+        background: none
+        color: $c-black
+        margin: 20px 0
+        font-size: 18px
+        max-height: none
+        +flex-wrap(wrap)
+
+    .art__img
+        margin-bottom: 30px
+
+.psgdprinfo17
+    position: relative
+    margin-top: 15px
+    margin-bottom: 15px
+    background: white
+    padding: 20px
+    border: 1px #ddd solid
+    border-radius: 5px
+
+    h2
+        font-size: 24px
+        color: #212121
+
+    .btn
+        margin: 10px
+
+#authentication
+    .card
+        border: 0
+
+#sitemap
+    h2
+        font-weight: 400
+        border-bottom: 1px solid #ddd
+
+    #main
+
+        ul
+            &.nested
+                margin-top: 5px
+                list-style: disc
+            li
+                margin-bottom: 3px
+
+            a
+                color: #212121
+
+                &:hover
+                    color: $cp2
+
+.contact-form
+    flex: 1
+    max-width: 80%
+    margin: 0 auto
+    +flex(1)
+
+.page-product
+    .contact-form
+        margin-left: 0
+        .row
+            padding-left: 0
+
+.contact-rich
+
+    .block:first-child
+        display: none
+    .icon
+        color: $cp1
+
+.h5
+    font-weight: 400
+    font-size: 18px
+
+.page-content.page-cms-13
+    // padding: 0 0 30px
+
+#search #js-product-list-top
+    // position: static
+    top: -40px
+    right: 0
+
+.page-not-found
+    text-align: center
+    .nav-top-search__form
+        position: relative
+
+    .nav-top-search__btn
+        position: absolute
+        top: 4px
+        right: 0
+        width: auto
+
++breakpoint(desktop)
+    .contact-form
+        max-width: 90%
+
+    .page-subnav
+        //display: none
+
+    body
+        font-size: 17px
+
+    .page-heading
+        border-top: 1px #ddd solid
+
++breakpoint(tablet)
+
+    body
+        padding-top: 60px
+
+    .page-container
+        padding:
+            left: 20px
+            right: 20px
+
+    .section--intro-page
+        margin-top: 53px
+        margin-bottom: 40px
+
+    .page-content.page-cms
+        padding: 0 2%
+
+        p
+            font-size: 16px
+
+    .page-content.page-cms-13
+        // padding: 30px 0 30px
+
++breakpoint(mobilewide)
+
+    body
+        padding-top: 50px
+
+    .page-heading h1
+        font-size: 34px
+    .section--intro-page
+        .section__header
+            text-align: center
+
+        .section__title
+            +rem(50)
+
+    .page-cms
+        .art__list
+            display: block
+
+            .art,
+            .art__figure
+                display: block
+                text-align: left
+
+    .page-content.page-cms-13
+        > h2
+            font-size: 28px
+
+    .section--blog-list
+
+        .section__header
+            margin-bottom: 30px
+
+    #cms #main .content-header, #sitemap #main .content-header, #my-account #main .content-header, #identity #main .content-header, #authentication #main .content-header, #addresses #main .content-header, #history #main .content-header, #order-slip #main .content-header, #discount #main .content-header, #module-myprestaloyalty-default #main .content-header, #module-ps_emailalerts-account #main .content-header, #module-psgdpr-gdpr #main .content-header, #cart #main .content-header, #order-confirmation #main .content-header
+        margin-bottom: 30px
+
++breakpoint(mobile)
+
+    .section--intro-page
+        .section__title
+            +rem(36)
+
+    .page-heading h1
+        font-size: 27px
+
+    // .page-content.page-cms
+    //     padding: 0 2% 30px

@@ -1,0 +1,35 @@
+
+.section--promo
+    padding: $space-m
+    background: url('../images/promo-bg.png') top left #f7b11a no-repeat
+    +flexbox()
+    +align-items(center)
+    +justify-content(space-around)
+    // min-height: 395px
+    +flex-wrap(wrap)
+
+
+.section
+    .promo-code__title
+        +rem(55)
+        line-height: 65px
+
+        .cp--white
+            padding: 0 0 0 45px
+
+        .sub
+            +rem(120)
+            font-weight: 400
+
+    .promo-code__p
+        margin: 0
+        text-align: center
+
+
++breakpoint(mobile)
+    .promo-code__title
+        +rem(33)
+
+        .sub
+            +rem(80)
+            line-height: 34px

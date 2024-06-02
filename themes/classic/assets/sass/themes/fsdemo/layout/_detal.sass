@@ -1,0 +1,512 @@
+.product-variants
+
+    .attr-view--selected,
+    .attr-view--size,
+    .attr-view--product
+        // display: none
+
+    
+
+    .attr-view--selected &
+        .attr-view--selected
+            +flexbox()
+
+    .attr-view--size &
+        .attr-view--size
+            +flexbox()
+
+    .product-options &
+        .attr-view--product
+            +flexbox()
+
+
+
+    
+.page-product
+    
+    .qty-add
+        +flexbox()
+        margin-right: 20px
+
+        .qty
+            display: none
+
+    .list--products2[data-col="4"] .art
+        max-width: 455px
+
+
+
+    .product-detail__title
+        margin-right: 60px
+        margin-bottom: 15px
+
+    .product-options
+        margin-top: 0
+
+    .product-variants
+        +flexbox()
+        +align-items(center)
+        +justify-content(flex-start)
+        +flex-wrap(wrap)
+
+        .control-label
+            margin-right: 15px
+            white-space: nowrap
+
+    .product-variants-item
+        +flexbox()
+        +align-items(center)
+        +justify-content(flex-start)
+        +flex-wrap(wrap)
+        margin-right: 15px
+
+        ul
+            margin: 0
+            +flexbox()
+            +justify-content(flex-start)
+
+            li
+                position: relative
+                margin-right: 5px
+
+                label
+                    display: block
+                    width: 32px
+                    height: 32px
+
+        .color
+            display: block
+            width: 100%
+            height: 100%
+            border: 1px rgb(0 0 0 / 15%) solid
+            border-radius: 100%
+            border: 5px white solid
+
+            .sr-only
+                display: none
+
+        .input-color
+            position: absolute
+            opacity: 0
+            left: 0
+            top: 0
+            width: 100%
+            height: 100%
+            cursor: pointer
+
+            &[checked] ~ .color
+                // border: 5px white solid
+                border: 1px black solid
+
+
+    .product-variants
+        // max-width: 50%
+
+    .product-quantity
+        width: 100%
+
+
+    .form-control-select
+        width: auto
+        margin-right: 0
+
+
+.product-detail__title
+    margin-right: 410px
+
+.page-product
+    .table-product
+        width: 100%
+
+        tr:nth-child(2n+1)
+            background: #f5f5f5
+
+    .variants-title
+        font-size: 24px
+        margin-bottom: 10px
+        margin-top: 10px
+
+    .product-options
+
+        .product-variants
+            padding: 15px
+            border: 1px #ddd solid
+            border-radius: 5px
+            // min-height: 65px
+
+.product-description
+    border-radius: 5px
+
+    > p:first-child
+        margin-top: 0
+    h2, h3, h4, h5
+        margin-bottom: 15px
+
+.tabs.tabs--left 
+    .nav-tabs
+        padding-left: 10px
+
+    .nav-link
+        +noselect()
+
+#payments
+    .table-product
+        tr:nth-child(2n+1)
+            // background: transparent
+        .value
+            font-weight: 400
+        img
+            max-width: 180px
+            height: none
+
+
+
+.table-product
+    td
+        border: 0
+        border-bottom: 1px #ddd solid
+        vertical-align: middle
+    td.value
+        background: none
+    td.name
+        background: none
+
+
+.page-product
+    .list--similar
+        .art:nth-child(6)
+            display: none
+
+
+.page-product .product-variants-item .input-color[checked]~.color
+    border: 1px #ddd solid
+
+
+.page-product:not(.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament, .product-skuteczny-i-dochodowy-sklep-internetowy-abonament) .page-header
+    border-color: #ddd
+    
+
+.page-product:not(.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament, .product-skuteczny-i-dochodowy-sklep-internetowy-abonament)
+
+    .breadcrumb
+        position: static
+        padding-left: 483px
+        padding-top: 30px
+
+
+
+
+
+.page-product:not(.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament, .product-skuteczny-i-dochodowy-sklep-internetowy-abonament) .product-detail-top
+    padding-top: 0
+
+
+.page-product:not(.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament, .product-skuteczny-i-dochodowy-sklep-internetowy-abonament) .page-logo
+    padding-left: 480px
+
+.page-product
+    .product-variants
+        .form-control-select
+            padding: 6px 12px
+
+.page-product
+    .product-item__footer
+        display: none
+    .product-item__info
+        margin-bottom: 0
+    .label-price
+        padding-bottom: 15px
+    .product-detail__scroll
+        .product-item__flag.new
+
+
+    .list--products2[data-col="6"]
+        .art
+            max-width: none !important
+
+.hide
+    // display: block !important
+
+.tabs 
+    .nav-tabs
+        border-bottom: 1px solid #ddd
+    .nav-link
+        border: 1px #eee solid
+        background: none
+
+        &:hover
+            background: $c-black
+            color: white
+        &.active
+            background: #f5f5f5
+            color: $c-black
+
+            &:hover
+                color: $c-black
+                background: #f5f5f5
+
+.page-product
+    .label-price__price-promo
+        font-weight: 400
+
+
+.page-product:not(.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament, .product-skuteczny-i-dochodowy-sklep-internetowy-abonament) .product-price-section
+    position: relative
+    top: 0
+    left: 0
+    .label-price
+        padding-right: 50px
+        border: 1px #ddd solid
+        margin: 25px 0 0
+        padding: 10px 20px 10px 15px
+        max-width: 330px
+        border-radius: $radius
+
+        &.label--discount
+            // margin-bottom: 45px
+
+        &.label--block
+            margin-top: 0
+            display: block
+            min-width: 245px
+            border: 0
+            padding: 0
+            .material-icons
+                display: none
+
+            .label-price__price
+                font-size: 26px
+                color: $cp1
+
+        .material-icons
+            right: -33px
+
+    .label-price__oldprice
+        font-size: 24px
+        font-weight: 400
+
+    .label-price__price-vat
+        font-weight: 400
+        text-transform: none
+        font-size: 13px
+        padding-top: 3px
+        position: static
+        display: block
+
+.page-product
+    .variants-title
+        margin-top: 0
+.page-product
+    .add-to-cart
+        margin: 10px 0 0
+        border-radius: 3px
+        padding: 10px 30px
+
+.product-detail .product-header .discount
+    left: 0
+    right: auto
+    top: -4px
+    // bottom: 18px
+    font-size: 14px
+    font-weight: 400
+    letter-spacing: 1px
+    border-radius: 5px 5px 0 0
+    // border-radius: 0 0 5px 5px
+        
+
+.prod-info-title
+    font-size: 32px
+    margin-bottom: 15px
+
+.page-product .list--products2[data-col].list--similar .art
+    max-width: 450px !important
+
+.page-product:not(.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament, .product-skuteczny-i-dochodowy-sklep-internetowy-abonament) .page-logo
+    padding-left: 30px
+
+
+.list--products[data-col][data-slider=true] 
+    .art,
+    .splide__slide
+        min-width: 33%
+
+    .art__figure
+        height: 200px
+
+@media only screen and (min-width: 1921px) and (max-width: 4000px)
+    .page-product .list--products2[data-col] .art
+        max-width: 450px !important
+
+@media only screen and (min-width: 1024px)
+    #product.page-product
+        .product-detail__scroll
+            width: 40%
+            max-width: 38%
+            padding: 0
+
+            img
+                width: 100%
+        .product-detail,
+        .page-logo,
+        .breadcrumb
+            padding-left: 40%
+            padding-right: 1%
+
+        .product-images
+            text-align: center
+
+        
++breakpoint(laptop)
+
+    .page-product .table-product
+        width: 100%
+    .page-product .breadcrumbs__list
+        // margin-top: 20px
+
+    .product-detail
+        padding-left: 480px
+
+    .page-index .list--products[data-col="6"] .art__figure
+        // height: 110px
+
+
+    
+    .page-product:not(.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament, .product-skuteczny-i-dochodowy-sklep-internetowy-abonament) .product-price-section
+        // position: static
+
+        .label-price
+            // padding-right: 50px
+            // border: 1px #ddd solid
+            // padding: 10px 20px 10px 15px
+            // margin: 25px 0 0
+            // max-width: 330px
+
+            .material-icons
+                right: -33px
+
+        .label-price__oldprice
+            font-size: 24px
+            font-weight: 400
+
+        .label-price__price-vat
+            font-weight: 400
+            text-transform: none
+            font-size: 13px
+            padding-top: 3px
+
+    .page-product:not(.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament, .product-skuteczny-i-dochodowy-sklep-internetowy-abonament) .label-price .material-icons
+        display: block
+
++breakpoint(tablet)
+
+
+    .page-product:not(.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament, .product-skuteczny-i-dochodowy-sklep-internetowy-abonament) .page-logo
+        padding-left: 20px
+
+    .page-product:not(.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament, .product-skuteczny-i-dochodowy-sklep-internetowy-abonament) .product-detail__scroll
+        width: 100%
+
+    .page-product:not(.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament,.product-skuteczny-i-dochodowy-sklep-internetowy-abonament) .page-main>.breadcrumb
+        padding: 0 20px
+        +flexbox()
+
+    .page-product:not(.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament, .product-skuteczny-i-dochodowy-sklep-internetowy-abonament) .product-detail .discount
+        display: block
+
+    .product-header
+        margin-top: 30px
+
+
+    .page-product
+        .list--products2[data-col]
+            +flex-wrap(nowrap)
+            overflow: hidden
+            overflow-x: auto
+            
+
+
+    
+    .page-product
+        .product-variants
+            max-width: 100%
+            width: 100%
+
+        .product-options
+            margin-top: 30px
+
+    
+    #add-to-cart-or-refresh
+        +flexbox()
+        +flex-wrap(wrap)
+
+    .page-product
+
+        .product-prices
+            order: 0
+            width: 100%
+        .product-options
+            order: 1
+
+        .product-variants
+            order: 2
+
+        .product-quantity
+            order: 3
+
+    .page-product
+        .variants-title
+            margin-top: 0
+
++breakpoint(mobilewide)
+    .product-detail__title .art__fav-link
+        top: -15px
+
+    #add-to-cart-or-refresh
+        +flexbox()
+        +flex-wrap(wrap)
+
+
+    .page-product 
+        .product-variants
+            padding: 0 15px
+        .product-variants-item
+            margin: 10px 0
+            +flex(1)
+            +flex-wrap(nowrap)
+
+    
+
++breakpoint(mobile)
+
+    .product-variants .product-quantity
+        margin: 0
+        +flexbox()
+
+    .page-product
+        .product-description
+            padding: 15px
+
+        .product-variants
+            padding-top: 0
+            padding-bottom: 0
+            .form-control-select
+                padding: 7px 10px
+
+
+
+        .product-quantity .quantity_wanted
+            width: 65px
+
+
+        .product-variants-item .input-color[checked]~.color
+            border: 1px white solid
+
+
+        .page-product .product-variants-item ul li label
+            margin-right: 5px
+
+
+
+    .page-product:not(.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament, .product-skuteczny-i-dochodowy-sklep-internetowy-abonament) .product-price-section .label-price .material-icons
+        right: -20px
+

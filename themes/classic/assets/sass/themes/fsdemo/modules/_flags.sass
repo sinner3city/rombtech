@@ -1,0 +1,33 @@
+.product-detail__scroll
+    .product-item__flags
+        position: absolute
+
+    .product-item__flag
+        width: 200px
+        position: fixed
+        top: 19px
+        left: -66px
+        transform: rotate(-45deg)!important
+        -ms-transform: rotate(-45deg)!important
+        -webkit-transform: rotate(-45deg)!important
+        // border-radius: 4px
+        // padding: 0.3125rem 0.4375rem
+        // text-transform: uppercase
+        color: #fff
+        // margin-top: 0.625rem
+        font-size: 17px
+        text-align: center
+        font-weight: 500
+        margin: 0
+        line-height: 1
+        padding: 10px
+
+        
+        &.discount
+            background: $cp1
+
+        &.on-sale
+            background: $cp2
+
+        &.new
+            background: $cp3

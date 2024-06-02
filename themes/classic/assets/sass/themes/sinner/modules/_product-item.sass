@@ -1,0 +1,410 @@
+.category-back
+    border: 1px $c-border solid
+    width: auto
+    margin-right: 10px
+    cursor: pointer
+    @extend .noselect
+    border: 1px #ddd solid
+    width: auto
+    margin-right: 0
+    cursor: pointer
+    position: absolute
+    bottom: 0
+    right: 0
+    background: black
+    font-size: 12px
+    text-transform: uppercase
+    padding: 5px 20px
+    color: white
+    +flexbox()
+    +align-items(center)
+    font-weight: 400
+    top: 60px
+    bottom: initial
+    height: 42px
+
+    i
+        margin-right: 10px
+
+    &:hover
+        background: $cp1
+        color: white
+
+
+
+.product-item__flags
+    position: absolute
+    top: -2px
+    left: 15px
+    z-index: 2
+    // width: 100%
+    +flexbox()
+    +justify-content(center)
+
+.product-item__flag
+    width: 26px
+    padding: 9px 0px 4px
+    border-radius: 0 0 3px 3px
+    margin-right: 3px
+    color: white
+    background: white
+    +flexbox()
+    +justify-content(center)
+    +align-items(center)
+    border: 2px rgb(255 255 255 / 65%) solid
+    cursor: help
+    margin-top: 3px
+
+    i
+        font-size: 22px
+        line-height: 1
+
+    &.new
+        // position: absolute
+        top: 0
+        left: 15px
+        color: $cp3a
+
+
+    &.discount
+        // position: absolute
+        top: 0
+        font-size: 14px
+        font-weight: 400
+        left: 15px
+        color: $cp1
+        order: 3
+
+        .product-item__discount
+            display: none
+            margin-right: 5px
+
+        i
+            // margin-left: 5px
+            // display: none
+
+
+    &.on-sale
+        // position: absolute
+        top: 0
+        left: 50px
+        color: $cp2
+        order: 2
+
+        i
+            font-size: 22px
+
+.product-item__current-price-vat
+    font-size: 14px
+    white-space: nowrap
+    margin-top: 5px
+    +flexbox()
+    +align-items(center)
+    +justify-content(center)
+
+
+
+.product-item__regular-price
+    color: $cp1
+    margin-right: 5px
+    font-size: 24px
+
+
+
+// .product-item__quick,
+.highlighted-informations
+    position: absolute
+    right: 0
+    bottom: 0
+    top: inherit
+    line-height: 1
+    z-index: 3
+    opacity: 0
+    +multipleTransition((opacity 0.25s ease, border 0.45s ease))
+
+    .page-product &
+        display: none
+
+    .grid--3 &,
+    .grid--2 &
+        //right: 20px
+// .product-item__title
+//     font-size: 20px
+//     font-weight: 400
+//     line-height: 1.1
+//     padding: 0 5px
+    
+
+// .product-item__price
+//     font-weight: 400
+
+
+
+
+// .product-item__prices
+//     margin-top: 15px
+
+
+.product-item__link
+    display: block
+    height: 100%
+
+.product-item__picture
+    // border: 1px #ddd solid
+
+
+
+
+.list--products[data-col]
+    .product-item__header
+        +flex-wrap(wrap)
+        // overflow: initial
+
+.product-item__title
+    width: 100%
+    // overflow: hidden
+
+.product-item__subtitle
+    color: $cp1
+
+.product-item__footer
+    min-height: 10px
+    // position: relative
+
+.product-item__shortdesc
+    position: absolute
+    bottom: 60px
+    left: 0
+    width: 100%
+    // display: none
+    font-size: 13px
+    margin-top: 5px
+    min-height: 0
+    padding: 0 10px
+    line-height: 1.2
+    // +multipleTransition((opacity 0.25s ease 0.2s, border 0.45s ease))
+
+.product-item__add
+    position: absolute
+    left: 50%
+    bottom: 12px
+    white-space: nowrap
+    +translate3d((-50%, 0, 0))
+    +multipleTransition((opacity 0.45s ease, border 0.45s ease))
+    opacity: 0
+    // margin-top: 30px
+
+    .page-product &
+        display: none
+
+
+.product-item__info
+    position: relative
+    margin-bottom: 15px
+
+.product-item
+    position: relative
+
+    .btn--price
+        font-size: 16px
+        line-height: 1
+
+    .sign
+        padding: 0 0 0 5px
+
+    .tax-label
+        font-size: 10px
+        margin-left: 5px
+        display: none
+    &:hover
+        .product-item__add,
+        .highlighted-informations
+            opacity: 1
+
+
+.product-badge
+    position: absolute
+    top: -6px
+    right: 15px
+    // width: 35px
+    text-align: center
+    color: white
+    font-size: 16px
+    font-weight: 400
+
+    &::before
+        position: absolute
+        content: ''
+        width: 10px
+        height: 6px
+        top: 0
+        left: -5px
+        background: url('../images/badge-corner-orange.png') no-repeat
+
+
+.product-badge__promo
+    position: relative
+    background: $cp1
+    padding: 5px 7px
+
+.product-badge__value
+    display: block
+    white-space: nowrap
+
+
+.product-badge__label
+    display: none
+
+#js-product-list
+    .products
+        +flexbox()
+        +justify-content(center)
+
+
+.products-list,
+.product-item-list
+    padding-bottom: 60px
+    +flexbox()
+    +justify-content(center)
+
+
+
+
+// PRODUCT BOX FOR GOOGLE
+
+
+.product-google
+    position: relative
+    border: 1px $c-border solid
+    padding: 30px
+    margin: 15px
+    text-align: center
+    color: $c-black
+    width: 33%
+
+.product-google__header
+    padding-bottom: 30px
+
+    &.pd-b-0
+        padding-bottom: 0
+
+.product-google__title
+    position: relative
+    color: $c-black
+
+.product-google__subtitle
+    display: block
+    font-size: 16px
+    font-weight: 400
+    margin-bottom: 0
+    color: $c-black
+
+.product-google__value
+    margin: 0
+    color: $cp1
+    font-size: 20px
+    font-weight: 400
+
+    .type--start &
+        // color: $cp5
+
+    .type--mid &
+        // color: $cp3a
+
+    .type--pro &
+        // color: $cp4
+
+.product-google__list
+    margin: 15px 0
+    color: $c-black
+    font-size: 16px
+
+.product-google__price
+    margin: 0
+    font-size: 26px
+    font-weight: 400
+    color: $c-black
+
+    .product-item__regular-price
+        margin-right: 0
+
+.product-google__price-tax
+    margin: 0
+    font-size: 14px
+    font-weight: 400
+    color: $c-black
+
+.product-google__img
+    height: 70px
+
+.google-type
+    text-transform: uppercase
+    font-size: 18px
+    font-weight: 400
+    position: absolute
+
+.type--start
+    color: $cp5
+
+    &:hover
+        border-color: $cp5
+        .btn
+            background: $cp5
+            border-color: $cp5
+
+            &:hover
+                color: white
+                background: $cp5
+                border-color: $cp5
+
+.type--mid
+    color: $cp3a
+
+    &:hover
+        border-color: $cp3a
+        .btn
+            background: $cp3a
+            border-color: $cp3a
+
+            &:hover
+                color: white
+                background: $cp3a
+                border-color: $cp3a
+
+
+.type--pro
+    color: $cp4
+    &:hover
+        border-color: $cp4
+        .btn
+            background: $cp4
+            border-color: $cp4
+
+            &:hover
+                color: white
+                background: $cp4
+                border-color: $cp4
+
+
++breakpoint(laptop)
+    .product-google
+        padding-top: 65px
+
+    .list--products
+        .product-item__add
+            display: none
+
+
++breakpoint(desktop)
+    .page-product
+        .list--products
+            .tax-label
+                display: none
++breakpoint(tablet)
+
+    .list--products
+        .product-item__add
+            display: none
+
+        .tax-label
+            display: none

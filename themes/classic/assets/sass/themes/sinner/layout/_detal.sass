@@ -1,0 +1,316 @@
+a[data-fslightbox]
+    pointer-events: none
+
+.price-flex .btn--demo
+    display: none
+
+.buyin-stage
+    text-align: center
+
+.product-miniature
+    
+.product-cover
+    position: relative
+
+
+.js__product-zoom
+    position: absolute
+    bottom: 30px
+    right: 30px
+    cursor: pointer
+    
+.product-info-top
+    position: relative
+    padding-top: 60px
+    padding-bottom: 60px
+    padding-left: 30px
+    padding-right: 30px
+    background: rgb(248 248 248 / 70%)
+    border-bottom: 1px #ddd solid
+    +flexbox()
+    +justify-content(flex-start)
+    +align-items(center)
+    +flex-wrap(wrap)
+    z-index: 2
+
+    .slider--title
+        text-align: center
+        margin-bottom: 70px
+        margin-top: 15px
+        color: #474747
+        width: 100%
+
+    &:hover
+        i
+            opacity: 1
+
+    ul
+        +flex-wrap(nowrap)
+
+    li
+        border-left: 1px white solid
+        border-left: 1px rgb(3 1 0 / 10%) solid
+        white-space: nowrap
+        // min-width: 180px
+        
+
+        &:hover
+            cursor: help
+
+            i
+                color: $cp1
+
+
+
+        &:last-child
+            border-right: 1px rgb(3 1 0 / 10%) solid
+            // border-left: 0
+
+    i
+        opacity: 0.9
+
+    p
+        // color: #969696
+
+
+    .slider--title
+        opacity: 0
+        // +translate3d((-30px, 0, 0))
+        +multipleTransition((opacity 0.55s ease, transform 0.65s ease))
+
+        strong
+            font-weight: 300
+
+        .animation--loaded &
+            opacity: 1
+            +translate3d((0, 0, 0))
+
+    .splide
+        opacity: 0
+        +multipleTransition((opacity 0.95s ease, background 0.2s, margin 0.35s ease, border 0.2s, transform 0.2s))
+        .animation--loaded &
+            opacity: 1
+
+
+
+#products .product-description, .section-products .product-description, .product-accessories .product-description, .product-miniature .product-description
+    height: auto
+    padding-bottom: 15px
+
+    .comments_note > span
+        display: none
+
+
+
+.product-quantity .qty,
+.product-add-to-cart > .control-label,
+#product-availability,
+.product-prices .tax-shipping-delivery-label .delivery-information
+    // display: none !important
+
+
+#product 
+    .radio-label
+        font-weight: 400
+
+    .product-cover img
+        background: transparent
+
+
+
+
+
+.product-short-info
+    padding-left: 5%
+
+
+.current-price-vat
+    color: #7a7a7a
+    font-size: 14px
+    // padding-top: 3px
+    padding-left: 10px
+
+.price-detal-mc
+    font-size: 36px
+    line-height: 1
+    color: #f94d12
+
+
+.product-add-to-cart
+    margin-right: 15px
+    margin-bottom: 15px
+
+
+.page-product
+    .price-label
+        padding-left: 3px
+
+.price-flex
+    padding-left: 3px
+    +flexbox()
+    +align-items(center)
+    +flex-wrap(wrap)
+
+    .btn--demo
+        margin-bottom: 15px
+
+
+    
+.page-product
+    .product-detail__title
+        font-weight: 500
+
+
+.product-actions
+    margin-top: 30px
+    margin-bottom: 60px
+.product-variant
+    .product-actions
+        position: relative
+        &::before
+            position: absolute
+            top: 20%
+            left: 50%
+            content: ''
+            z-index: 0
+            width: calc(100% + 30px)
+            height: 70%
+            background: transparent
+            border: 2px $cp1 solid
+            border-radius: $radius
+            +translate3d((-50%, 0, 0))
+
+    .radio-label
+        width: 115px
+
+.functions__list
+    +flexbox()
+    +justify-content(flex-start)
+    +flex-wrap(wrap)
+
+    > div
+        margin: 0
+        max-width: 50%
+        padding: 15px
+
+    h3
+        font-size: 32px
+        font-weight: 300
+
++breakpoint(desktop)
+    .functions__list
+        h3
+            font-size: 28px
+
+        .title-small
+            font-size: 20px
+            margin-bottom: 5px
+
+
++breakpoint(mobilewide)
+    .page-product 
+        .images-container
+            margin: 0 auto
+            padding: 0 5%
+
+        .section__title
+            // font-size: 44px
+
+        .title-abo
+            font-size: 36px
+            font-weight: 400
+
+        .price-detal-mc
+            // padding-top: 20px
+
+    .product-short-info
+        padding-left: 0
+        padding-top: 30px
+
+    .functions__list
+        +flexbox()
+        +justify-content(flex-start)
+        +flex-wrap(wrap)
+
+        > div
+            width: 100%
+            text-align: left
+
+
+    .tabs
+
+        +justify-content(flex-start)
+        .nav-tabs
+            min-width: 600px
+        .tab-content
+            padding: 30pX
+
+        .nav-link
+            white-space: nowrap
+            padding: 12px 20px
+            background: #f5f5f5
+            border-left: 2px white solid
+
+            &.active
+                background: $cp1
+                color: white
+
+        .nav-item
+            // width: 30%
+    .tabs .nav-tabs .nav-link.active, .tabs .nav-tabs .nav-link:hover
+        border-left: 2px white solid
+
+
+    .buyin-stage__title
+        font-size: 24px
+    
+
++breakpoint(mobile)
+
+    .page-product .title-abo
+        font-size: 28px
+
+
+    .product-variants-item
+        +flex-wrap(wrap)
+    .product-variants
+
+        .input-container,
+        label,
+        .radio-label
+            // width: 100%
+
+        .product-quantity
+            width: 90%
+            display: block
+            margin: 0 5%
+
+    .price-flex
+        display: block
+
+    .product-add-to-cart
+        margin: 0 5% 15px
+
+    .product-actions
+        .product-add-to-cart
+            .add-to-cart
+                width: 100%
+                +justify-content(center)
+                height: 45px
+                font-size: 16px
+
+                i
+                    font-size: 24px
+
+            
+        .btn--demo
+            text-align: center
+            +justify-content(center)
+            margin: 0 10%
+
+    .page-product .radio-label .mc-label
+        //font-size: 24px
+
++breakpoint(0, 380px)
+    .product-add-to-cart
+        // margin-right: 0

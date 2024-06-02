@@ -1,0 +1,377 @@
+
+
+
+.fs-slider-home .caption .caption-description, 
+.fs-slider-home .caption .caption-description span, 
+.fs-slider-home .caption .caption-description strong
+    font-size: 22px
+
+    
+.fs-slider-home
+    height: 480px
+    overflow: hidden
+    .fs-slider-home__item
+        opacity: 0
+        +multipleTransition((opacity 0.45s))
+    .caption
+        max-width: 70%
+        text-align: center
+        opacity: 0
+        +multipleTransition((opacity 0.25s))
+        .is-visible &
+            opacity: 1
+
+    .caption-description
+        margin: 30px 0 15px
+        font-size: 17px
+
+
+    .slider-text
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: rgb(0 0 0 / 45%)
+        // opacity: 0
+        +flexbox()
+        +justify-content(center)
+        +align-items(center)
+
+    .btn--primary
+        &:hover
+            color: white
+            border-color: white
+
+    .splide__list
+        height: 480px
+.fs-slider-home 
+    h2 img
+        margin: 0 auto
+
+    .slider--flag
+        position: absolute
+        top: 0
+        right: 20px
+        width: 100px
+        z-index: 2
+.splide
+    opacity: 0
+    +multipleTransition((opacity 0.45s))
+    &.is-initialized
+        opacity: 1
+        .caption,
+        .fs-slider-home__item
+            opacity: 1
+
+.fs-slider-home__description
+    p
+        margin: 0
+
+.fs-slider-home__item
+    height: 100%
+    background-size: cover
+    background-position: center center
+    background-repeat: no-repeat
+    .caption-description
+        line-height: 1.2
+
+    h2
+        line-height: 1
+
+
+    &[data-cover="dark"]
+        .slider-text
+            background: rgb(0 0 0 / 65%)
+
+        .fs-slider-home__description
+            text-shadow: 1px 1px 1px black
+
+    &[data-cover="light"]
+        .slider-text
+            background: rgb(255 255 255 / 45%)
+            background: none
+            line-height: 1.2
+
+        .caption-description,
+        h2
+            color: $c-black
+
+        .btn--primary
+            &:hover
+                color: $c-black
+                border-color: $c-black
+
+    &[data-caption="left"]
+        .fs-slider-home__text
+            +justify-content(flex-start)
+        .fs-slider-home__caption
+            max-width: 40%
+            margin-left: 120px
+            text-align: left
+            +rem(19)
+
+            p
+                font-weight: 300
+                +rem(24)
+                color: black
+
+            span, strong, p
+                +rem(19)
+
+            img
+                margin: 0
+                max-height: 100px
+                max-width: 455px
+
+.fs-slider-home__legend
+    display: none
+
+.fs-slider-home
+    .splide__slide
+        padding-bottom: 0
+        margin: 0
+
+    &:hover
+        .splide__arrow
+            opacity: 1
+
+    .splide__pagination
+        bottom: 40px
+
+    .splide__arrow
+        opacity: 0
+        &:hover
+            background: $cp1
+            color: white
+        +multipleTransition((opacity 0.25s, background 0.25s))
+        &.splide__arrow--next
+            right: 30px
+        &.splide__arrow--prev
+            left: 30px
+
+.fs-slider-home h3
+    font-size: 12px
+    letter-spacing: 1px
+
+.fs-slider-home h2
+    max-height: none
+    color: white
+    font-weight: 700
+
+.splide__pagination__page
+    background: $c-black
+    &.is-active
+        background: $cp1
+ 
+.fs-slider-home.slider-style-2
+    height: 400px
+    border-bottom: 1px #ddd solid
+    .fs-slider-home__item
+        height: 100%
+        background-size: cover
+        background-position: right center
+        background-color: transparent
+
+        .btn--primary:hover
+            background: $c-black
+            border-color: $c-black
+            color: white
+
+        .caption
+            left: 80px
+            max-width: 35%
+            text-align: left
+            +translate3d((0, -50%, 0))
+
+            .caption-description
+                border-radius: 5px
+                margin-top: 20px
+                font-size: 17px
+                color: $c-black
+                background: rgb(255 255 255 / 45%)
+                border-color: rgb(167 167 167 / 15%)
+
+
+    h2, h3
+        color: $c-black
+
+    h2
+        line-height: 1
+
+    h3
+        padding-top: 3px
+        line-height: 1.2
+        letter-spacing: 2px
+
+
+    .slider-text
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        // background: rgb(0 0 0 / 75%)
+        color: $c-black
+
+    .carousel-control
+        a
+            opacity: 0.3
+
+            &:hover
+                opacity: 1
+        .icon-next i,
+        .icon-prev i
+            color: $c-black
+            opacity: 0.3
+
+            &:hover
+                opacity: 1
+
+
++breakpoint(desktop)
+    .fs-slider-home.slider-style-2
+        h2
+            font-size: 36px
+
+        h2, h3
+            text-shadow: 1px 1px 1px white
+
+
+        .fs-slider-home__item
+            background-position: center
+            .caption
+                max-width: 50%
+                .caption-description
+                    background: rgba(255, 255, 255, 0.85)
+
+
++breakpoint(tablet)
+
+    .fs-slider-home
+        .fs-slider-home__item
+            .caption
+                width: 100%
+
+
+    .fs-slider-home.slider-style-2
+        .fs-slider-home__item
+
+            &:last-child
+                // background-position: -118px center
+
+
+    .fs-slider-home__item
+        &[data-caption=left]
+            .fs-slider-home__caption
+                margin-left: 7%
+                max-width: 55%
+
+
++breakpoint(mobilewide)
+
+    .fs-slider-home__item[data-caption=left] .fs-slider-home__caption img
+        max-width: 100%
+    
+    .fs-slider-home
+
+        h2
+            // font-size: 30px
+            // max-height: 72px
+            // overflow: hidden
+
+        h3
+            font-size: 13px
+        .direction
+            top: 100%
+            margin-top: -75px
+
+        .carousel-control
+            .icon-prev,
+            .icon-next
+                i
+                    font-size: 55px
+
+
+        .carousel-control.left
+            left: 15px
+
+        .carousel-control.right
+            right: 15px
+
+
+    .fs-slider-home .fs-slider-home__item .caption .caption-description
+        font-size: 16px
+        line-height: 1.2
+
+    
+    .fs-slider-home.slider-style-2
+        .fs-slider-home__item
+            background-attachment: initial
+
+    .fs-slider-home .fs-slider-home__item .caption
+        // max-width: 100%
+        // padding: 0 30px
+
+    .fs-slider-home .caption .caption-description, 
+    .fs-slider-home .caption .caption-description span, 
+    .fs-slider-home .caption .caption-description strong
+        font-size: 18px
+
+
+    .fs-slider-home__item
+        .caption
+            max-width: 85%
+        &[data-caption=left]
+            .fs-slider-home__caption
+                margin-left: 60px
+                max-width: 70%
+
+    .fs-slider-home .fs-slider-home__item[data-cover="light"] .caption .caption-description
+        font-size: 18px
+        line-height: 1.2
+        font-weight: 400
+        background: rgb(255 255 255 / 82%)
+        padding: 15px
+        border-radius: 5px
+   
++breakpoint(mobile) 
+    .fs-slider-home__item
+        .caption
+            max-width: 80%
+        &[data-caption=left]
+            .fs-slider-home__caption
+                margin-left: 30px
+                max-width: 80%
+
+    .blog-list .art__title
+        font-size: 22px !important
++breakpoint(mobilesmall)
+
+    .fs-slider-home.slider-style-2 h2
+        font-size: 32px
+        max-height: 100px
+
+    .fs-slider-home.slider-style-2 .fs-slider-home__item .caption .caption-description
+        font-size: 16px
+        line-height: 1.2
+
+    
+    .fs-slider-home
+        .splide__arrows
+            display: none !important
+    .fs-slider-home__item
+        .fs-slider-home__caption
+            // margin-left: 30px
+            max-width: 80%
+            text-align: left
+
+        span, p, strong
+            +rem(16)
+        &[data-caption=left]
+            .fs-slider-home__caption
+                margin-left: 30px
+                max-width: 80%
+
+            span, p, strong
+                +rem(16)

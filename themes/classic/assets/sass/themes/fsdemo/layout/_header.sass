@@ -1,0 +1,84 @@
+
+
+.page-logo
+    position: relative
+
+.page-logo__demo
+    position: absolute
+    top: -7px
+    right: -14px
+    font-size: 12px
+    font-weight: 400
+    white-space: nowrap
+    padding-left: 5px
+    color: $cp1
+
+    
+
+.rebate-topinfo
+    display: none
+    padding: 3px 15px 3px 10px
+    border: 1px $cp1 solid
+    line-height: 1
+
+    &.show
+        +flexbox()
+
+.rebate-topinfo__val
+    font-size: 18px
+    font-weight: 700
+
+.page-header .page-logo__name
+    +flexbox()
+    margin-left: 10px
+
+
+.page-sidebar
+    .nav-top__link.link--burger
+        +scale(0.5)
+
+.page-header 
+    .nav-top-search
+        display: block
+
+    .topcontact
+        display: none
+
++breakpoint(desktop)
+    .topcontact
+        display: none
+
+
++breakpoint(mobilewide)
+    .nav-top-user
+
+        .link--account
+            &.link--logged
+
+                i
+                    margin-top: 8px
+
+
+
++breakpoint(mobile)
+
+    .page-logo__demo
+        top: -7px
+        font-size: 10px
+        top: -8px
+        left: 65%
+
+    .page-logo
+        margin-top: 5px
+
+
+@media only screen and (max-width: 375px)
+    .page-logo
+        > img
+            display: none
+
+    .page-logo__name
+        // margin-left: 0
+
+    .page-header .page-logo__name
+        margin-left: 0

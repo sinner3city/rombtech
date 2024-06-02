@@ -1,0 +1,743 @@
+
+
+h1.page-home__title
+    font-size: 22px
+    text-align: center
+    opacity: 0
+    font-weight: 300
+    +multipleTransition((opacity 0.45s))
+
+    .animation--active &
+        opacity: 1
+        +multipleTransition((opacity 0.85s))
+        
+
+.page-banner.banner--home
+    overflow-x: none
+    height: 500px
+    background: white
+    .section__header
+        margin-bottom: 0
+
+    .section__title
+        font-size: 44px
+        font-style: italic
+        position: absolute
+        top: 50%
+        left: 50%
+        opacity: 0
+        margin-top: 100px
+        pointer-events: none
+        +translate3d((-60%, -50%, 0))
+        .animation--active &
+            opacity: 1
+            +translate3d((-50%, -60%, 0))
+            +multipleTransition((transform 1.65s ease 0.4s, opacity 1.65s ease  0.4s))
+
+        .animation--start &
+            opacity: 0
+            +translate3d((-50%, -60%, 0))
+            +multipleTransition((transform 1.15s ease 0.1s, opacity 0.6s ease 0.1s))
+
+.banner-lady
+    position: absolute
+    z-index: 2
+    max-width: none
+    max-height: none
+    width: 1440px
+    left: 50%
+    pointer-events: none
+    bottom: -240px
+    opacity: 0
+    z-index: 100
+    +translate3d((-50%, 30px, 0))
+    +multipleTransition((transform 0.75s ease-in-out))
+
+    .animation--start &
+        opacity: 1
+        +translate3d((-50%, 0, 0))
+        +multipleTransition((transform 0.9s ease .6s, opacity 1.25s ease .6s, margin 0.9s ease 0.4s, width 0.9s ease, height 0.9s ease, bottom 0.9s ease))
+
+
+
+.home-intro__slogo-left,
+.home-intro__slogo-right
+    position: absolute
+    top: 50%
+    left: 50%
+    opacity: 0
+    pointer-events: none
+    +translate3d((-50%, -80%, 0))
+
+    .animation--active &
+        opacity: 1
+        padding: 0
+        +translate3d((-50%, -80%, 0))
+        +multipleTransition((transform 0.65s ease, opacity 0.65s ease  , padding 0.9s ease))
+
+    .animation--start &
+        opacity: 0
+        +translate3d((-50%, -80%, 0))
+        +multipleTransition((transform 1.15s ease 0.4s, opacity 0.6s ease 0.1s))
+
+    
+
+.home-intro__slogo-left
+    padding-right: 120px
+
+
+.home-intro__slogo-right
+    padding-left: 120px
+
+
+.relative
+    position: relative
+    img
+        display: block
+
+
+.intro__left-logo,
+.intro__right-logo
+    display: block
+    margin-bottom: 30px
+
+
+.intro__left,
+.intro__right
+    display: block
+    position: absolute
+    left: 0
+    top: 0
+    width: 40%
+    height: 100%
+    padding-left: 9%
+    opacity: 0
+    pointer-events: none
+    +flexbox()
+    +align-items(center)
+    +justify-content(flex-start)
+    +translate3d((400px, 0, 0))
+    +flex-wrap(wrap)
+    +multipleTransition((transform 0.75s ease-in-out, opacity 0.75s, width 0.75s, padding 0.75s 0.1s))
+
+    .hover--on &
+        pointer-events: none
+
+    .header--scroll &
+        // pointer-events: none
+
+
+    .relative
+        display: block
+        +translate3d((0, 0, 0))
+        +multipleTransition((transform 0.6s ease 0.2s))
+        
+
+    .btn--price
+        pointer-events: none
+        margin: 0
+        padding: 6px 25px
+        border-width: 3px
+        font-size: 24px
+        object-fit: none
+        text-transform: none
+        height: auto
+        +flexinline()
+        +align-items(center)
+        +translate3d((0, 0, 0))
+        +multipleTransition((transform 0.9s ease 0.7s, opacity 0.9s ease 0.7s))
+        
+        strong
+            color: $cp2
+            font-weight: 400
+            margin-right: 5px
+            margin-left: 5px
+            font-size: 30px
+
+        &:hover
+            background: $c-black
+
+    .btn--more
+        margin-top: 30px
+
+.intro__right
+    left: inherit
+    right: 0
+    +translate3d((-400px, 0, 0))
+
+    .btn--price
+        strong
+            color: $cp3
+
+
+.intro__left-info,
+.intro__right-info
+    position: static
+    opacity: 0 
+    font-size: 18px
+    font-weight: 400
+    width: 100%
+    margin: 0
+    height: 0
+    +translate3d((-50px, 0, 0))
+    +multipleTransition((transform 0.45s ease 0.2s, opacity 0.45s ease))
+
+    p
+        margin: 0
+        color: white
+        padding-right: 60px
+
+    .btn--more
+        margin: 30px 0 0 0
+
+        &:hover
+            background: transparent
+            border-color: black
+            color: black
+            font-weight: 700
+
+
+.animation--start
+    .intro__left,
+    .intro__right
+        opacity: 1
+        +translate3d((0, 0, 0))
+        +multipleTransition((transform 1.15s ease 1.1s, opacity 1.15s ease  1.1s, width 0.75s .1s, padding 0.75s ease 0.7s))
+
+
+
+
+.section--products
+
+    .btn--border.cp3
+        &:hover
+            background: $cp3
+            border-color: $cp3
+
+    .art__figure
+        position: relative
+
+    .box-img
+        max-width: 280px
+        margin-left: -20px
+
+    .btn--price
+        position: absolute
+        bottom: 0
+        left: 50%
+        white-space: nowrap
+        pointer-events: none
+        +translate3d((-50%, 0, 0))
+
+        &.btn--site
+            background: $cp3a
+            border-color: $cp3a
+
+        &:hover
+            background: initial
+
+        strong
+            font-size: 20px
+            margin: 0 3px
+
+        // display: none
+    .art__content
+        > p
+            font-size: 20px
+
+    .art__title
+        //font-size: 52px
+
+
+#index 
+    .section-products
+        
+        //margin: 45px auto
+        //max-width: 900px
+
+    .highlighted-informations
+        display: none
+    .carousel
+        margin:
+            left: -30px
+            right: -30px
+
+
+    .section-products
+        .art__list
+            //margin-left: -30px
+            //margin-right: -30px
+
+
+    
+    .section--premium
+        margin-left: -30px
+        margin-right: -30px
+
+
+
+#index .comments_note
+    display: none !important
+
+#index #products .product-miniature, #index .section-products .product-miniature, #index .product-accessories .product-miniature, #index .product-miniature .product-miniature
+    // border-color: $c-border
+
+#custom-text
+    display: none
+    padding: 0 10%
+
+#custom-text p
+    font-weight: 300
+
+
+
+.section--why
+    // padding-top: 80px
+    // background: #fff
+    position: relative
+
+    &::before
+        positon: absolute
+        content: ''
+        // +gradientLightGray()
+        z-index: -1 
+
+
+.section--home-offer
+    display: none
+    position: static
+    // bottom: -300px
+    // background-color: $cp1
+    min-height: auto
+    width: 100%
+    // padding-bottom: 60px
+    // transform: rotate(-5deg)
+
+
+    .heading--primary,
+    .heading--sec
+        color: white
+
+.section--home-offer__p
+    +rem(20)
+    max-width: 1200px
+    margin: 0 auto 30px
+    font-weight: 300
+
+    .body--seo &
+        margin-bottom: 0
+
+
+.home-offer__content
+    position: static
+    // padding-top: 60px
+    // transform: rotate(5deg)
+    width: 100%
+    text-align: center
+    // background: $cp1
+
+
+.art__linkbox
+    display: block
+    color: $c-black
+
++breakpoint(1280px, 3000px)
+
+
+    .animation--start
+        .intro__left,
+        .intro__right
+            opacity: 1
+            +translate3d((0, 0, 0))
+            +multipleTransition((transform 1.15s ease 1.1s, opacity 1.15s ease  1.1s, width 0.75s .1s, padding 0.75s ease 0.7s))
+
+            &:hover
+                padding-left: calc(#{$page-padding} * 2)
+                +multipleTransition((width 0.15s 0.1s, padding 0.55s 0.1s))
+                & ~ .banner-lady
+                    margin-left: 150px
+                    // +translate3d((-30%, 0, 0))
+                    +multipleTransition((margin 0.9s ease 0.4s, opacity 0.95s ease, width 0.9s ease, height 0.9s ease, bottom 0.9s ease))
+
+                .intro__left-info
+                    opacity: 1
+                    +translate3d((0, 0, 0))
+                    +multipleTransition((transform 0.65s ease 0.9s, opacity 0.65s ease 0.9s))
+
+                .relative
+                    +translate3d((0, -50px, 0))
+                    +multipleTransition((transform 0.6s ease 0.5s))
+
+                .btn--price
+                    opacity: 0
+                    +translate3d((-500px, 0, 0))
+                    +multipleTransition((transform 0.9s ease 0.15s, opacity 0.3s ease))
+
+    .animation--start
+        .intro__right
+            &:hover
+                & ~ .banner-lady
+                    margin-left: -150px
+                    // +translate3d((-30%, 0, 0))
+                    +multipleTransition((margin 0.9s ease 0.4s, opacity 0.95s ease, width 0.9s ease, height 0.9s ease, bottom 0.9s ease))
+
+                .intro__right-info
+                    opacity: 1
+                    +translate3d((0, 0, 0))
+                    +multipleTransition((transform 0.65s ease 0.9s, opacity 0.65s ease 0.9s))
+
+                .btn--price
+                    // opacity: 0
+                    +translate3d((500px, 0, 0))
+                    +multipleTransition((transform 0.9s ease 0.15s, opacity 0.3s ease))
+
+
+
+
+.page-banner.banner--home
+    margin-bottom: 140px
+    // border-top: 1px #ddd solid
+    .page-banner__bg
+        background-image: url('../images/bgbg.png')
+        background-size: cover
+        .animation--start &
+            opacity: 1
+            +multipleTransition((transform 0.7s ease .6s, opacity 1.75s ease 0.9s))
+
++breakpoint(1920px, 3000px)
+    .section--products
+        [data-col="2"] [data-src-background]
+            height: 350px
+
++breakpoint(desktop)
+    .intro__left .btn--price, .intro__right .btn--price
+        padding: 5px 15px
+
+
+    .review__stars i
+        font-size: 50px
+
+
+    .section--products
+        .btn--large:hover
+            background: $cp1
+            border-color: $cp1
+            color: white
+
+
++breakpoint(desktop)
+    .section--home-offer__p
+        br
+            display: none
+
+    .intro__left
+        padding-left: 3%
+
+    .intro__right
+        padding-right: 5%
+
+    .banner-lady
+        width: 1200px
+        bottom: -199px
+
+
+    .page-banner.banner--home
+        margin-bottom: 0
+        min-height: auto
+        height: 440px
+
++breakpoint(tablet)
+
+    .page-index .topinfo
+        display: none
+
+    .intro__left-info, .intro__right-info
+        pointer-events: none
+            
+
+    .page-banner.banner--home
+        height: 390px
+
+        .section__title
+            font-size: 38px
+            width: 100%
+
+    .banner-lady
+        width: 960px
+        bottom: -155px
+        // left: 90%
+
+    .section--home-offer
+        background-image: none !important
+        .cp--white br
+            display: none
+
+
+    .section--home-offer__p
+        line-height: 1.6
+        font-size: 17px
+        padding: 0 30px
+
+    .section--why
+        padding-top: 10px
+
+
+    .animation--end .intro__left, .animation--end .intro__right
+        // display: none
+
+        &:hover
+            pointer-events: none
+
+    .intro__left, .intro__right
+        z-index: 105
+        width: 250px
+
+        .relative
+            height: 75%
+            padding: 70px 0
+            position: absolute
+
+            img
+                pointer-events: auto
+
+        .btn--price
+            position: absolute
+            bottom: 50px
+            width: 100%
+            +justify-content(center)
+            padding: 0px 30px
+            line-height: 1
+            pointer-events: auto
+            background: none
+            // +flex-wrap(wrap)
+            // position: static
+            padding: 3px 15px
+            width: auto
+            +align-items(center)
+            white-space: nowrap
+            background: $c-black
+
+            &:hover
+                border-color: $c-black
+                background: none
+            > strong
+               //  color: $c-black
+                font-size: 44px
+                font-weight: 500
+                font-size: 36px
+
+            > small
+                position: absolute
+                top: 100%
+                margin-top: 10px
+                margin-top: 0
+                margin-left: 5px
+                position: static
+                // color: $c-black
+    .intro__right
+        padding-left: 0
+        right: 40px
+        // left: 320px
+
+    .intro__left-logo
+        position: absolute
+        bottom: 100px
+        // width: 190px
+        height: 100px
+
+    .intro__right-logo
+        position: absolute
+        bottom: 100px
+        height: 100px
+        max-width: none
+
+        
+    .home-intro__slogo-left, .home-intro__slogo-right
+        width: 200px
+        top: 55%
+
+
+    .lady
+        display: none
+
+
+    .section--products
+        .art__title
+            font-size: 33px
+
+        .art__content > p
+            font-size: 16px
+
+        .btn--large
+            font-size: 16px
+
+
+
++breakpoint(mobilewide)
+
+
+    .animation--end
+        .page-banner__bg
+            // background: none
+        .home-intro__fstrona,
+        .home-intro__fsklep
+            // display: none
+
+        .banner-lady
+            max-height: 545px
+            top: -3px
+
+
+
+    .animation--active .page-banner .section__title
+        font-size: 28px
+        position: absolute
+        bottom: 100%
+
+    .page-banner.banner--home
+        border-top: 0
+        // margin-top: 50px
+        
+        .page-banner__bg
+            background: none
+    .footer-menu
+        // display: none
+
+    .footer-company p
+        // color: $cp3
+
+
+    .section--home-offer__p
+        +rem(16)
+
+
+    .section--why .article-no-image,
+    .section--blog .article-top-image
+        width: 100%
+        margin: 15px 0
+
+
+
+    .section--why
+        padding-top: 0
+
+
+            
+    .home-intro__slogo-left, .home-intro__slogo-right
+        width: 200px
+        top: 65%
+
+
+    .page-banner.banner--home
+        height: 335px
+        margin-top: 0
+        +justify-content(center)
+        +flex-wrap(wrap)
+        .section__title
+            width: 90%
+
+        .page-banner__bg
+            background-position: top left
+
+
+    .animation--end .banner-lady
+        left: calc(40% + 200px)
+        top: -55px
+        display: none
+
+    .animation--end
+        .intro__left, .intro__right
+            width: 100%
+            padding-left: 30px
+            padding-right: 30px
+            height: auto
+            right: auto
+            left: 0
+            +multipleTransition((transform 1.15s ease, opacity 1.15s ease  1.1s, width 0.75s, padding 0.75s ease))
+            text-align: center
+            position: static
+            +flexbox()
+            display: block
+            .relative
+                +justify-content(flex-end)
+                +flexbox()
+                height: 100%
+                padding: 0
+
+            img
+                position: static
+                height: 74px
+                margin: 0 0 14px 0
+
+            .btn--price
+                position: absolute
+                top: 0
+                bottom: 0
+                right: 0
+                //position: static
+                padding: 0 15px
+                width: auto
+                +align-items(center)
+                > strong
+                    font-size: 36px
+
+                > small
+                    margin-top: 0
+                    margin-left: 5px
+                    position: static
+
+    .intro__left
+        top: 30px
+    .intro__right
+        top: 180px
+
+
+    .home-intro__slogo-left, .home-intro__slogo-right
+        top: 55%
+
+
+    .intro__left .relative, .intro__right .relative
+        position: static
+
+
+    .section--products
+        .art__content
+            > p
+                font-size: 17px
+
+        .art
+            padding-left: 30px
+            padding-right: 30px
+
+        .art__footer
+            padding-top: 30px
+            // margin-top: 30px
+
+
++breakpoint(mobile)
+    .section--home-offer__p
+        padding: 0 15px
+
+    .animation--end .banner-lady
+        left: calc(50% + 200px)
+
+
+    .intro__left, .intro__right
+        padding-left: 15px
+
+
+        .btn--price
+            padding: 0 10px
+
+
+    .animation--end .intro__left img, .animation--end .intro__right img
+        height: 63px
+
+    .review__stars i
+        font-size: 40px
+
+    .section--products
+        .art__figure
+            //background-size: contain
+
+

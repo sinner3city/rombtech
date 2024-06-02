@@ -1,0 +1,60 @@
+div.facelogin {
+    cursor: pointer;
+}
+
+.facelogin-link {
+    float: right;
+    border-left: 1px solid #e0d3d3;
+    display: block;
+    color: white;
+    font-weight: bold;
+    padding: 8px 10px 3px 10px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    line-height: 18px;
+}
+
+.fbloader {
+    display: none;
+    z-index: 99999;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    height: 40px;
+    width: 80px;
+    background: #3B5998 url('../img/loading.gif') no-repeat center;
+}
+
+.loginpopupsocial {
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.loginpopupsocial span {
+    color: #FFF !important;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2) !important;
+    font-family: arial !important;
+}
+
+.loginpopupsocial p {
+    margin-top: 0px;
+}
+
+form div.facelogin p span {
+    float: none !important;
+    text-align: inherit !important;
+    width: auto !important;
+}
+
+form div.facelogin p {
+    padding-left: 0px !important;
+}
+
+.fbldisplayCustomerLoginFormAfter {
+    cursor: default!important;
+}
+.fbldisplayCustomerLoginFormAfter p {
+    cursor:pointer;
+}

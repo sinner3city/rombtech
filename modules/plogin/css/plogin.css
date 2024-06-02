@@ -1,0 +1,111 @@
+/*
+* PrestaShop module created by VEKIA, a guy from official PrestaShop community ;-)
+*
+* @author    VEKIA https://www.prestashop.com/forums/user/132608-vekia/
+* @copyright 2010-2020 VEKIA
+* @license   This program is not free software and you can't resell and redistribute it
+*
+* CONTACT WITH DEVELOPER http://mypresta.eu
+* support@mypresta.eu
+*/
+
+div.plogin {
+    cursor: pointer;
+}
+
+div.plogin p::before {
+    width: 21px;
+    height: 21px;
+    background: url('../img/fb1.png') no-repeat top right;
+    display: inline-block;
+    content: "";
+}
+
+div.plogin p {
+    padding: 0px 0px;
+    background: url('../img/fb2.png') repeat-x top;
+    height: 21px;
+    color: #FFF;
+    text-shadow: 1px 1px 0px #41577d;
+    font-size: 12px;
+    display: inline-block;
+}
+
+div.plogin p span {
+    display: inline-block;
+    padding: 0px 10px;
+    position: relative;
+    top: -6px;
+    font-weight: bold;
+}
+
+div.plogin p:after {
+    width: 2px;
+    height: 21px;
+    background: url('../img/fb3.png') no-repeat top left;
+    display: inline-block;
+    content: "";
+}
+
+.plogin-link {
+    float: right;
+    display: block;
+    color: white;
+    font-weight: bold;
+    padding: 8px 10px 3px 10px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    line-height: 18px;
+}
+
+.fbloader {
+    display: none;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    height: 40px;
+    width: 80px;
+    background: #3B5998 url('../img/loading.gif') no-repeat center;
+}
+
+.loginpopupsocial {
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.loginpopupsocial span {
+    color: #FFF !important;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2) !important;
+    font-family: arial !important;
+}
+
+.loginpopupsocial p {
+    margin-top: 0px;
+}
+
+form div.plogin p span {
+    float: none !important;
+    text-align: inherit !important;
+    width: auto !important;
+}
+
+form div.plogin p {
+    padding-left: 0px !important;
+}
+
+.pldisplayCustomerLoginFormAfter {
+    cursor: default!important;
+}
+.pldisplayCustomerLoginFormAfter p {
+    cursor:pointer;
+}
+
+#_desktop_contact_link {
+    display:inline-block;
+    float:left;
+}
+.displaynav1, .displaynav2 {
+    margin-top: .324rem;
+}

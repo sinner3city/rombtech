@@ -1,0 +1,274 @@
+.abo
+    display: block
+    background: #fff
+    padding: 15px 20px
+    border-radius: 8px
+    border: 1px #ddd solid
+    // border: 2px $c-black solid
+    color: $c-black
+    margin-bottom: 30px
+
+
+    .label-price
+        position: relative
+
+    .label-price__price
+        margin-right: 10px
+
+    .label-price__label
+        +rem(17)
+        font-weight: 400
+        letter-spacing: 1px
+
+    .btn
+        margin-left: auto
+
+    &:hover,
+    &.abo--active
+        background: $cp1
+        color: white
+        border-color: $cp1
+
+        .cp1
+            color: white
+
+        .btn
+            background: transparent
+            border-color: white
+
+        .abo__title
+            color: white
+
+    &.abo--active:hover,
+    &:hover
+        .btn
+            background: $c-black
+            border-color: $c-black
+
+
+.abo__title
+    color: $c-black
+    margin-bottom: 15px
+    padding-bottom: 15px
+    border-bottom: 1px #eee solid
+    +rem(30)
+
+
+.abo__period
+    margin: 0 auto
+    font-weight: 700
+    font-size: 40px
+    opacity: 0.3
+
+.abo__period-label
+    display: block
+    line-height: 1
+
+
+.abo__summary
+    padding-top: 15px
+
+
+
+
+.abo-block
+    position: relative
+    width: 480px
+    padding: 0 5px
+    margin-left: auto
+    margin-right: auto
+    max-width: 100%
+    +flexbox()
+    +justify-content(center)
+    +flex-wrap(wrap)
+
+    &::before
+        position: absolute
+        top: 40px
+        left: 50%
+        content: ''
+        z-index: 0
+        width: calc(100% + 30px)
+        height: 70%
+        height: 195px
+        background: transparent
+        border: 2px $cp1 solid
+        border-color: rgb(33 33 33 / 15%)
+        border-radius: $radius
+        +translate3d((-50%, 0, 0))
+
+
+.abo-block__list
+    width: 100%
+    +flexbox()
+    +justify-content(center)
+
+
+.abo-block__best
+    position: absolute
+    left: -52px
+    top: -10px
+
+
+.abo-block__prices
+    position: relative
+    text-align: center
+    width: 100%
+    background: $cp1
+    color: white
+    border: 2px transparent solid
+    border-radius: $radius
+    padding: 15px 30px 35px
+    text-align: center
+    margin-top: 15px
+
+
+    .abo-block__price-selected
+        color: white
+        font-weight: 400
+
+
+    .abo-block__btn
+        position: absolute
+        bottom: -15px
+        left: 50%
+        white-space: nowrap
+        +translate3d((-50%, 0, 0))
+        &:hover,
+        &:focus,
+        &:active
+            background: $cp1
+            color: white
+            border-color: white
+
+            i
+                color: white
+
+
+.abo-block__summary
+    +flexbox()
+    +justify-content(center)
+    display: block
+    text-align: center
+    font-size: 15px
+    font-weight: 300
+    width: 100%
+    color: black
+    color: white
+    margin-top: 2px
+
+
+.abo-block__item
+    width: 115px
+    height: 120px
+    background: $c-black
+    border-radius: $radius
+    text-align: center
+    color: white
+    position: relative
+    border: 2px transparent solid
+    +flexbox()
+    +align-content(center)
+    +justify-content(center)
+    +flex-wrap(wrap)
+    +multipleTransition((margin 0.35s ease, background 0.25s ease, border 0.35s ease))
+
+    &.item--active,
+    &:hover
+        +multipleTransition((margin 0.35s ease, background 0.25s ease, border 0.35s ease))
+
+
+    &:hover
+        border-color: $cp1
+        color: white
+        background: $cp1
+
+
+        .abo-block__value
+            color: white
+
+    &.item--active
+        color: white
+        border-color: $cp1
+        margin-top: -10px
+        background: white
+
+        .abo-block__value
+            font-weight: 700
+
+        
+        .abo-block__unit,
+        .abo-block__label
+            color: black
+
+        
+        .abo-block__value
+            color: $cp1
+
+
+
+.abo-block__label
+    display: block
+    font-weight: 400
+    margin-bottom: 0
+    width: 100%
+    text-align: center
+    +multipleTransition((margin 0.35s ease, background 0.35s ease, border 0.35s ease))
+
+.abo-block__value
+    font-size: 48px
+    position: static
+    line-height: 1
+    color: $cp1
+    font-weight: 500
+    +multipleTransition((color 0.35s ease, background 0.35s ease, border 0.35s ease))
+    // padding-top: 8px
+
+.abo-block__unit
+    font-size: 18px
+    font-weight: 400
+    margin-top: 0
+    width: 100%
+    text-align: center
+    +multipleTransition((color 0.35s ease, background 0.35s ease, border 0.35s ease))
+
+
+.abo-block__li
+    margin: 10px
+
+
+.abo-block__price
+    +flexbox()
+
+
+
++breakpoint(desktop)
+    .abo__period
+        margin-right: 0
+
+
++breakpoint(mobilewide)
+
+    .abo-block__li
+        margin: 10px 3px
+
+
+@media only screen and (max-width: 580px)
+
+    .abo__period
+        display: none
+
+
++breakpoint(mobile)
+
+    .abo .btn
+        width: 100%
+        text-align: center
+        margin-top: 30px
+
+    .abo__summary
+        width: 80%
+        margin: 0 auto
+
+    .abo-block__item
+        width: 104px

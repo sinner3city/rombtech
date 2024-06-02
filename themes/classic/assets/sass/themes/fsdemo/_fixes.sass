@@ -1,0 +1,1366 @@
+.demohide
+    display: none !important
+
+.tooltip-comp
+    padding: 5px 10px
+    border-radius: $radius
+    // background: $cp1
+
+.product-detail-top
+    .hide
+        // display: block !important
+
+img
+    image-rendering: -webkit-optimize-contrast
+
+.shadow::after, .page__panel-right::after, .page-menu::after, .animation--loaded [data-style="1"] .art::after, .page-header::after
+    box-shadow: 0 -2px 10px rgb(0 0 0 / 20%)
+
+.page-product:not(.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament, .product-skuteczny-i-dochodowy-sklep-internetowy-abonament) .page-header .nav-top-search
+    +flexbox()
+
+.page-product:not(.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament, .product-skuteczny-i-dochodowy-sklep-internetowy-abonament) .product-price-section .label-price__oldprice
+    +rem(19)
+
+.page-product:not(.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament, .product-skuteczny-i-dochodowy-sklep-internetowy-abonament) .product-price-section .label-price
+    margin: -40px 0 0 0
+    border: 0
+    margin-top: 0
+    display: block
+    min-width: 0
+    border: 0
+    padding: 0
+
+    .discount-amount
+        position: absolute
+        right: 0
+        top: 100%
+        font-weight: bold
+
+    .material-icons
+        right: -50px
+
+.page-product
+    .discount-amount
+        +flexbox()
+        position: absolute
+        right: 0
+        top: 13px
+        font-weight: bold
+
+        .cp1
+            margin: 0 4px
+
+.page-product:not(.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament, .product-skuteczny-i-dochodowy-sklep-internetowy-abonament) .product-price-section .label-price__price-vat
+    padding-top: 0
+
+.label-price__oldprice
+    font-size: 20px
+    position: absolute
+    top: -22px
+    font-weight: 400
+    position: static
+    margin: 0
+    padding: 0
+    margin-top: 0px
+    display: block
+
+.discount-ico
+    color: $cp1
+
+.label-price i
+    color: $cp1
+    display: none
+
+// Header
+.page-logo
+    position: absolute
+    max-height: 46px
+    img
+        height: auto
+        // height: 40px
+
+.nav-top__link.link--burger
+    right: 1px
+
+.page__panel-right
+    #lnk-katalog-produktow
+        display: none
+
+.wcag__hide
+    position: absolute
+    width: 1px
+    height: 1px
+    padding: 0
+    margin: -1px
+    overflow: hidden
+    clip: rect(0, 0, 0, 0)
+    white-space: nowrap
+    border: 0
+
+.fs-gallery__link
+    display: block
+.fs-gallery__item
+    border-bottom: 2px white solid
+    img
+        height: auto
+.art__fav-link
+    display: none !important
+
+.tabs .nav-link.active
+    background-color: #ddd
+
+.page-product
+    .product-manufacturer
+        position: static
+        right: 0
+        top: 0
+        img
+            max-width: 185px
+            max-height: 89px
+
+    .product-detail__table-title
+        margin: 0 0 15px
+        font-weight: 500
+
+.page-menu__list[data-depth="1"]
+    > li > a
+        font-weight: 400
+
+.product-attach__title
+    margin-bottom: 0
+    +rem(18)
+    font-weight: 400
+.product-attach
+    margin-top: 5px
+    margin-bottom: 0
+    padding-left: 20px
+    margin-top: 15px
+
+.dev-ops
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 222
+    width: 450px
+    height: 600px
+    overflow: auto
+
+.dev-close
+    position: absolute
+    z-index: 111111
+    top: 0
+    right: 0
+    background: $cp1
+    // width: 50px
+    // height: 50px
+    color: white
+    font-weight: 700
+    padding: 15px
+
+.page-product
+    .qty
+        margin-right: 10px
+
+    .product-attach__item
+        padding: 0
+
+.product-attach__item
+    .product-attach__title
+        font-weight: 300
+        color: $c-black
+
+#quantity_wanted
+    display: block
+    max-width: 61px
+    padding: 10px
+    height: 40px
+    text-align: center
+.page-product
+    .product-actions
+        margin-top: 0
+    .product-detail__title
+        // margin: 0 0 45px 0
+        +rem(44)
+
+    .add
+        +flexbox()
+        +align-items(center)
+        margin-right: auto
+        //width: 100%
+
+    .add-to-cart
+        margin: 0 30px 0 0
+        margin: 0 0 0 auto
+
+    .product-attr--js
+        display: inline-flex
+    .product-quantity
+        position: static
+        +flex-wrap(wrap)
+
+    .product-attr
+        width: 100%
+        font-weight: 300
+        +rem(26)
+        margin-top: 4px
+        // font-weight: 400
+
+    .product-options
+        position: relative
+        width: 100%
+
+    .product-prices
+        position: static
+        text-align: left
+        top: 12px
+        left: 20px
+        margin-top: 30px
+
+#product
+
+    .discount-amount
+        position: static
+
+    .detal-back-btn
+        // position: absolute
+        top: 0
+        right: 0
+        border: 1px #b5b5b5 solid
+
+        &:hover
+            border-color: transparent
+
+    .product-prices
+        position: relative
+        left: 0
+        top: 0
+        background: #f7f7f7
+        padding: 22px
+        margin-bottom: 0
+        border-radius: 6px
+
+        .label-price
+            display: flex
+
+    .taxtax
+        font-size: 14px
+        color: black
+
+    .label-price__price-promo,
+    .label-price__price
+        display: flex
+        align-items: center
+        font-weight: bold
+        justify-content: center
+
+    .discount-right
+        display: flex
+
+    .label-price__oldprice
+        color: black
+        font-weight: normal
+    .discount-amount
+        flex-wrap: wrap
+        text-align: right
+        justify-content: flex-end
+        top: 0
+        margin-top: 5px
+        font-size: 14px
+        font-weight: bold
+        width: 100%
+        text-align: left
+        margin: 0
+        padding: 0
+        color: black
+        display: block
+
+        i
+            left: -45px
+            top: 13px
+            display: block
+
+        .cp1
+            margin-left: 0
+            color: black
+    .label-price__price-vat
+        margin-top: 5px
+
+    .label-price__oldprice
+        margin-left: 5px
+        // display: block
+        // width: 100%
+        // font-weight: bold
+        // position: static
+        // margin-right: auto
+        // width: 100%
+        // margin-top: 5px
+
+    .product-price-section
+        flex-wrap: wrap
+
+.tabs .nav-link.active
+    border-color: #dddddd
+
+.tabs.tabs--left .nav-tabs
+    padding-left: 0
+
+.page-product .product-variants-item
+    margin: 6px 20px
+
+    &:last-child
+        margin-right: 0
+
+.product-top-info
+    +flexbox()
+    +align-items(center)
+    order: 2
+    margin-left: auto
+
+.btn-print-cart
+    margin-left: 20px
+
+.ico--blue
+    color: #0091c1
+
+.ico--green
+    color: $cp3a
+
+.ico--red
+    color: $cp1
+
+.product-description
+    padding: 15px 25px
+
+.tabs .nav-link
+    i
+        color: $c-black
+    i.ico--red
+        @extend .ico--green
+    i.ico--green
+        @extend .ico--green
+
+    i.ico--blue
+        @extend .ico--blue
+
+    &:hover
+        i.ico--green,
+        i.ico--blue
+            //color: white
+
+.page-product
+    .add-to-cart
+        border-radius: $radius
+
+.page-product .product-variants-item ul li label
+    width: 24px
+    height: 24px
+
+.page-product .product-variants .control-label
+    font-size: 16px
+    font-weight: 400
+
+#product-availability,
+.btn-print-cart
+    +rem(14)
+    font-weight: 400
+    line-height: 1
+    +flexbox()
+    +align-items(center)
+
+    i
+        +rem(22)
+        margin-right: 5px
+
+    .product-available
+        color: $cp3a
+
+    .product-unavailable
+        color: $cp1
+
+.tabs .tab-pane
+    padding: 0 0
+    +rem(17)
+    line-height: 1.2
+
+    h2
+        +rem(32)
+    h3
+        +rem(18)
+        font-weight: 500
+
+.section-files
+    padding: 15px
+    margin-top: 15px
+
+.page-brands
+    .brand
+        margin: 0
+        border: 1px #eee solid
+        padding: 30px
+        height: 100%
+        text-align: center
+        +rem(18)
+        +multipleTransition((border 0.35s))
+
+        &:hover
+            border-color: $c-black
+
+    .brand-img
+        text-align: center
+        height: 170px
+        +flexbox()
+        +justify-content(center)
+        +align-items(center)
+
+    .brand-infos
+        text-align: justify
+        color: $c-black
+.page-manufacturer
+    .page-heading
+        padding-bottom: 20px
+        +justify-content(flex-start)
+
+.heading--brand
+    +flexbox()
+    +align-items(center)
+    +justify-content(center)
+    text-align: left
+
+.heading--brand__text
+    padding: 15px 15px 0 30px
+    max-width: 70%
+    +rem(20)
+    p
+        margin: 0
+    h1
+        +rem(32)
+        margin-bottom: 5px
+
+.product-options
+    .product-variants
+        border-radius: $radius
+
+.product-description
+    border-radius: $radius
+
+.product-tabs.tabs
+    margin-bottom: 30px
+
+.toggle-content__link
+    position: relative
+    display: block
+    font-weight: 500
+    color: $c-black
+    margin: -20px
+    padding: 20px
+    i
+        position: absolute
+        right: 15px
+        top: 20px
+        +multipleTransition((transform 0.35s))
+    p
+        margin: 0
+
+    &.active
+        color: $cp1
+        i
+            +rotate(180)
+    &:hover
+        color: $cp1
+.toggle-content__content
+    display: none
+
+.label-price__price-promo
+    +rem(26)
+
+// home
+
+.fshop_demo
+    #custom-text
+        display: none
+
+.blog-list
+    +justify-content(flex-start)
+
+#custom-text
+    display: block
+    padding: 60px 5% 30px
+    position: static
+    // position: absolute
+    // top: 87px
+    // background: $cp1
+    // color: white
+    // font-weight: 400
+    // z-index: 2
+    // width: 100%
+    // left: 0
+    // text-shadow: 1px 1px 6px #000
+    // display: block
+    text-align: center
+    // margin:
+        // left: -30px
+        // right: -30px
+
+#custom-text p
+    font-weight: 300
+
+.page-index .list--products[data-col="6"] .art__figure
+    // max-height: 180px
+
+.section-premium__title
+    text-align: center
+    // margin-top: 60px
+
+.table-product .name
+    +rem(17)
+
+.page-up
+    position: absolute
+    bottom: 0
+    right: 30px
+
+    .btn
+        padding: 0 8px
+
+    i
+        margin: 0
+
+.section-products__title
+    +rem(28)
+    br
+        display: none
+    strong
+        color: white
+        background: $cp1
+        padding: 3px 8px
+        margin-right: 12px
+        border-radius: $radius
+        font-weight: 300
+        +rem(28)
+
+        &.cp2
+            color: white
+            background: $cp2
+
+        &.cp3
+            color: white
+            background: $cp3
+
+.page-product
+    .section-products__title
+        text-align: left
+
+        &.t-center
+            text-align: center
+
+.hl
+    color: white
+    background: $cp1
+    padding: 2px 8px
+    margin-right: 12px
+
+.glassbest
+    display: block
+    margin: 0 auto
+
+.section--premium
+    text-align: left
+    margin-top: 0
+    border-top: 1px #ddd solid
+    padding-top: 60px
+    margin-bottom: 0
+
+    .art
+        margin: 8px
+
+    .section__content
+        max-width: 85%
+        text-align: center
+        margin: 45px auto
+        //font-size: 22px
+
+.section-with-box,
+.section-premium__list
+    +flexbox()
+    +justify-content(center)
+    +align-content(flex-start)
+    +flex-wrap(wrap)
+
+.section-premium__list
+    padding-top: 30px
+
+.section-premium__item-title
+    position: absolute
+    bottom: 15px
+    left: 10%
+    width: 80%
+    text-align: center
+    background: $c-black
+    color: white
+    font-weight: 700
+    text-transform: uppercase
+    z-index: 2
+    text-transform: none
+    padding: 5px 15px
+    font-weight: 500
+    z-index: 3
+    +rem(14)
+    border-radius: $radius
+    +multipleTransition((background 0.3s))
+
+.section-premium__link
+    position: relative
+    display: block
+    margin: 4px
+    overflow: hidden
+    border-radius: $radius
+    &::before
+        position: absolute
+        content: ''
+        width: 100%
+        height: 100%
+        z-index: 2
+        background: rgb(255 255 255 / 58%)
+        +multipleTransition((background 0.2s))
+
+    &:hover,
+    .is-active &
+        &::before
+            background: rgb(255 255 255 / 0%)
+
+    &:hover
+        .section-premium__item-title
+            background: $cp1
+
+.section-products__title
+    text-align: center
+
+.section--prodpl
+    background: url('../media/glasscolor/plproducent.jpg') no-repeat top center
+    background-size: cover
+    min-height: 440px
+    +flexbox()
+    +justify-content(flex-end)
+    +align-items(center)
+
+.prodpl__desc
+    position: absolute
+    right: 30px
+    top: 50%
+    // background: rgb(0 0 0 / 13%)
+    border-radius: $radius
+    color: white
+    padding: 30px
+    width: 40%
+    margin-top: -30px
+    +translate3d((0, -50%, 0))
+    font-size: 20px
+    font-weight: 300
+    position: static
+    +translate3d((0, 0, 0))
+
+    h3
+        font-size: 32px
+        font-weight: 500
+        margin-bottom: 15px
+
+    p
+        margin: 0
+
+.section--full
+    margin-left: -$page-padding
+    margin-right: -$page-padding
+
+body .art__list.list--products[data-slider]
+    // margin-left: 0
+    // margin-right: 0
+
+.product-detail__footer
+    padding-top: 60px
+
+    .section:first-chil
+        margin-top: 0
+
+    .section--review
+        margin: 0 0 60px
+
+.section--review
+    display: block
+
+    h3
+        font-size: 24px
+
+    .section__title
+        margin-bottom: 0
+
+    img
+        margin: auto
+    ul
+        width: 100%
+        +justify-content(space-evenly)
+
+.section-products
+    .head--border
+        border-bottom: 0
+
+.section--news
+    text-align: center
+
+.page-product:not(.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament, .product-skuteczny-i-dochodowy-sklep-internetowy-abonament) .page-header
+    z-index: 1
+    border-color: white
+
+.product-header
+    z-index: 3
+    margin-bottom: 0
+    +flexbox()
+    +justify-content(flex-start)
+    +align-items(flex-start)
+    gap: 30px
+
+    .product-manufacturer
+        order: 2
+        margin-bottom: 0
+        margin-left: auto
+        // padding: 15px
+
+.product-detail-top
+    +rem(18)
+
+.product-detail__scroll
+    padding-left: 0
+
+.product-detail__scroll
+
+    .ico--scroll
+        position: fixed
+        top: 0
+        left: 0
+        color: white
+        font-size: 22px
+        z-index: 2
+        padding: 0 15px
+        // position: absolute
+        text-align: left
+        background: none
+        text-align: left
+        justify-content: center
+        width: 800px
+        max-width: 37%
+        top: initial
+        bottom: 0
+        margin-left: -6px
+        padding: 10px 10px 10px 20px
+        cursor: help
+        +multipleTransition((background 0.4s))
+        pointer-events: none
+        background: rgb(0 0 0 / 36%)
+
+        &:hover
+            background: rgb(0 0 0 / 36%)
+
+        .badge
+            position: relative
+            opacity: 0.3
+            display: none
+
+        .img
+            position: absolute
+            right: 36px
+            top: 4px
+            // filter: invert(1)
+            height: 51px
+
+        .ico
+            left: 36px
+            top: 4px
+            height: auto
+            margin-top: -3px
+            text-shadow: 0px 1px 5px black
+            pointer-events: none
+
+        .info-label
+            margin: 0
+            font-size: 18px
+            text-shadow: 0px 1px 5px black
+            margin-left: 10px
+            pointer-events: auto
+            &:hover
+                & ~ .info
+                    opacity: 1
+
+        .info
+            display: block
+            +rem(14)
+            margin-left: auto
+            opacity: 0
+            +multipleTransition((opacity 0.4s))
+
+.product-quality
+    // margin: 60px 0 0
+    // padding: 30px 0
+    text-align: center
+
+.quality-list
+    +flexbox()
+    +justify-content(center)
+    +align-items(center)
+    img
+        margin: 30px 5%
+        display: block
+        max-height: 150px
+.product-info
+    .img-cont
+        position: relative
+        overflow: hidden
+        // height: 450px
+        margin: 30px 0
+        width: 100%
+        background-attachment: fixed
+        background-size: contain
+        background: none
+        +flexbox()
+        +align-items(center)
+        +justify-content(space-between)
+        +flex-wrap(wrap)
+
+        .ecoclean &
+
+            +justify-content(space-between)
+
+        img
+            border-radius: 6px
+            +flex(1)
+    .img-cont__desc
+        // position: absolute
+        top: 30px
+        right: 0
+        text-align: right
+        padding: 30px
+        +flex(1)
+        max-width: 100%
+        text-align: center
+
+        .title1
+            font-size: 66px
+            display: block
+            line-height: 1
+
+        .title2
+            font-size: 46px
+
+    &.easeclean
+        .title1
+            color: $cp3
+
+.page-menu__scroll
+    &::-webkit-scrollbar-track
+        -webkit-box-shadow: none
+        border-radius: 0
+        background-color: #f5f5f5
+
+    &::-webkit-scrollbar
+        width: 4px
+        background-color: white
+
+    &::-webkit-scrollbar-thumb
+        border-radius: 5px
+        -webkit-box-shadow: none
+        background-color: $cp1
+
+.page__panel-right .page-menu__link
+    padding-top: 9px
+    padding-bottom: 9px
+
+#fs_product
+    .product-detail__scroll
+
+        &::-webkit-scrollbar-track
+            -webkit-box-shadow: none
+            border-radius: 0
+            background-color: #f5f5f5
+
+        &::-webkit-scrollbar
+            width: 6px
+            // background-color: white
+
+        &::-webkit-scrollbar-thumb
+            border-radius: 5px
+            -webkit-box-shadow: none
+            background-color: $cp1
+
+.cardmember
+    +flexbox()
+    +align-items(center)
+    +flex-wrap(wrap)
+    +justify-content(left)
+    .img,
+    .txt
+        // +flex(1)
+        // width: 100%
+        // flex: 1
+
+    .img
+        text-align: left
+        img
+            min-width: 300px
+    .txt
+        text-align: left
+        min-width: 240px
+        padding: 60px
+        +flex(1)
+
+// rwd
+
+.splide--categories
+    min-height: 460px
+
+.section--member
+    .section__title
+        margin-bottom: 0
+    .section__content
+        padding: 0 5%
+
+img.lazy
+    opacity: 0
+    +multipleTransition((opacity 0.4s))
+
+    &.loaded
+        opacity: 1
+        height: auto
+
+.head--border
+    padding-top: 30px
+    padding-bottom: 30px
+    // text-align: left
+    // border-top: 1px #ddd solid
+    border-bottom: 1px #ddd solid
+
+.list--products[data-col] .product-item__flag.new
+    +flexbox()
+
+.list--products[data-col="6"] .splide .art
+    // max-width: 100% !important
+
+.splide
+    width: 100%
+    .art
+        margin: 0
+
+.section--home-text
+    p
+        +rem(28)
+
+.table--delivery
+    tr:first-child
+        background: #eee
+    img
+        max-height: 40px
+
+    td
+        text-align: center
+        padding: 5px 12px
+        font-size: 15px
+
+    .no
+        opacity: 0.5
+
+.section__title
+    text-align: center
+
+.page-product .product-options .product-variants
+    +justify-content(flex-start)
+    padding-left: 5px
+    padding-right: 5px
+    padding: 5px
+    margin-top: 15px
+
+.pswp__counter
+    // color: black
+
+.pswp__ui--idle .pswp__top-bar
+    opacity: 1
+
+.pswp__top-bar
+    opacity: 1
+    background: transparent
+.product-information
+    .product-description
+        margin-bottom: 15px
+
+.promocode
+    padding: 30px
+    border-radius: $radius
+    border: 1px $cp1 solid
+    min-width: 30%
+
+    .product-detail__footer &
+        max-width: 50%
+    .counter__field
+        background: $cp1
+
+.payu-raty
+    text-align: left
+    max-width: 1400px
+    margin: auto
+    padding: 15px 60px
+
+.ico-swipe-mobile
+    display: none
+
+html.with-fancybox body.hide-scrollbar
+    overflow-y: scroll !important
+
+.category-id-2
+    .filter-wrapper
+        .facet:not(:first-of-type)
+            display: none
+
+.page-menu
+    #cms-category-2
+        .page-menu__arrow
+            display: none
+        .page-menu__droplist
+            display: none
+
++breakpoint(1025px, 5000px)
+
+    .product-detail__footer
+        .list--products[data-col][data-slider=true]
+            .splide__slide
+                max-width: 500px !important
+                min-width: initial !important
+                width: 100%
+
++breakpoint(laptop)
+    .page-index .list--products[data-col="6"] .art__figure
+        // max-height: 120px
+
+    .dev-ops
+        display: none
+
+    .product-detail-top .list--products[data-col][data-slider=true]
+        .splide__slide
+            min-width: 50%
+            // width: 50%
+
++breakpoint(desktop)
+    .page-logo
+        position: relative
+
+    .nav-top__link.link--burger
+        right: 1px
+        top: -3px
+
+    .img-cont
+        +justify-content(center)
+
+    .promo-loyal
+        +flex-wrap(wrap)
+
++breakpoint(tablet)
+
+    .payu-raty
+        text-align: center
+
+    .ico-swipe-mobile
+        position: absolute
+        display: block
+        bottom: 45px
+        right: 30px
+        color: white
+        font-size: 45px
+        text-shadow: 0px 3px 4px rgb(0 0 0 / 64%)
+    .section-premium__link
+
+        &::before
+            display: none
+
+    .fs-gallery
+        +flexbox()
+        overflow: auto
+
+    .product-detail__images
+        overflow: hidden
+        max-width: 100%
+
+    .fs-gallery__item img.lazy
+        height: 400px
+        width: auto
+        max-width: none
+
+    #fs_product
+        overflow: hidden
+        position: relative
+
+    .list--products[data-col][data-slider=true]
+        .splide__slide
+            min-width: 50%
+
+    .page-product:not(.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament, .product-skuteczny-i-dochodowy-sklep-internetowy-abonament) .page-header
+        z-index: 1
+        border-color: #eee
+
++breakpoint(mobilewide)
+
+    #product
+        .discount-amount
+            i
+                display: none
+        .tabs .tab-pane.active
+            overflow: auto
+
+        .product-prices
+            .label-price
+                display: flex
+                justify-content: center
+
+        .discount-right
+            display: none
+
+        .qty-add
+            margin-right: 0
+
+    #product .discount-amount
+        justify-content: center
+        text-align: center
+
+    .page-product .product-variants-item
+        +flex-wrap(wrap)
+
+    .product-info .img-cont__desc .title1
+        +rem(34)
+
+    .tabs.tabs--left .nav-tabs
+        padding-left: 10px
+
+    .page-up
+        right: 60px
+
+    .product-detail__footer .section--review
+        padding: 30px
+
+    .payu-raty
+        padding: 15px
+
+    .promocode,
+    .product-detail__footer .promocode
+        max-width: 100%
+        width: 100%
+        padding: 30px
+        margin: 30px
+
+    .product-detail__title
+        width: 100%
+
+    .heading--brand
+        +flex-wrap(wrap)
+        padding-top: 30px
+
+    .heading--brand__text
+        text-align: center
+        padding: 30px 30px 0
+    .section--premium
+        .section__title,
+        .section__content
+            text-align: left
+    .section--home-text,
+    .section--home-text2
+        .t-center
+            text-align: center
+    .page-logo
+        position: relative
+
+    .nav-top__link.link--burger
+        right: 0
+        top: -7px
+
+    .page-header .page-logo img
+        display: block
+        height: 26px
+        margin-top: -7px
+
+    .section--premium
+        .section__title
+            text-align: center
+        > p
+            max-width: 100%
+            font-size: 16px
+            text-align: left
+
+    .section--prodpl
+        background-size: initial
+        background-position: top left -100px
+        min-height: 500px
+        margin-top: -80px
+        margin-top: 0
+        min-height: 0
+        height: auto
+        background: #860000
+        .prodpl__desc
+            width: 100%
+            margin: 0
+            font-size: 18px
+            // display: none
+    body
+        // font-size: 16px
+
+    .section-premium__link
+        margin: 0
+        border-radius: 0
+        border: 2px white solid
+
+    .section-products__title
+        text-align: center
+        br
+        // display: block
+
+    .section-premium__item-title
+        position: static
+        margin: 0
+        width: 100%
+        border-radius: 0
+        font-size: 14px
+        bottom: 35px
+
+        text-align: left
+        margin-bottom: 0
+        +rem(30)
+        strong
+            display: inline-block
+
+    .section--home-text p
+        line-height: 1.2
+    .splide .art
+        margin: 0
+
+    .section--premium .section__content
+        max-width: 100%
+        padding: 0 30px
+
+    .cardmember
+        .txt
+            text-align: center
+            margin-top: 15px
+
+    .page-product
+        .product-prices
+            position: static
+            margin-bottom: 15px
+
+        .product-options .product-variants
+            padding-left: 20px
+
+        .product-options
+            margin-top: 0
+
+        .product-add-to-cart
+            margin: 0
+
+    .product-header .product-manufacturer
+        margin: auto
+
+    .product-top-info
+        margin: 30px auto 30px 0
+
+    .tabs .tab-pane
+        padding: 0
+        overflow: hidden
+
+        &#payments
+
+            .table-product
+                width: 600px
+
+    .page-product:not(.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament, .product-skuteczny-i-dochodowy-sklep-internetowy-abonament) .product-detail__title
+        margin: 0
+        text-align: center
+        +justify-content(center)
+
+    .page-product:not(.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament, .product-skuteczny-i-dochodowy-sklep-internetowy-abonament) .products--special
+        margin: 0 20px
+
+    .grid--4 .list--products[data-col] .art__figure, .list--products[data-col="4"] .art__figure
+        //height: 180px
+
+    .page-product .product-variants-item
+        margin-right: 10px
+
+    .product-attach__title
+        +rem(18)
+
+    .section-products__title strong
+        +rem(24)
+
+    .section--review img
+        margin: 0 40px
+
+    .product-header
+        margin-bottom: 15px
+        +flex-wrap(wrap)
+
+    .page-product .product-options .product-variants
+        +justify-content(flex-start)
+
+    .page-product:not(.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament, .product-skuteczny-i-dochodowy-sklep-internetowy-abonament) .product-price-section
+        +justify-content(center)
+        text-align: center
+        width: 100%
+        position: static
+        +flex-wrap(wrap)
+
+        .label-price
+            width: 100%
+
+        .discount-amount
+            position: static
+            width: 100%
+
+            .cp1
+                margin-left: 20px
+
+    .page-product .add
+        margin: auto
+
+    .product-top-info
+        margin: 15px auto 0
+
+    .page-product .qty-add
+        width: 100%
+
+    .page-product .product-options .product-variants
+        padding-left: 0
+
++breakpoint(mobile)
+
+    .section-products__title
+        text-align: center
+        margin-bottom: 0
+        +rem(30)
+        strong
+            display: inline-block
+
+    .section--prodpl
+        background-position: top left -100px
+
+    .page-brands .brand
+        margin: 0
+        padding: 15px
+
+    .promocode
+        .section__title
+            font-size: 34px
+
+    .product-quality
+        +flex-wrap(wrap)
+
+@media only screen and (max-width: 376px)
+
+    .page-header .page-logo img
+        display: block
+        height: 26px
+        margin-top: -7px
+
+    .grid--4 .list--products[data-col] .art__figure, .list--products[data-col="4"] .art__figure
+        height: 150px

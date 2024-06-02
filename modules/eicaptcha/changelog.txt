@@ -1,0 +1,16 @@
+/**
+ * Module Captcha
+ * Add (re)captcha on contact and account creation forms
+ * © Hervé Hennes 2013-2020
+ * https://github.com/nenes25/eicaptcha
+ * https://www.h-hennes.fr/blog/
+ */
+
+ - V 2.0.7 - 2020-12-22 : Fix prestashop 1.7.7 compatibility
+ - V 2.0.6 - 2020-10-31 : Improve code + fix OPC verification
+ - V 2.0.5 - 2019-04-23 : Small fixes - Not released
+ - V 2.0.4 - 2018-03-09 : Display debug information in back-office
+ - V 2.0.3 - 2018-03-01 : Add debug mode + activate compatibility for PS 1.7.0.x
+ - V 2.0.2 - 2018-02-13 : Check if composer "vendor" directory is present
+ - V 2.0.1 - 2017-12-01 : Css improvments thanks to Arnaud Merigeau
+ - V 2.0.0 - 2017-07-10 : New version for prestashop 1.7, add only captcha for contact form and account creation

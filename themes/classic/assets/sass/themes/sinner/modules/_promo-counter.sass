@@ -1,0 +1,278 @@
+.promo-counter__title,
+.promo-counter__title-bar
+    text-align: center
+    color: $c-black
+    font-weight: 400
+    +rem(20)
+    display: block
+    margin-bottom: 15px
+
+
+.promo-counter__title-bar
+    display: none
+
+.promo-counter__btn
+    background: $c-black
+    color: white
+    border: 2px transparent solid
+
+    &:hover
+        background: $cp1
+        color: white
+        border-color: white
+
+        i
+            color: white
+    
+.counter
+    +flexbox()
+    +align-items(center)
+    +justify-content(center)
+
+.counter__field
+    +rem(28)
+    font-weight: 300
+    color: white
+    background: #ff6c00
+    background: $c-black
+    // border: 1px white solid
+    line-height: 1
+    padding: 7px
+    margin: 0 1px
+    border-radius: 3px
+
+.counter__label
+    +rem(16)
+    font-weight: 400
+    margin: 3px 3px 0
+    text-transform: uppercase
+
+
+.label--d,
+.field--d
+    display: none
+
+    &.day--active
+        display: block
+
+
+    
+#promo-bar.promo-counter
+
+    &.promo-counter--preshow
+        position: fixed
+        bottom: -100px
+        +multipleTransition(( bottom 0.45s))
+
+    &.promo-counter--bottom
+        position: static
+        bottom: -100px
+        z-index: 2
+        // background: rgb(255 165 0 / 85%)
+        // background: $cp1
+        height: 0
+        width: 100%
+        left: 0
+        +flex-wrap(wrap)
+        +flexbox()
+        +align-items(center)
+        +justify-content(space-between)
+        // padding: 0 4%
+        overflow: hidden
+        // border-top: 2px white solid
+        border: 0
+        height: 100%
+        +multipleTransition(( bottom 0.45s, height 0.25s ease-in-out))
+
+        .counter__label
+            color: white
+
+        &.show
+            bottom: 0
+            padding: 10px 30px
+            height: auto
+            +multipleTransition(( bottom 0.45s, height 0.45s ease-in-out))
+            z-index: 999
+
+        .counter__field
+            background: $c-black
+            padding: 3px 5px
+            font-weight: 400
+            +rem(20)
+
+        .promo-counter__title
+            margin: 0
+
+        .mg-t-30
+            margin-top: 0
+
+        .promo-counter__title-bar
+            display: block
+            margin: 0
+            font-weight: 300
+            
+
+        .promo-counter__title
+            // display: none
+
+        .promo-counter__label
+            margin-right: 15px
+            letter-spacing: 0
+            font-size: 16px
+            color: white
+
+
+        .rebate
+            font-weight: bold
+            color: black
+            font-size: 18px
+            vertical-align: middle
+
+        .promo-counter__btn
+            letter-spacing: 1px
+            font-size: 12px
+            line-height: 1
+
+    .break-line
+        margin: 0
+        line-height: 1
+        display: inline-block
+        font-size: 20px
+
+.section--buy
+    .promo-counter__label
+        display: block
+        text-align: center
+        margin-bottom: 15px
+
+.counter--small
+    .counter__label
+        +rem(14)
+
+    .counter__field
+        +rem(20)
+        padding: 7px 5px
+        margin: 0 1px
+
+
+.block-promo
+    #counterjs
+        // opacity: 0
+
+        &.visible
+            opacity: 1
+
+@media only screen and (max-width: 1200px)
+
+    .promo-counter__title
+        display: none
+
++breakpoint(tablet)
+    .promo-counter
+        margin-top: 30px
+
+    .promo-code__title
+        text-align: center
+
+    .promo-code__title .cp--white
+        padding: 0
+
+    .promo-counter__title-bar
+        +rem(18)
+        line-height: 1
+
+        .break-line
+            display: block
+
+
+
+#cart
+    .promo-counter.show
+        display: none
++breakpoint(0, 960px)
+    .counter
+        .promo-counter__label
+            display: none
+
++breakpoint(0, 800px)
+    .promo-counter.promo-counter--bottom
+        // display: none
+
+        .counter__field
+            font-size: 16px
+            margin: 0 2px
+            padding: 5px
+
+        .field--s,
+        .label--s
+            display: none
+
+        .counter__label 
+            +rem(16)
+
++breakpoint(mobilewide)
+    #promo-bar.promo-counter.promo-counter--bottom
+        // display: none
+
+        .counter__field
+            font-size: 16px
+            margin: 0 2px
+            padding: 5px
+
+        .field--s,
+        .label--s
+            display: none
+
+        .counter__label 
+            +rem(16)
+
+        
+                
+
+    .promo-counter__title-bar
+        width: 100%
+        text-align: left
+        
+
+        > .flex-row-center
+            display: block
+
+        .t-center
+            text-align: left
+
+    .promo-counter__label
+        display: block
+        // margin-bottom: 5px
+        margin: 0
+        text-align: center
+        // margin-bottom: 5px
+        // padding-bottom: 5px
+
+    .counter
+        position: absolute
+        right: 15px
+        top: 45px
+        position: static
+        margin: 0 auto
+
+        .promo-counter__label
+            display: none
+            margin-bottom: 15px
+
+    
+
+
++breakpoint(mobilewide)
+    #promo-bar.promo-counter.promo-counter--bottom .promo-counter__label
+        margin-right: 0
+        margin-bottom: 5px
+
+    #promo-bar.promo-counter.promo-counter--bottom .promo-counter__btn
+        display: none
+
+    #promo-bar.promo-counter.promo-counter--bottom .rebate
+        font-size: 18px
+
+    #promo-bar.promo-counter.promo-counter--bottom .counter__field
+        font-size: 14px
+    

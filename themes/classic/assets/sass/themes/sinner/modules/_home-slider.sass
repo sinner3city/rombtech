@@ -1,0 +1,162 @@
+
+.caption-description
+    color: white
+    // display: none
+
+#carousel
+    position: relative
+    h2, h3
+        color: white
+        margin-bottom: 0
+        font-weight: 300
+
+    h3
+        font-size: 15px
+        text-transform: uppercase
+        margin-top: 2px
+
+    .direction
+        position: absolute
+        z-index: 2
+        top: 50%
+        margin-top: -40px
+        left: 0
+        width: 100%
+
+        .sr-only
+            display: none
+
+
+
+    .carousel-inner
+        height: 340px
+
+    .carousel-item
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        // display: none
+        opacity: 0
+        background-position: top right
+        background-size: contain
+        background-repeat: no-repeat
+        overflow: hidden
+        background-color: #111
+        pointer-events: none
+        +multipleTransition((opacity 0.45s ease-in-out))
+
+        &.active
+            opacity: 1
+            pointer-events: auto
+            // display: block
+            +multipleTransition((opacity 0.85s ease-in-out))
+
+        .image-max__container
+            position: relative
+            float: right
+            max-width: 60%
+            height: 340px
+            overflow: hidden
+
+            img
+                display: block
+                float: right
+                max-width: none
+                max-height: none
+                height: 340px
+                width: auto
+                transform: translateZ(0)
+
+            &::after
+                position: absolute
+                top: 0
+                left: -50px
+                content: ""
+                width: 100px
+                height: 400px
+                transform: skewX(12deg) translateZ(0)
+                border-right: 5px white solid
+                background: #111
+
+        
+        .caption
+            position: absolute
+            top: 50%
+            left: 5%
+            // +transform(translate(0, -50%))
+            max-width: 35%
+            bottom: auto
+            // top: 50%
+            // bottom: initial
+            // // max-width: 440px
+            // // +transform(translate(0, -50%))
+            // top: 0
+            // position: relative
+            // max-width: 50%
+            // width: 50%
+            // left: 0
+
+
+    .caption .caption-description
+        margin-bottom: 0
+        border: 1px rgb(255 255 255 / 15%) solid
+        padding: 15px
+        margin-top: 30px
+        font-weight: 300
+        font-size: 16px
+
+        p, span, strong
+            font-size: 16px
+
+    .btn--primary
+        border-width: 1px
+        &:hover
+            border-color: white
+            color: white
+
+    .carousel-control
+        // text-shadow: none
+
+    .carousel-control
+        .icon-next,
+        .icon-prev
+            opacity: 1
+            color: white
+            margin-top: -40px
+            +multipleTransition((opacity 0.25s ease-in-out))
+
+            &:hover
+                i
+                    color: $cp1
+
+            i
+                font-size: 80px
+
+        &.right
+            position: absolute
+            right: 0
+
+        &.left
+            position: absolute
+            left: 0
+
+        .icon-next
+            right: 40px
+            margin-right: 0
+            text-shadow: none
+
+            i:hover
+                // color: #111
+                text-shadow: none
+
+        .icon-prev
+            left: -10px
+            margin-left: 0
+
+        &:hover
+            > span
+                opacity: 1
+                +multipleTransition((opacity 0.25s ease-in-out))
+            
+    

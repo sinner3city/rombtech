@@ -1,0 +1,764 @@
+#fs_product
+    > .page-container
+        max-width: none
+
+.fs_product
+    // padding-right: 30px
+.product-skuteczny-i-dochodowy-sklep-internetowy-abonament,
+.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament
+    .page-footer
+        margin-top: 0
+        padding-top: 0
+
+    .section--startujemy
+        margin-bottom: 0
+
+
+
+.page-product:not(.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament, .product-skuteczny-i-dochodowy-sklep-internetowy-abonament)
+    &.menu--active
+        .page-header
+            border-color: white
+
+    > .page-container
+        padding-top: 0
+
+    .product-quantity
+        margin-top: 15px
+
+    .nav-top-currency
+        left: initial
+        right: 535px
+        right: 305px
+
+    .nav-top-lang
+        left: initial
+        right: 600px
+        right: 375px
+
+        .btn-unstyle
+            margin-left: auto
+
+    .page-header
+        // position: absolute
+        z-index: 1
+        border-bottom: 1px #eee solid
+
+        .nav-top-search
+            display: none
+
+        &::after
+            opacity: 0
+
+    .product-detail-top > .product-item__flags
+        top: 0
+
+    .breadcrumb
+        position: absolute
+        top: -117px
+        z-index: 2
+
+    .breadcrumbs__item:last-child
+        display: none
+
+    .breadcrumbs__item:visible:last-child
+        .sep
+            display: none
+    .product-detail-top
+        padding-top: 90px
+
+    .product-detail
+        position: relative
+
+    .product-price-section
+        top: 45px
+
+    .product-detail__scroll
+        height: 100%
+        width: 450px
+
+    .products--special
+        margin: 0 30px 30px
+        text-align: center
+
+        h2
+            margin-bottom: 30px
+    .list--special
+        // padding: 60px
+
+    .product-quantities
+        font-size: 16px
+
+.section-products__title
+    // border-bottom: 1px #eee solid
+    text-align: left
+    line-height: 1
+    font-size: 36px
+    padding-bottom: 15px
+    margin-bottom: 30px
+    //margin-top: 30px
+    strong
+        font-size: 33px
+
+.tax-label
+    text-transform: lowercase
+    
+.page-product
+    .breadcrumbs
+        padding-right: 240px
+    .breadcrumbs__list
+        background: none
+        margin-top: 37px
+
+    .tax-label
+        margin-left: 5px
+        text-transform: lowercase
+    
+
+    
+.product-detail-top
+    position: relative
+    min-height: 100vh
+
+    & > .product-item__flags
+        z-index: 3
+        position: fixed
+        top: 55px
+    
+    
+.product-detail__scroll
+    position: fixed
+    width: 480px
+    top: 0
+    left: 0
+    padding: 0 15px
+    z-index: 2
+    height: calc(100% - 60px)
+    overflow-y: auto
+    background: white
+    scrollbar-color: #eee white
+    scrollbar-width: thin
+
+
+.product-detail
+    padding-left: 480px
+    padding-bottom: 80px
+    .product-header
+        .discount
+            position: absolute
+            top: 100%
+            right: 0
+            background: $cp1
+            color: white
+            padding: 5px 15px
+
+    .contact-us
+        > .form-fields
+            > .form-group:first-child
+                display: none 
+
+
+.product-detail__title
+    font-size: 44px
+    position: relative
+    margin-right: 365px
+    display: inline-flex
+    line-height: 1
+
+    .art__fav-link
+        left: 100%
+        margin-left: 35px
+        top: 0
+
+
+
+.product-header,
+.product-information,
+.product-tabs.tabs
+    margin-bottom: 40px
+
+.product-detail__footer
+    position: relative
+    background: white
+    // width: 100%
+    z-index: 2
+    margin: 0 -30px
+    padding: 60px 30px
+    box-shadow: 0px -1px 43px rgb(0 0 0 / 12%)
+
+
+.product-detail__images
+    position: relative
+    padding-top: 0
+    // overflow: hidden
+    // height: 440px
+
+    &::before
+        // content: ""
+        position: fixed
+        top: 30px
+        left: 30px
+        width: 90%
+        height: 90vh
+        border: 1px white solid
+        z-index: 1
+        max-width: 90%
+        max-height: 90%
+
+
+.category-back
+    display: none
+
+.section--pakiety
+    .products-list
+        +flex-wrap(wrap)
+    .product-google
+        +flex(1)
+
+
+.label-price
+    position: relative
+    +flexbox()
+    +align-items(center)
+    line-height: 1
+    font-size: 34px
+    +flex-wrap(wrap)
+    border: 1px $c-border solid
+    padding: 15px
+    margin-top: -30px
+    padding-right: 50px
+    padding-bottom: 30px
+    
+    i
+        font-size: 44px
+        color: #f94d12
+        position: absolute
+        right: -7px
+
+
+.label-price__tax
+    text-transform: lowercase
+    margin-left: 3px
+
+
+.label-price__oldprice
+    margin-right: 5px
+
+
+.label-price__price-promo
+    color: $cp1
+    margin: 0
+    font-weight: 900
+    margin-right: 5px
+    line-height: 1
+    font-size: 34px
+
+.label-price__price
+    margin: 0
+    font-weight: 400
+
+.label-price__price-vat
+    position: absolute
+    bottom: 12px
+    font-size: 14px
+    text-transform: uppercase
+    margin: 0
+    // padding-right: 50px
+    // width: 100%
+
+
+
+.product-description
+    border: 1px $c-border solid
+    padding: 30px
+    // margin-top: 60px
+    margin-bottom: 40px
+
+
+.product-price-section
+    position: absolute
+    right: 0
+    top: 103px
+
+.page__panel-right .page-logo__name
+    +rem(14)
+    margin-top: 7px
+    font-weight: 300
+    letter-spacing: 3px
+
+
+
+.tab-content
+    padding: 30px
+    border: 1px #eee solid
+    border-top: 0
+    border-radius: 0 0 5px 5px
+    // background: #f5f5f5
+
+
+
+.table-product
+    width: 100%
+    font-size: 18px
+
+    .name
+        font-weight: 400
+    td
+        background: #f5f5f5
+        border: 2px white solid
+        padding: 10px 20px
+        line-height: 1.2
+
+.product-attach__item
+    padding: 5px 0
+    // +flexbox()
+    +align-items(center)
+
+    i
+        margin-right: 10px
+
+    a
+        +flexinline()
+        +align-items(center)
+
+
+.product-attach__title
+    margin-top: 0
+
+
+
+.product-attach__desc
+    margin: 0
+
+
+
+.product-customization
+    border: 1px $cp1 solid
+    margin: 30px 0 30px
+    margin-top: 60px
+
+    .card-block
+        display: none
+        padding: 0 30px 30px 30px
+
+    .product-custom__header
+        padding: 30px 30px
+
+    textarea
+        min-height: 0
+        font-family: $body-f
+        font-size: 16px
+        height: 60px
+
+
+    .card-title
+        // margin-bottom: 30px
+
+        &:hover
+            color: $cp1
+
+    .title--drop
+        cursor: pointer
+        @extend .noselect
+
+        i
+            +rotate(-90)
+            vertical-align: top
+            margin-top: 2px
+            color: $cp1
+            +multipleTransition((opacity 0.45s ease, transform 0.45s ease))
+
+    &.custom--active
+        .title--drop
+            color: $cp1
+            i
+                +rotate(90)
+
+    .custom-file
+        position: relative
+        font-size: 16px
+        border: 1px #ddd solid
+        padding: 15px
+
+    .file-input
+        opacity: 0
+        position: absolute
+        height: 38px
+
+
+.product-customization-item
+    margin-bottom: 15px
+
+
+.product-quantity
+    position: relative
+    +flexbox()
+    +align-items(center)
+
+
+    .input-group-btn-vertical
+        display: none
+
+    .quantity_wanted
+        width: 75px
+        margin-right: 10px
+        padding: 9px 15px
+
+
+.product-list__title
+    margin: 0
+    font-weight: 300
+    text-transform: initial
+    line-height: 1.2
+    font-size: 19px
+    font-weight: 400
+    display: inline-block
+    padding: 5px 18px
+    background: $c-black
+    background: #eee
+    color: $c-black
+    margin-bottom: -4px
+    position: relative
+    z-index: 3
+    margin-left: 16px
+
+
+.product-accessories
+    margin: 30px 0
+
+.tabs
+    // max-width: 1400px
+    margin: 0 auto
+    padding-right: 30px
+    padding-left: 30px
+
+    &.tabs--left
+        padding-left: 0
+        padding-right: 0
+
+        .nav-tabs
+            +justify-content(flex-start)
+
+
+        .nav-item
+            &:first-child
+                // padding-left: 30px
+
+    
+    .art__figure
+        padding: 15px 0
+
+    .tab-pane
+        display: none
+
+        > p:first-child
+            margin-top: 0
+
+        &.active
+            display: block
+
+    .nav-tabs
+        border: none
+        border-bottom: 2px solid $c-black
+        text-align: center
+        +flexbox()
+        +justify-content(center)
+
+    .nav-item
+        +flexbox()
+
+    .nav-link
+        color: $c-black
+        padding: 9px 30px 10px
+        border-radius: 3px 3px 0 0
+        font-size: 16px
+        font-weight: 400
+        +flexbox()
+        +align-items(center)
+        background: #f5f5f5
+        margin-right: 3px
+        // border-bottom: 2px transparent solid
+        // margin-bottom: -2px
+
+        i
+            margin-right: 10px
+            color: $cp1
+            margin-top: -2px
+
+        &.active
+            color: white
+            background: $c-black
+            // border-bottom: 2px $cp1 solid
+            &:hover
+                //color: white
+
+                i
+                    //color: white
+
+            i
+                //color: white
+
+        &:hover
+            color: $cp1
+
+
+    .tab-content
+        overflow: hidden
+        +multipleTransition((opacity 0.45s ease, height 0.25s ease, transform 0.45s ease))
+        // padding: 30px
+
+    .section
+        margin-bottom: 0
+
+    .overflow-x
+    .overflow-x
+        // height: 55px
+
+
+.tabs .tab-pane
+    img
+        height: auto
+
+
+.products--similar
+    overflow: hidden
+
++breakpoint(laptop)
+    
+    .product-header
+        // margin-top: 60px
+
+    .product-detail
+        padding-left: 440px
+
+    
+    .fs_product
+        padding-right: 0
+
+    .page-product:not(.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament, .product-skuteczny-i-dochodowy-sklep-internetowy-abonament)
+        .page-logo
+            padding-left: 440px
+
+        .breadcrumb
+            position: static
+
+        .product-detail-top
+            padding-top: 0
+
+        .product-price-section
+            position: static
+
+        .product-detail .discount
+            display: none
+
+        .product-detail__title
+            margin-right: 40px
+
+        .label-price
+            margin-top: 0
+            border: 0
+            padding: 30px 0 0 0
+
+            .material-icons
+                display: none
+
+        .label-price__price-vat
+            position: static
+            display: block
+            padding-top: 10px
+            width: 100%
+
+
+    .tab-content
+        // padding: 30px 0
+
+
++breakpoint(991px, 1024px)
+    .list--products[data-slider=true] .art__figure
+        // display: none
+
++breakpoint(desktop)
+    .tabs
+        padding-left: 0
+        padding-right: 0
+    
+    .tab-content
+        padding-left: 0
+        padding-right: 0
+
+
+    #promo-bar
+        padding: 0
+        .counter .promo-counter__label
+            display: none
+
+    #promo-bar.promo-counter
+        margin-top: 0
+
+    #promo-bar.promo-counter.promo-counter--bottom.show
+        padding: 0
+
++breakpoint(tablet)
+
+    .table-product
+        width: 100%
+        font-size: 15px
+    #promo-bar.promo-counter.promo-counter--bottom .promo-counter__btn
+        display: none
+
+    
+
+    
+
+    .section--pakiety
+        .products-list
+            +flex-wrap(wrap)
+        .product-google
+            min-width: 45%
+
+    .page-product:not(.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament, .product-skuteczny-i-dochodowy-sklep-internetowy-abonament)
+        .page-main > .breadcrumb
+            display: none
+        .product-detail__scroll
+            position: static
+            padding: 0
+            width: 100%
+            overflow: hidden
+            overflow-x: auto
+            max-height: 100vh
+            margin-bottom: 15px
+            border-bottom: 1px #ddd solid
+
+        .product-item__flags
+            display: none
+
+        .product-detail
+            margin: 0
+            width: 100%
+            padding: 0 30px
+
+        .thumb-container
+            +flexbox()
+            +align-items(center)
+
+        .page-container
+            padding-left: 0
+            padding-right: 0
+            padding-top: 60px
+
+        .product-detail__images
+            .product-images
+                +flexbox()
+                max-height: 455px
+                // min-height: 350px
+                // height: 60vh
+
+                img
+                    height: 60vw
+                    max-height: 100%
+                    max-width: none
+
+        .page-logo
+            padding-left: 0
+
+        .breadcrumbs__list
+            margin-top: 10px
+
+
+    .page-product:not(.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament, .product-skuteczny-i-dochodowy-sklep-internetowy-abonament) .list--products2
+        overflow: auto
+
+        .art[style*="margin-left"]
+            margin-left: 0 !important
+
+        .slider-nav
+            display: none
+
++breakpoint(mobilewide)
+
+
+    .page-product:not(.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament, .product-skuteczny-i-dochodowy-sklep-internetowy-abonament) 
+        .product-detail__images 
+            .product-images img
+                height: 60vw
+
+        .product-detail__title
+            font-size: 34px
+
+        .label-price
+            font-size: 28px
+            padding-top: 15px
+
+    .tabs
+        padding-left: 0
+        padding-right: 0
+
+
+    .overflow-x
+        overflow-y: hidden
+        overflow-x: scroll
+        overflow: auto
+
+
+    .product-google
+        padding-left: 15px
+        padding-right: 15px
+
+
+    .product--firmowareklama
+        .page-banner
+            > img
+                display: none
+
+        .page-banner__header
+            width: 100%
+
+    .page-product:not(.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament, .product-skuteczny-i-dochodowy-sklep-internetowy-abonament)
+        .product-detail
+            padding: 0 20px
+
+
+
+    .product-detail__footer
+        padding-bottom: 15px
+
+
+    .panel-bottom
+        padding: 0 15px
+
+
++breakpoint(mobile)
+    .page-product:not(.product-nowoczesna-strona-internetowa-z-panelem-edycji-abonament, .product-skuteczny-i-dochodowy-sklep-internetowy-abonament)
+        .product-detail__images 
+            .product-images img
+                height: 80vw
+
+        .product-detail__title
+            font-size: 32px
+
+
+    .panel-bottom
+        padding: 0 10px
+
+        .panel__close
+            right: 5px
+            font-size: 40px
+
+        .panel__container
+            padding-right: 35px
+
+    .product-customization .product-custom__header
+        font-size: 21px
+
+    .product-detail__title .art__fav-link
+        top: -10px
+
+    .page-product
+        .products--similar
+            padding-top: 0
+
+    .tabs .tab-content
+        padding-bottom: 0
+
+    .tabs .tab-pane img
+        max-width: 70%

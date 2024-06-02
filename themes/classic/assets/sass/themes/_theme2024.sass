@@ -1,0 +1,1306 @@
+.fshop
+    color: $fshop !important
+
+.fshop-bg
+    background: $fshop !important
+
+.fweb
+    color: $fweb !important
+
+.fweb-bg
+    background: $fweb !important
+
+.product-item__flags:not(.flags--ribbon)
+    display: none !important
+
+#order-detail .box.messages
+    max-width: 95%
+    border-radius: 8px
+#product.page-product .breadcrumb
+    padding-right: 0
+
+
+.fs-gallery
+    &.overflow-hidden
+        overflow: hidden !important
+
+
+    img
+        cursor: zoom-in
+
+
+.product-description
+    h1, h2
+        +rem(24)
+        font-weight: 400
+        margin: 15px 0
+
+
+
+
+.fsbasket-aside .cart-detailed-actions
+    margin-top: 0
+
+.fspromo-form
+    margin-bottom: 0
+
+
+.center-foto
+    +justify-content(center)
+    +flexbox()
+    margin: 0 auto
+
+#exportDataToCsv,
+#exportDataToPdf
+    float: none
+    margin: 0
+
+
+.panel
+    background: $cp1
+
+.table thead th
+    background: $cp1
+.fspromo-voucher
+    .label
+        color: $cp1
+        font-weight: 400
+        margin-right: 5px
+    i
+        font-size: 25px
+        line-height: 1
+        display: block
+        margin-top: 5px
+#fspromo
+    .fspromo-form__input
+        height: 37px
+        margin-right: 10px
+
+
+#checkout
+    padding-top: 50px
+
+    .page-heading
+        margin-bottom: 0
+
+    .check-account
+        padding-top: 10px
+
+#checkout-personal-information-step
+    .tab-content
+        padding-top: 0
+        border: 0
+
+    .tab-pane.active
+        +flexbox()
+        +flex-wrap(wrap)
+        border: 0
+
+    .page-content
+        max-width: 100%
+
+    #login-form
+        min-width: 320px
+        +flex(1)
+        margin-top: 15px
+
+    .login-footer
+        padding: 0 15px
+
+
+#cart-subtotal-discount
+    border-radius: 0 0 8px 8px
+
+    .label
+        color: white
+        font-weight: 300
+        text-align: center
+
+    .value
+        +rem(18)
+        color: white
+
+
+
+.alert-warning
+    ul
+        list-style: none
+
+    
+#js-product-list,
+#index,
+#product
+    .product-item__cover
+        border-radius: 8px
+
+
+    .product-item
+        border-color: transparent
+        // margin: 0
+
+    .list--products[data-col="3"] .product-item__info
+        bottom: -8px
+
+
+.page__panel-right .page-menu__scroll
+    overflow-x: hidden
+
+#product
+    .product-detail__scroll .ico--scroll .info-label, .product-detail__scroll .ico--scroll .ico
+        color: white
+        text-shadow: 0 0 5px black
+
+
+    .toggle-content__link
+        margin: 0
+        padding: 0
+
+
+
+
+#category
+
+    .qm-prices
+        margin-top: 15px
+
+    .qm-product__title
+        font-weight: 400
+
+        
+    .qm-photos > .qm-photos__container
+        gap: 5px
+
+    .product-images
+        gap: 5px
+        +flexbox()
+        +flex-direction(column)
+
+
+
+#js-product-list
+    // .grid--transform &
+    //     opacity: 1
+    //     +multipleTransition((all 1.25s))
+
+
+    .list--products[data-col="2"] .product-item__price
+        padding: 3px 10px
+
+    .list--products[data-col] .art__footer, .list--products[data-col] .product-item__prices
+        margin-bottom: 5px
+
+    .list--products[data-col] .btn--price
+        padding-top: 3px
+        padding-bottom: 3px
+
+
+
+.product-item
+    opacity: 1
+    +multipleTransition((all 1.25s 1s))
+
+.grid--transform
+    .product-item
+        opacity: 0
+        +multipleTransition((all 1.25s 1s))
+
+
+
+.modal.quickview .modal-content
+    padding: 15px
+
+
+#product .product-prices
+    border: 1px #ddd solid
+
+body#checkout .payment-option label
+    +justify-content(space-between)
+    width: 100%
+    color: #aaa
+    padding-right: 10px
+
+    &:hover
+        color: $cp1
+
+    img
+        margin-right: auto
+        margin-left: 20px
+#product 
+    .btn
+        border-radius: 5px
+
+    .tabs
+        .nav-link
+            border-radius: 8px 8px 0 0
+
+            &.active
+                background: #e7e7e7
+                color: black
+
+
+    .list--products[data-col="4"]
+        .art
+            padding: 0 0 30px
+
+    .splide__list
+        gap: 15px
+
+    .section-products__title
+        .cp1
+            font-weight: 400
+
+
+    .list--products[data-col][data-slider=true]
+        .art__figure
+            height: 150px
+
+
+        .product-item__current-price-vat
+            display: none
+
+        .btn--price
+            +rem(14)
+
+        .art__content
+            padding-top: 30px
+
+        .art__title
+
+
+
+
+#category
+    .quick-view,
+    .btn-fastmode
+        display: none !important
+
+
+.page-footer
+    .delivery-bottom
+        img
+            border-radius: 8px
+
+#index
+
+    .section--news
+        .art
+            border-radius: 8px
+            +multipleTransition((background 0.25s, transform 0.25s))
+
+            &:hover
+                background: #fafafa
+
+    .list--products .splide--slide
+        padding: 15px 0
+
+    .fs-slider-home__description
+        max-width: 1200px
+
+    .fs-slider-home h2
+        +rem(55)
+
+    .blog-list .art__title
+        font-weight: 400
+
+    .fs-slider-home
+
+        .break
+            display: block
+            // margin: 15px 0 
+
+        .btn--primary
+            padding: 10px 25px
+            background: $fshop
+            color: black
+            background: white
+            +rem(15)
+            letter-spacing: 1px
+            line-height: 1
+            border: 1px white solid
+
+            &:hover
+                background: black
+                color: white
+        .splide
+            .splide__pagination
+                display: block
+                text-align: right
+                bottom: 25px
+
+        .splide__arrows
+            display: none
+
+        strong
+            font-weight: 700
+
+    .splide__pagination__page
+        width: 12px
+        height: 12px
+        background: white
+        opacity: 1
+        margin: 8px
+
+        &.is-active
+            background: $fshop
+    .logo--slider
+        max-height: 200px
+    .splide__slide
+        cursor: grab
+    .page-container
+        padding-left: 3%
+        padding-right: 3%
+    .section--premium
+        border: 0
+        margin-bottom: $space-bb
+
+    .splide__track
+        overflow: visible
+    
+
+    .products--featured
+        position: relative
+
+    .section-products__title
+        position: absolute
+        top: 0px
+        left: -15px
+        background: black
+        border-radius: 6px
+        padding: 10px 20px
+        +rem(18)
+        color: white
+        z-index: 2
+        font-weight: 400
+        +rotate(-5)
+
+        .cp1
+            color: white
+    .section
+        position: relative
+    #custom-text
+        padding-left: 0
+        padding-right: 0
+        display: block
+
+        .art__list
+            +flexbox()
+            width: 100%
+            +align-items(center)
+            gap: 30px
+        .art
+            display: block
+            +flex(1)
+            border: 0
+            padding: 0
+            +flex-wrap(nowrap)
+            gap: 30px
+
+            &:first-child
+                max-width: 35%
+                margin-right: 2%
+
+            &::before
+                display: none
+
+
+            &.art--txt
+                padding-right: 3%
+
+            img
+                width: 100%
+                height: auto
+                display: block
+                border-radius: 12px
+
+
+        .h2
+            display: block
+            width: 100%
+            +rem(55)
+            font-weight: 300
+            margin-bottom: 45px
+        table
+            width: 100%
+            height: auto !important
+            text-align: left
+
+    .section-products__title 
+        text-align: left
+        
+
+
+.fs-slider-home
+    .btn--primary
+        
+        background-color: $c-black
+        color: white
+        border-color: white
+        padding: 15px 30px
+        border-radius: 6px
+
+        &:hover
+            background-color: $fshop
+            color: white
+            border-color: white
+
+#checkout section.checkout-step .carrier-price
+    +rem(15)
+#index .carousel
+    margin: 30px 0 0
+    border-radius: 12px
+    border: 2px white solid
+
+.order-message-form
+    display: none
+
+.alert
+    ul, ol
+        list-style: none
+.addresses
+    gap: 30px
+    .div-invoice,
+    .div-delivery
+        background: #eee
+        padding: 30px
+        border-radius: 12px
+        text-align: center
+    .invoice-title
+        font-weight: 400
+        margin-bottom: 15px
+
+    .box
+        margin: 0 !important
+
+
+#order-detail address
+    +rem(18)
+
+#order-detail
+    table
+        // display: none
+    .label.label-pill
+        background: #eee !important
+        border: 2px #eee solid
+        border-radius: 6px
+
+    .btn
+        border-radius: 8px
+        +justify-content(center)
+
+
+    .line-products,
+    .line-tax
+        display: none
+
+
+.history-padding
+    padding: 0 5%
+    max-width: 90%
+    .box
+        margin-top: 30px
+
+#history
+    .label.label-pill
+        background: #eee !important
+        border-radius: 6px
+        border: 2px #eee solid
+
+    table
+        td
+            vertical-align: middle
+            font-weight: 400
+
+        tr
+            +multipleTransition((background 0.25s))
+            &:hover
+                background: #eee
+                cursor: pointer
+
+    .details-history-press
+    
+    .order-actions
+        a:last-child
+            // display: none
+
+.fs-gallery__item
+    cursor: zoom-in
+
+.page__panel-logo
+    +align-items(center)
+    img
+        height: auto
+
+
+.fsbasket-item__prices
+    .product-discount
+        display: none
+
+#checkout section.checkout-step.-complete
+    .step-title
+        color: $cp1
+
+
+.page__panel-right #category-2 > .page-menu__droplist
+    // margin-bottom: 15px
+
+.page__panel-right .page-menu__list
+    .page-menu__item
+        &:first-child
+            .page-menu__label
+                font-weight: 400
+        .page-menu__label
+            font-weight: 300
+
+#checkout section.checkout-step.-current .step-edit
+    display: none
+body#checkout
+    .payment-option label span
+        +rem(16)
+
+    .condition-label
+        label
+            position: relative
+            padding-left: 16px
+            text-align: left
+            display: block
+            +rem(18)
+            font-weight: 400
+        .custom-checkbox
+            position: absolute
+            top: -2px
+            left: 10px
+            margin: 0
+
+
+    .ps-hidden-by-js
+        opacity: 0
+        display: none
+
+    
+    .payment-option
+        padding-left: 15px
+
+        &:hover
+            color: $cp1
+            // font-weight: 400
+
+        label
+            // font-weight: 400
+            font-size: 16px
+            // display: flex
+            +flexbox()
+            +flex-direction(row-reverse)
+            // flex-direction: row-reverse
+            +align-items(center)
+            +flex-wrap(wrap)
+            +justify-content(start)
+
+            img
+                max-height: 40px
+
+    #payment-option-4-container
+        label
+            span
+                // display: none
+    .delivery-name
+        // display: none
+
+    .carrier-name
+        +rem(14)
+        font-weight: 500
+    .delivery-option
+        padding: 10px
+
+    .delivery-logo ~ .delivery-name
+        display: none
+
+
+    .checkout-step .step-title
+        font-weight: 400
+.page-sidebar
+    .promocode
+        padding: 30px 15px
+        background: #111
+        color: white
+        border-radius: 12px
+        margin-top: 30px
+        border: 0
+        
+
+        .promo-img
+            max-height: 70px
+            margin-bottom: 10px
+
+        .section__header
+            margin-bottom: 20px
+        .section__title
+            +rem(24)
+
+            strong
+                color: #fa6c15
+                font-weight: 500
+
+        .counter__field
+            background: #fa6c15
+
+        .btn--secondary
+            background: white
+            border-radius: 6px
+            color: black
+
+            &:hover
+                background: #fa6c15
+                color: white
+
+
+#cart
+    .list--products[data-col] .art
+        margin: 0 !important
+
+    .list--products[data-col="4"] .art, .list--products[data-col="4"] .art
+        margin: 0 !important
+
+#category
+    .product-item__current-price-vat
+        display: none
+
+    .list--products[data-col="6"] .art__content
+        padding-top: 30px
+
+    #js-product-list .art__list
+        // margin: 0
+        // gap: 15px
+
+
+    .list--products[data-col="6"] .art .btn--price, .list--products[data-col="4"] .art .btn--price
+        +rem(18)
+
+
+#js-product-list
+
+    .list--products[data-col="4"] .art__content,
+    .list--products[data-col="6"] .art__content
+        padding-top: 20px
+
+    .product-item__flags
+        padding: 10px
+        
+
+
+
+    .product-item__link
+        &:hover
+            border-radius: 8px
+
+#product
+    .product-description .toggle-content__content
+        margin-top: 0
+
+        > span:first-child, > p:first-child
+            margin-top: 15px
+            display: block
+    .ico--green, .tabs .nav-link i.ico--green, .tabs .nav-link i.ico--red
+        color: $fshop
+
+
+    .splide__arrow--prev
+        left: 30px
+
+    .splide__arrow--next
+        right: 30px
+
+
+    .art__list
+        .splide
+            padding: 15px 0
+
+
+    .tab-content
+        border-radius: 0 0 8px 8px
+
+    .product-description
+        border-radius: 8px
+
+    
+    .product-description .toggle-content__content
+        // margin-top: 0
+
+    .product-information
+        padding: 0
+        ol
+            margin: 30px
+
+    .product-description
+        .product-title-top
+            font-weight: 400
+            +rem(24)
+            margin: 0
+
+        h3
+            +rem(18)
+            font-weight: 400
+
+        .toggle-content__link i
+            top: 0
+            font-weight: 500
+            right: 0
+
+    .page-header__bg
+        .page-logo
+            // margin-top: 5px
+
+
+    .breadcrumbs__list
+        border-top: 1px #eee solid
+        padding-top: 15px
+        margin-top: 18px
+
+    .splide__track
+        overflow: visible
+
+    .product-accessories
+        overflow: hidden
+
+
+#my-account
+    .breadcrumb
+        display: none
+
+
+.page-header__bg
+    .page-logo
+        max-height: 20px
+        top: 12px
+
+
+
+
+#search_filters
+    .facet-label
+        a
+            +rem(18)
+
+.page-header__bg
+    position: relative
+    & > .page-menu
+        top: 0
+        #lnk-katalog-produktow
+            display: none !important
+
+
+#product.page-product
+    .product-detail
+        padding-right: 0
+
+    .product-detail__footer
+        padding: 15px
+        // margin: 0
+
+    .product-detail__table-title
+        font-weight: 400
+
+
+.page-product .section-products__title
+    margin-bottom: 0
+
+#product
+    .product-accessories
+        margin: 0
+
+    .toggle-content__content
+        // margin-top: 0
+
+#category
+    .btn-grid
+        .btn-grid__label
+            color: black
+
+#cart
+    .product-item__flags
+        display: none
+
+
+.register-fb-label
+    display: none
+#authentication
+    .page-heading
+        margin-bottom: 0
+
+
+#checkout
+    .logowanie
+        // background: #eee
+        flex: auto
+        width: 100%
+        margin-top: 50px
+
+
+#customer-form,
+.logowanie
+    .title
+        text-align: center
+        font-weight: 400
+
+
+
+
+@media only screen and (min-width: 1300px) and (max-width: 5000px)
+    .grid--3 .list--products[data-col] .art__figure, .list--products[data-col="3"] .art__figure
+        height: 400px
+
++breakpoint(desktop)
+
+
+    #checkout-personal-information-step
+
+        #login-form
+            width: 100%
+    #index
+        #custom-text
+            .art__list
+                display: block
+                .art
+                    width: 100%
+                    max-width: 100%
+                    &:first-child
+                        margin-bottom: 45px
+        #custom-text p
+            p
+                +rem(21)
+    
+        .section
+            overflow: visible
+
+        .section
+            overflow-y: hidden
+
+        
+        .splide--slide
+            overflow: initial
+
+    #product.page-product .page-header__bg .page-logo
+        margin-left: 5px
+
+    #product .breadcrumbs__list
+        margin-top: 28px
+        border-top: 1px #ddd solid
++breakpoint(tablet)
+
+    #checkout #customer-form, #checkout #login-form
+        padding: 0 30px
+    
+    #product.page-product .page-header__bg .page-logo
+        margin-left: 0
+    
+
+    #product .table--delivery td
+        padding: 12px 15px
+        text-align: left
+
+        img
+            border-radius: 8px
+
+    .page-sidebar .promocode
+        margin: 0
+        margin-top: 30px
+        border: 0
+    #index
+
+
+        .section--premium
+            margin: 0
+            padding-bottom: 0
+
+        .section-products__title
+            position: static
+            +rotate(0)
+
+
+        .section--premium
+            // padding: 45px 0
+
+        .page-container
+            padding-left: 5%
+            padding-right: 5%
+
+        .fs-slider-home
+            .slider-text
+                padding: 15px
+
+        .fs-slider-home__item
+            br
+                display: display-inline
+                margin: 10px 0
+
+
+        .fs-slider-home__description
+            // padding: 0
+            margin: 10px 5px
+            line-height: 1.4
+            font-size: 18px
+
+        .caption
+            max-width: 100%
+
+        .fs-slider-home
+
+            .break
+                margin: 15px 0
+
+
+    #contact
+        .page-4
+            padding-top: 45px
+
+    #product.page-product .breadcrumbs__list
+        border-top: 0
+        margin-top: 0
+        padding-top: 0
+
+    .grid--3 .list--products[data-col="3"] .art__subtitle, .list--products[data-col="3"] .art__subtitle
+        display: none
+
+    #js-product-list .list--products[data-col="3"] .product-item__info, #index .list--products[data-col="3"] .product-item__info, #product .list--products[data-col="3"] .product-item__info
+        bottom: 0
+
+    #product
+        .product-detail__scroll
+            .ico--scroll
+                display: none
+    
+        .breadcrumb
+            margin-top: 10px
+
+    .panel-top--active.animation--loaded .panel-top, .panel-top.panel-top--active
+        position: static
+        margin-bottom: 30px
+
+
+    .page-header
+        z-index: 3 !important
+
+
+    .fs-gallery__item img.lazy
+        height: 100%
+        max-width: 100%
+        max-width: none
+        // min-height: 250px
+
+    .fs-gallery__item
+        height: 300px
++breakpoint(mobilewide)
+
+    .page-cms .art__list .art
+        margin: 15px 0
+
+    #cms .custom--blog img
+        max-width: 100%
+
+    #js-product-list .art__list[data-col="4"]
+        gap: 1.5%
+        // margin: 0
+
+    body .container
+        padding: 0
+
+    #category
+        // padding-top: 55px
+
+    .breadcrumbs__item a
+        +rem(12)
+
+
+    .breadcrumb .sep
+        +rem(14)
+
+
+    #authentication
+        .breadcrumb
+            border: 0
+
+
+
+    #product .breadcrumb
+        margin-top: 5px
+
+
+
+    #checkout section.checkout-step .delivery-logo
+        display: block
+        max-width: 80px
+
+    #js-delivery
+        max-width: 90%
+
+
+    .page-footer
+        .delivery-bottom
+            img:first-child
+                display: none
+
+    #index .page-container
+        padding-left: 5%
+        padding-right: 5%
+
+    #index
+        .list--products[data-col] .art .art__figure
+            height: 200px
+
+
+    #index
+        #custom-text
+            padding-top: 0
+
+
+    .grid--3 .list--products[data-col="3"] .art__link-art, .grid--3 .list--products[data-col="3"] .art__img, .list--products[data-col="3"] .art__link-art, .list--products[data-col="3"] .art__img
+        max-height: 200px
+
+    #product
+        .product-description .toggle-content__content
+            // margin-top: 0
+
+        .page-content.page-cms p
+            text-align: left
+
+        .product-detail__footer
+            margin: 0
+            .page-content
+                padding-top: 0
+
+    .delivery-bottom
+        padding-top: 15px
+
+        img
+            margin: 6px
+
+    #index
+        .product-item__flags
+            display: none
+
+
+    #index
+        #custom-text p
+            +rem(19)
+        .fs-slider-home__description
+            text-align: center
+        .fs-slider-home
+            .fs-slider-home__h2
+                margin-bottom: 25px
+                +rem(44)
+
+        #custom-text .h2
+            +rem(36)
+            font-weight: 400
+
+
+        .section--premium .section__content
+            padding: 0 15px
+            margin: 20px 0
+
+        .section
+            margin: 20px 0
+
+        .page-footer 
+            .section
+                margin: 0
+
+            .page-bottom
+                padding: 15px 0
+
+            .copyrights
+                color: #aaa
+
+            .section--contact
+                padding: 30px 15px 0
+
+        .section--premium
+            padding-top: 15px
+            text-align: center
+
+            p
+                text-align: center
+
+
+        .splide__pagination
+            display: none !important
+
+        .fs-slider-home .fs-slider-home__h2
+            margin: 0 auto 25px
+            max-width: 80%
+
+
+        .section-products
+            margin: 0
+
+
+        .home-top.relative
+            margin-bottom: 30px
+
+        #custom-text
+            .h1, .h2, .h3, .h4, .h5
+                margin: 0
+
+
+    .page-sidebar .nav-top__link.link--burger,
+    .menu--active .page-sidebar .nav-top__link.link--burger
+        +scale(0.8)
+        top: -7px
+        margin-left: -7px
+        right: 6px
+
+    .page-sidebar .promocode
+        margin-top: 30px
+        border: 0
+
+
+    #product
+        .product-detail__scroll
+            .ico--scroll
+                display: none
+    
+        .breadcrumb
+            margin-top: 5px
+    .page-product .product-variants-item:last-child
+        +justify-content(center)
+
+
+    #product.page-product .product-detail
+        padding-left: 5%
+        padding-right: 5%
+
+    .checkout-step-4 .content
+        padding: 25px 0
+
+    #checkout-payment-step .payment-options,
+    #order-summary-content .order-table-header .card-title:first-child
+        padding-left: 0
+
+    .order-confirmation-table table
+        width: 100%
+
+    body#checkout #order-summary-content #order-items
+        padding-top: 10px
+
+    #conditions-to-approve
+        margin-top: 30px
+
+
+    body#checkout #order-summary-content #order-items h3.h3:first-child
+        padding-bottom: 10px
+        font-weight: 400
+
+
+    .list--products[data-slider] .product-item,
+    #product .list--products[data-col="4"] .art
+        border: 1px #eee solid
+        border-radius: 12px
+
+    #product .list--products[data-col="4"][data-slider=true] .art__figure
+        +align-items(start)
+
+    #product .list--products[data-col="4"] .art
+        padding-bottom: 15px
+
+    #product .list--products[data-col="4"][data-slider=true] .product-item__prices
+        margin-bottom: 25px
+
+    #product .list--products[data-col="4"][data-slider=true]
+        .art__content
+            padding-top: 0px
+
+        .art__title
+            +rem(14)
+            font-weight: 400
+
+    #product  .products--special
+        margin: 0
+
+
+    #checkout #customer-form, #checkout #login-form
+        padding: 0
+
+        
+        
+
+    .login-by__google
+        h4
+            margin-top: 30px
+
+
+    #history
+        table
+            display: none
+
+        .date
+            +rem(12)
+
+        .total
+            font-weight: 400
+
+
+    #history .orders .order
+        border-top: 1px #ddd solid
+        padding-top: 15px
+
+
+    .history-padding
+        padding: 0
+        max-width: 95%
+
+        table
+            min-width: 600px
+
+        .box:first-child
+            overflow: hidden
+            overflow-x: scroll
+
+    #order-detail
+        .addresses
+            margin: 30px 0
+
+        .box
+            overflow: auto
+
+    #order-detail .hidden-md-up
+        display: none
+
+
+    .addresses .div-invoice, .addresses .div-delivery
+        padding: 15px
+
+    #category.grid--4 .list--products[data-col] .art, #category .list--products[data-col="4"] .art
+        padding: 0 0 15px 0
+
+    .grid--3 .list--products[data-col],
+    .list--products[data-col="3"] .art__figure
+        .art__figure
+            height: 140px
+
+        .product-item
+            padding: 0
+
+    #category.grid--6 .list--products[data-col] .art, #category .list--products[data-col="6"] .art
+        padding: 0 0 15px 0
+
+    .grid--2 .list--products[data-col] .art, .list--products[data-col="2"] .art
+
+        .product-item
+            padding: 0
+            margin: 15px 0 !important
+
+    .page-product .products--similar
+        padding-top: 30px
+
+
++breakpoint(mobile)
+    #payment-option-4-container
+        label
+            span
+                display: none
+
+@media only screen and (max-width: 430px)
+    
+    .payment-options
+        label
+            span
+                display: none

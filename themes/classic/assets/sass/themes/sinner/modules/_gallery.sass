@@ -1,0 +1,60 @@
+
+// GALLERy
+
+
+.section--gallery
+    .section-title
+        color: $c-text
+
+.gallery
+    +flex-wrap(wrap)
+    margin-left: -15px
+    margin-right: -15px
+
+
+.gallery__item
+    background: $cp1
+    padding: 10px
+    display: block
+    margin: 1%
+    width: 290px
+    height: 290px
+    +multipleTransition((opacity 0.35s ease, padding 0.35s ease))
+
+    &:hover
+        padding: 0
+        +multipleTransition((opacity 0.25s ease, padding 0.2s ease))
+
+        .gallery__holder
+            opacity: 1
+            +multipleTransition((opacity 0.25s))
+
+
+.gallery__holder
+    position: relative
+    width: 100%
+    height: 100%
+    // margin: 10px
+    overflow: hidden
+    +multipleTransition((opacity 0.25s))
+
+    .js__fade &
+        opacity: 0.5
+        +multipleTransition((opacity 0.45s))
+
+    &:hover
+        opacity: 1
+        +multipleTransition((opacity 0.45s))
+
+    img
+        position: absolute
+        top: 0
+        left: 0
+        display: block
+        max-width: none
+        max-height: none
+        transform-origin: center center
+
+
+.gallery__img
+    display: block

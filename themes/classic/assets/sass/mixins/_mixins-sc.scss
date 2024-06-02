@@ -1,0 +1,18 @@
+@mixin gradientOrange {
+    background: rgb(251,178,71);
+    background: radial-gradient(circle, rgba(251,178,71,1) 0%, rgba(233,80,32,1) 100%);
+}
+
+
+@mixin gradientYellow  {
+    background: rgb(251,178,71);
+    background: radial-gradient(circle, rgba(251,178,71,1) 0%, rgba(221,131,0,1) 100%);
+}
+
+
+
+@mixin gradientLightGray  {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle at top, rgba(221,221,221,1)  0%, rgba(255,255,255,1)  58%);
+
+}
